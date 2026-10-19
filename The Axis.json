@@ -8,13 +8,97 @@
     "library": false,
     "revision": 1,
     "type": "catalogue",
+    "forceEntries": [
+      {
+        "name": "Assault Platoon",
+        "id": "69da-2cb9-ac74-0d3a",
+        "hidden": false,
+        "categoryLinks": [
+          {"name": "Base platoon", "id": "446f-571d-a9e1-1346", "hidden": false, "targetId": "6b68-e870-7c94-8956"},
+          {
+            "name": "platoon commander",
+            "id": "afa6-87a1-1b73-95fe",
+            "hidden": false,
+            "targetId": "35bf-bece-817b-6874",
+            "constraints": [
+              {"id": "59e4-8a40-26ce-f790", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "f6f1-5a94-4c8e-0398", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          },
+          {
+            "name": "Specialist or Advanced Infantry",
+            "id": "b162-f945-8aa6-3a64",
+            "hidden": false,
+            "targetId": "18b5-bdcf-20f0-e1a8",
+            "constraints": [{"id": "c89f-7067-5b6b-753e", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 2}]
+          },
+          {
+            "name": "Infantry",
+            "id": "95a3-a0dc-39d2-77ec",
+            "hidden": false,
+            "targetId": "d013-452d-3733-7f93",
+            "constraints": [{"id": "c851-ac89-773b-3d28", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 4}]
+          },
+          {
+            "name": "Medic",
+            "id": "a888-9522-a0ba-7efb",
+            "hidden": false,
+            "targetId": "b80d-a889-28b3-8f4b",
+            "constraints": [{"id": "bf02-224c-624b-29ca", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}]
+          },
+          {
+            "name": "forward observer",
+            "id": "0550-5fe2-35df-d49f",
+            "hidden": false,
+            "targetId": "f53e-dfd3-ad86-30d6",
+            "constraints": [{"id": "cf89-a90e-5586-5241", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}]
+          },
+          {
+            "name": "sniper team",
+            "id": "3adb-f244-35f7-5e04",
+            "hidden": false,
+            "targetId": "1a91-d7ad-0674-5498",
+            "constraints": [{"id": "5230-2d01-6518-f302", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}]
+          },
+          {
+            "name": "Anti-tank team",
+            "id": "344e-68e3-3d1b-1d82",
+            "hidden": false,
+            "targetId": "337f-4c4b-44e3-0501",
+            "constraints": [{"id": "e6fe-26b3-43ff-065f", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}]
+          },
+          {
+            "name": "light mortar team",
+            "id": "e7ad-d612-9768-0d6c",
+            "hidden": false,
+            "targetId": "fff3-9026-78e4-303d",
+            "constraints": [{"id": "312d-f65f-eef6-f375", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}]
+          },
+          {
+            "name": "Transport vehicle",
+            "id": "c568-931a-7aff-1c41",
+            "hidden": false,
+            "targetId": "727b-b399-e4a6-f1e1",
+            "constraints": [{"id": "ab07-88a0-e29a-ea40", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 0}],
+            "modifiers": [
+              {
+                "field": "ab07-88a0-e29a-ea40",
+                "type": "increment",
+                "value": 1,
+                "conditions": [{"childId": "832b-b467-f671-7cf0", "childName": "nonvehicle unit", "field": "selections", "scope": "parent", "shared": true, "type": "instanceOf", "value": 1}]
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "sharedProfiles": [
       {
         "name": "Volksgrenadier",
         "id": "d665-7272-49e6-0d0d",
         "hidden": false,
         "typeId": "8230-ff01-d021-4ee9",
-        "typeName": "unit",
+        "typeName": "infantry unit",
         "characteristics": [
           {"name": "base size", "$text": "25mm", "typeId": "6b5c-b67a-16a5-05c8"},
           {"name": "movement rate", "$text": "6\"(advance)\n12\"(run)", "typeId": "13d7-4ad1-36a5-25ac"},
@@ -28,7 +112,7 @@
         "id": "85bc-d1f2-8c2f-6f71",
         "hidden": false,
         "typeId": "8230-ff01-d021-4ee9",
-        "typeName": "unit",
+        "typeName": "infantry unit",
         "characteristics": [
           {"name": "base size", "$text": "25mm", "typeId": "6b5c-b67a-16a5-05c8"},
           {"name": "movement rate", "$text": "6\"(advance)\n12\"(run)", "typeId": "13d7-4ad1-36a5-25ac"},
@@ -68,7 +152,7 @@
         "id": "d309-c2e4-aa0a-afa2",
         "hidden": false,
         "typeId": "8230-ff01-d021-4ee9",
-        "typeName": "unit",
+        "typeName": "infantry unit",
         "characteristics": [
           {"name": "base size", "$text": "40mm", "typeId": "6b5c-b67a-16a5-05c8"},
           {"name": "movement rate", "$text": "8\"(advance)\n16\"(run)", "typeId": "13d7-4ad1-36a5-25ac"},
@@ -527,7 +611,7 @@
                 "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 43}],
                 "infoLinks": [
                   {"name": "Teeth and Claws", "id": "662a-943c-5970-5f4a", "hidden": false, "targetId": "7e38-dfbf-da04-07f8", "type": "profile"},
-                  {"name": "Deadly (3)", "id": "450d-c200-4601-14b0", "hidden": false, "targetId": "3e3f-37c8-755b-9c6c", "type": "rule"}
+                  {"name": "Deadly (x)", "id": "450d-c200-4601-14b0", "hidden": false, "targetId": "3e3f-37c8-755b-9c6c", "type": "rule"}
                 ]
               }
             ]

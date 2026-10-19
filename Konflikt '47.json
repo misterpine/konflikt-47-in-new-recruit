@@ -30,7 +30,21 @@
       {"name": "Specialist or Advanced Infantry", "id": "18b5-bdcf-20f0-e1a8", "hidden": false},
       {"name": "Basic or Advanced infantry", "id": "d6d7-014d-1a7d-49c5", "hidden": false},
       {"name": "Infantry", "id": "d013-452d-3733-7f93", "hidden": false},
-      {"name": "Medic", "id": "b80d-a889-28b3-8f4b", "hidden": false}
+      {"name": "Medic", "id": "b80d-a889-28b3-8f4b", "hidden": false},
+      {"name": "Machine gun team", "id": "9db3-9b46-4317-255a", "hidden": false},
+      {"name": "Mortar team", "id": "c962-a159-684b-8434", "hidden": false},
+      {"name": "Machine gun or Mortar team", "id": "b9e0-9524-54ef-1d0d", "hidden": false},
+      {"name": "Anti-tank team", "id": "337f-4c4b-44e3-0501", "hidden": false},
+      {"name": "Transport vehicle", "id": "727b-b399-e4a6-f1e1", "hidden": false},
+      {"name": "Field artillery, Anti-aircraft, or Anti-tank gun", "id": "61ae-2aaa-4796-9a48", "hidden": false},
+      {"name": "Command vehicle", "id": "bfcd-b7a7-9c75-7b27", "hidden": false},
+      {"name": "Vehicle", "id": "a2f7-3055-bd92-3d51", "hidden": false},
+      {"name": "Armored walker", "id": "6f56-1279-250c-0b66", "hidden": false},
+      {"name": "Heavy weapons team", "id": "afc6-971e-682d-9c64", "hidden": false},
+      {"name": "forward observer", "id": "f53e-dfd3-ad86-30d6", "hidden": false},
+      {"name": "sniper team", "id": "1a91-d7ad-0674-5498", "hidden": false},
+      {"name": "light mortar team", "id": "fff3-9026-78e4-303d", "hidden": false},
+      {"name": "nonvehicle unit", "id": "832b-b467-f671-7cf0", "hidden": false}
     ],
     "costTypes": [{"name": "points", "id": "2eda-e484-fddf-506a", "defaultCostLimit": -1}],
     "forceEntries": [
@@ -70,17 +84,122 @@
             "hidden": false,
             "targetId": "b80d-a889-28b3-8f4b",
             "constraints": [{"id": "427a-08f8-29ee-4771", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}]
+          },
+          {
+            "name": "forward observer",
+            "id": "8975-345e-3d2b-5683",
+            "hidden": false,
+            "targetId": "f53e-dfd3-ad86-30d6",
+            "constraints": [{"id": "47f6-d651-481e-7ad8", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}]
+          },
+          {
+            "name": "sniper team",
+            "id": "8fba-da7a-4d26-0980",
+            "hidden": false,
+            "targetId": "1a91-d7ad-0674-5498",
+            "constraints": [{"id": "07fb-d8bf-bbd4-ab4d", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}]
+          },
+          {
+            "name": "Anti-tank team",
+            "id": "add6-7091-46d1-5393",
+            "hidden": false,
+            "targetId": "337f-4c4b-44e3-0501",
+            "constraints": [{"id": "06d7-bdef-9fe7-9ea1", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}]
+          },
+          {
+            "name": "light mortar team",
+            "id": "6949-869e-99e8-a5b5",
+            "hidden": false,
+            "targetId": "fff3-9026-78e4-303d",
+            "constraints": [{"id": "6375-c496-8afb-1925", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}]
+          },
+          {
+            "name": "Transport vehicle",
+            "id": "2c76-0680-4dc3-0220",
+            "hidden": false,
+            "targetId": "727b-b399-e4a6-f1e1",
+            "constraints": [{"id": "7ae6-a521-cc38-0f04", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 0}],
+            "modifiers": [
+              {
+                "field": "7ae6-a521-cc38-0f04",
+                "type": "increment",
+                "value": 1,
+                "conditions": [{"childId": "832b-b467-f671-7cf0", "childName": "nonvehicle unit", "field": "selections", "scope": "parent", "shared": true, "type": "instanceOf", "value": 1}]
+              }
+            ]
           }
         ]
       },
-      {"name": "Heavy Weapons Platoon", "id": "fd68-c31f-45dd-db52", "hidden": false},
+      {
+        "name": "Heavy Weapons Platoon",
+        "id": "fd68-c31f-45dd-db52",
+        "hidden": false,
+        "categoryLinks": [
+          {
+            "name": "platoon commander",
+            "id": "b70a-8f62-bad7-c179",
+            "hidden": false,
+            "targetId": "35bf-bece-817b-6874",
+            "constraints": [
+              {"id": "7923-967c-992a-e9b8-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "7923-967c-992a-e9b8-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          },
+          {
+            "name": "Machine gun or Mortar team",
+            "id": "bcd4-33af-96c6-bc4d",
+            "hidden": false,
+            "targetId": "b9e0-9524-54ef-1d0d",
+            "constraints": [
+              {"id": "216b-3d16-f6da-bbd5", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 2},
+              {"id": "9c87-7b5e-f4af-3e5c", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 8}
+            ]
+          },
+          {
+            "name": "Machine gun team",
+            "id": "283b-701f-3c86-7a13",
+            "hidden": false,
+            "targetId": "9db3-9b46-4317-255a",
+            "constraints": [{"id": "f0c0-3c5a-9359-470d", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 5}]
+          },
+          {
+            "name": "Mortar team",
+            "id": "870e-8a27-43e3-c785",
+            "hidden": false,
+            "targetId": "c962-a159-684b-8434",
+            "constraints": [{"id": "ae72-9f1d-3ec2-66fe", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 5}]
+          },
+          {
+            "name": "Anti-tank team",
+            "id": "1e26-5fa8-84ea-6986",
+            "hidden": false,
+            "targetId": "337f-4c4b-44e3-0501",
+            "constraints": [{"id": "258f-4b14-0bc1-5307", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 3}]
+          },
+          {
+            "name": "Transport vehicle",
+            "id": "d11f-123c-6dc3-6066",
+            "hidden": false,
+            "targetId": "727b-b399-e4a6-f1e1",
+            "constraints": [{"id": "34c7-7319-ee78-f1a7", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 0}],
+            "modifiers": [
+              {
+                "field": "34c7-7319-ee78-f1a7",
+                "type": "increment",
+                "value": 1,
+                "conditions": [{"childId": "832b-b467-f671-7cf0", "childName": "nonvehicle unit", "field": "selections", "scope": "parent", "shared": true, "type": "instanceOf", "value": 1}]
+              }
+            ]
+          }
+        ]
+      },
       {"name": "artillery platoon", "id": "7255-b135-fe8a-65e0", "hidden": false},
       {"name": "armored platoon", "id": "2569-cb3b-cfeb-48af", "hidden": false},
       {"name": "armored walker platoon", "id": "9694-2631-336f-301a", "hidden": false}
     ],
     "profileTypes": [
       {
-        "name": "unit",
+        "name": "infantry unit",
         "id": "8230-ff01-d021-4ee9",
         "hidden": false,
         "kind": "model",
@@ -122,6 +241,19 @@
         "hidden": false,
         "kind": "model",
         "characteristicTypes": [{"name": "Guts", "id": "586d-9d30-8830-1c71"}, {"name": "Rift Mastery", "id": "f4dc-544b-85d6-7ac1"}, {"name": "Luck", "id": "f48c-63c7-341b-e425"}]
+      },
+      {
+        "name": "vehicle unit",
+        "id": "6d46-1cc8-b1b9-621c",
+        "hidden": false,
+        "kind": "model",
+        "characteristicTypes": [
+          {"name": "vehicle type", "id": "dc3e-cef8-bc05-d739"},
+          {"name": "movement rate", "id": "e6c9-e5cf-2716-2ec7"},
+          {"name": "quality", "id": "ae4a-e376-0373-b61f"},
+          {"name": "damage value", "id": "5a66-2cf9-eca0-5992"},
+          {"name": "morale value", "id": "5b73-3cda-a2ed-841d"}
+        ]
       }
     ],
     "sharedProfiles": [
