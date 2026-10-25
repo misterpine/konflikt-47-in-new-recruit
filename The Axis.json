@@ -17,8 +17,9 @@
         "type": "upgrade",
         "categoryLinks": [
           {"name": "specialist infantry", "id": "505f-4a47-b867-9b32", "hidden": false, "primary": true, "targetId": "afb0-6ed6-ee90-d5fa"},
-          {"name": "Specialist or Advanced Infantry", "id": "e092-120e-1314-0305", "hidden": false, "primary": false, "targetId": "18b5-bdcf-20f0-e1a8"},
-          {"name": "Infantry", "id": "0059-f2e4-4fa9-9573", "hidden": false, "primary": false, "targetId": "d013-452d-3733-7f93"}
+          {"name": "Infantry", "id": "0059-f2e4-4fa9-9573", "hidden": false, "primary": false, "targetId": "d013-452d-3733-7f93"},
+          {"name": "Specialist or Advanced Infantry", "id": "8c34-6996-bf79-da96", "hidden": false, "primary": false, "targetId": "18b5-bdcf-20f0-e1a8"},
+          {"name": "nonvehicle unit", "id": "db59-f6fd-b057-59b6", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
         ],
         "selectionEntryGroups": [
           {
@@ -56,7 +57,10 @@
         "hidden": false,
         "import": true,
         "type": "unit",
-        "categoryLinks": [{"name": "platoon commander", "id": "3865-dcbd-2b18-7e58", "hidden": false, "primary": true, "targetId": "35bf-bece-817b-6874"}],
+        "categoryLinks": [
+          {"name": "platoon commander", "id": "3865-dcbd-2b18-7e58", "hidden": false, "primary": true, "targetId": "35bf-bece-817b-6874"},
+          {"name": "nonvehicle unit", "id": "db81-d873-415c-3a3c", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ],
         "selectionEntryGroups": [
           {
             "name": "Unit Configuration",
@@ -278,8 +282,7 @@
                     ]
                   }
                 ]
-              },
-              {"name": "Squad Upgrades", "id": "68c5-67fd-635e-574a", "hidden": false, "import": true, "sortIndex": 3, "type": "upgrade"}
+              }
             ]
           }
         ]
@@ -293,7 +296,8 @@
         "categoryLinks": [
           {"name": "Infantry", "id": "b46d-200f-1f06-39ed", "hidden": false, "primary": false, "targetId": "d013-452d-3733-7f93"},
           {"name": "basic infantry", "id": "bb3c-d4c1-f5c9-06a6", "hidden": false, "primary": true, "targetId": "a5af-4276-4e0f-cd76"},
-          {"name": "Basic or Advanced infantry", "id": "b44e-ced3-2529-8dfb", "hidden": false, "primary": false, "targetId": "d6d7-014d-1a7d-49c5"}
+          {"name": "Basic or Advanced infantry", "id": "b44e-ced3-2529-8dfb", "hidden": false, "primary": false, "targetId": "d6d7-014d-1a7d-49c5"},
+          {"name": "nonvehicle unit", "id": "c424-41fc-f7c9-2d07", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
         ],
         "selectionEntryGroups": [
           {
@@ -435,7 +439,7 @@
         "name": "Volksgrenadier",
         "id": "d665-7272-49e6-0d0d",
         "hidden": false,
-        "typeId": "8230-ff01-d021-4ee9",
+        "typeId": "i_stats",
         "typeName": "infantry unit",
         "characteristics": [
           {"name": "base size", "$text": "25mm", "typeId": "6b5c-b67a-16a5-05c8"},
@@ -449,7 +453,7 @@
         "name": "Officer",
         "id": "85bc-d1f2-8c2f-6f71",
         "hidden": false,
-        "typeId": "8230-ff01-d021-4ee9",
+        "typeId": "i_stats",
         "typeName": "infantry unit",
         "characteristics": [
           {"name": "base size", "$text": "25mm", "typeId": "6b5c-b67a-16a5-05c8"},
@@ -463,7 +467,7 @@
         "name": "SL luger",
         "id": "28a3-a111-d167-426a",
         "hidden": false,
-        "typeId": "892e-6b89-8c3c-5543",
+        "typeId": "w_stats",
         "typeName": "weapon",
         "characteristics": [
           {"name": "range", "$text": "6\"", "typeId": "0fa9-a3c9-d7da-2e6e"},
@@ -476,7 +480,7 @@
         "name": "SL schmeisser",
         "id": "fb7e-47c2-8c0e-476c",
         "hidden": false,
-        "typeId": "892e-6b89-8c3c-5543",
+        "typeId": "w_stats",
         "typeName": "weapon",
         "characteristics": [
           {"name": "range", "$text": "12\"", "typeId": "0fa9-a3c9-d7da-2e6e"},
@@ -489,7 +493,7 @@
         "name": "Schreckwulfen",
         "id": "d309-c2e4-aa0a-afa2",
         "hidden": false,
-        "typeId": "8230-ff01-d021-4ee9",
+        "typeId": "i_stats",
         "typeName": "infantry unit",
         "characteristics": [
           {"name": "base size", "$text": "40mm", "typeId": "6b5c-b67a-16a5-05c8"},
@@ -503,7 +507,7 @@
         "name": "Teeth and Claws",
         "id": "7e38-dfbf-da04-07f8",
         "hidden": false,
-        "typeId": "892e-6b89-8c3c-5543",
+        "typeId": "w_stats",
         "typeName": "weapon",
         "characteristics": [
           {"name": "range", "$text": "-", "typeId": "0fa9-a3c9-d7da-2e6e"},
