@@ -32,10 +32,137 @@
     "costTypes": [{"name": "points", "id": "2eda-e484-fddf-506a", "defaultCostLimit": -1}],
     "forceEntries": [
       {
-        "name": "Army list (assault platoon based)",
+        "name": "auxiliary platoons",
         "id": "7979-9fd0-4425-d3d4",
-        "hidden": false,
+        "hidden": true,
+        "constraints": [{"id": "54f4-b9c6-dd7b-c46e", "field": "forces", "scope": "parent", "shared": true, "type": "max", "value": 0}],
         "forceEntries": [
+          {
+            "name": "Heavy Weapons Platoon",
+            "id": "fd68-c31f-45dd-db52",
+            "hidden": false,
+            "categoryLinks": [
+              {
+                "name": "platoon commander",
+                "id": "b70a-8f62-bad7-c179",
+                "hidden": false,
+                "targetId": "35bf-bece-817b-6874",
+                "constraints": [
+                  {"id": "7923-967c-992a-e9b8-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "7923-967c-992a-e9b8-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ]
+              },
+              {
+                "name": "Machine gun or Mortar team",
+                "id": "bcd4-33af-96c6-bc4d",
+                "hidden": true,
+                "targetId": "b9e0-9524-54ef-1d0d",
+                "tracked": true,
+                "constraints": [
+                  {"id": "216b-3d16-f6da-bbd5", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 2},
+                  {"id": "9c87-7b5e-f4af-3e5c", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 8}
+                ]
+              },
+              {
+                "name": "Machine gun team",
+                "id": "283b-701f-3c86-7a13",
+                "hidden": false,
+                "targetId": "9db3-9b46-4317-255a",
+                "constraints": [{"id": "f0c0-3c5a-9359-470d", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 5}]
+              },
+              {
+                "name": "Mortar team",
+                "id": "870e-8a27-43e3-c785",
+                "hidden": false,
+                "targetId": "c962-a159-684b-8434",
+                "constraints": [{"id": "ae72-9f1d-3ec2-66fe", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 5}]
+              },
+              {
+                "name": "Anti-tank team",
+                "id": "1e26-5fa8-84ea-6986",
+                "hidden": false,
+                "targetId": "337f-4c4b-44e3-0501",
+                "constraints": [{"id": "258f-4b14-0bc1-5307", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 3}]
+              },
+              {
+                "name": "Transport vehicle",
+                "id": "d11f-123c-6dc3-6066",
+                "hidden": false,
+                "targetId": "727b-b399-e4a6-f1e1",
+                "constraints": [{"id": "34c7-7319-ee78-f1a7", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 0}],
+                "modifiers": [
+                  {
+                    "field": "34c7-7319-ee78-f1a7",
+                    "type": "increment",
+                    "value": 1,
+                    "conditions": [{"childId": "832b-b467-f671-7cf0", "childName": "nonvehicle unit", "field": "selections", "scope": "parent", "shared": true, "type": "instanceOf", "value": 1}]
+                  }
+                ]
+              }
+            ],
+            "rules": [
+              {
+                "name": "platoon composition (heavy weapons)",
+                "id": "8789-d9a7-26ec-a545",
+                "description": "composition:\nplatoon commander: 1\nmachine gun or mortar team: 2\nmachine gun: 0-3\nmortar team: 0-3\nanti-tank team: 0-3\ntransport vehicle: 0-12 (up to 1 per nonvehicle unit)",
+                "hidden": false
+              }
+            ]
+          },
+          {"name": "artillery platoon", "id": "fe04-6682-df61-471f", "hidden": false},
+          {"name": "armored platoon", "id": "6c02-f233-60cd-ef7f", "hidden": false},
+          {"name": "armored walker platoon", "id": "89b2-efd1-3594-e6bd", "hidden": false}
+        ],
+        "modifiers": [
+          {
+            "field": "54f4-b9c6-dd7b-c46e",
+            "type": "increment",
+            "value": 1,
+            "repeats": [
+              {
+                "childId": "413b-e7cd-dffe-1626",
+                "childName": "core platoons",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": true,
+                "repeats": 1,
+                "roundUp": false,
+                "scope": "roster",
+                "shared": true,
+                "value": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "unstructured force",
+        "id": "42d5-0e58-99b7-5fbc",
+        "hidden": false,
+        "categoryLinks": [
+          {"name": "platoon commander", "id": "c82b-af97-442d-1fa8", "hidden": false, "targetId": "35bf-bece-817b-6874"},
+          {"name": "advanced infantry", "id": "c885-12e9-4a6b-912e", "hidden": false, "targetId": "2bf0-01bb-f369-5f59"},
+          {"name": "Anti-tank team", "id": "5b11-820e-d6c8-b808", "hidden": false, "targetId": "337f-4c4b-44e3-0501"},
+          {"name": "Armored walker", "id": "9612-6fce-484d-01c1", "hidden": false, "targetId": "6f56-1279-250c-0b66"},
+          {"name": "basic infantry", "id": "e290-0fb2-819d-09b6", "hidden": false, "targetId": "a5af-4276-4e0f-cd76"},
+          {"name": "Field artillery, Anti-aircraft, or Anti-tank gun", "id": "f656-7f95-5922-1e4e", "hidden": false, "targetId": "61ae-2aaa-4796-9a48"},
+          {"name": "forward observer", "id": "b22d-ebdf-3c8e-d81e", "hidden": false, "targetId": "f53e-dfd3-ad86-30d6"},
+          {"name": "light mortar team", "id": "3afc-b12d-d6f7-be99", "hidden": false, "targetId": "fff3-9026-78e4-303d"},
+          {"name": "Machine gun team", "id": "8abc-4e1c-697c-12eb", "hidden": false, "targetId": "9db3-9b46-4317-255a"},
+          {"name": "Medic", "id": "8056-5063-96e4-e6ac", "hidden": false, "targetId": "b80d-a889-28b3-8f4b"},
+          {"name": "Mortar team", "id": "1177-ac76-379e-a26b", "hidden": false, "targetId": "c962-a159-684b-8434"},
+          {"name": "sniper team", "id": "5070-256c-7f11-6001", "hidden": false, "targetId": "1a91-d7ad-0674-5498"},
+          {"name": "specialist infantry", "id": "fc5d-7592-e362-7e3a", "hidden": false, "targetId": "afb0-6ed6-ee90-d5fa"},
+          {"name": "Transport vehicle", "id": "d86e-1e45-101a-1261", "hidden": false, "targetId": "727b-b399-e4a6-f1e1"},
+          {"name": "Vehicle", "id": "5169-ec74-7d69-1b30", "hidden": false, "targetId": "a2f7-3055-bd92-3d51"}
+        ]
+      },
+      {
+        "name": "core platoons",
+        "id": "413b-e7cd-dffe-1626",
+        "hidden": true,
+        "forceEntries": [
+          {"name": "totenrotte platoon", "id": "7246-f40c-b343-638a", "hidden": false},
           {
             "name": "Assault Platoon",
             "id": "1971-0894-aefe-a5f3",
@@ -139,83 +266,11 @@
                 "constraints": [{"id": "315c-dba8-ea7e-3f27", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}]
               }
             ],
-            "constraints": [{"id": "602d-ee4a-b111-58e2", "field": "forces", "scope": "parent", "shared": true, "type": "min", "value": 1}],
             "rules": [
               {
                 "name": "Platoon composition (assault platoon)",
                 "id": "5592-e60b-0515-7c7a",
                 "description": "composition:\nplatoon commander: 1\nspecialist or advanced infantry: 2\nspecialist, advanced, or basic infantry: 0-2\nmedic: 0-1\nforward observer: 0-1\nsniper team: 0-1\nanti-tank team: 0-1\nlight mortar team: 0-2\ntransport vehicle: 0-11 (up to 1 per non-vehicle unit)",
-                "hidden": false
-              }
-            ]
-          },
-          {
-            "name": "Heavy Weapons Platoon",
-            "id": "fd68-c31f-45dd-db52",
-            "hidden": false,
-            "categoryLinks": [
-              {
-                "name": "platoon commander",
-                "id": "b70a-8f62-bad7-c179",
-                "hidden": false,
-                "targetId": "35bf-bece-817b-6874",
-                "constraints": [
-                  {"id": "7923-967c-992a-e9b8-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
-                  {"id": "7923-967c-992a-e9b8-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
-                ]
-              },
-              {
-                "name": "Machine gun or Mortar team",
-                "id": "bcd4-33af-96c6-bc4d",
-                "hidden": true,
-                "targetId": "b9e0-9524-54ef-1d0d",
-                "constraints": [
-                  {"id": "216b-3d16-f6da-bbd5", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 2},
-                  {"id": "9c87-7b5e-f4af-3e5c", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 8}
-                ]
-              },
-              {
-                "name": "Machine gun team",
-                "id": "283b-701f-3c86-7a13",
-                "hidden": false,
-                "targetId": "9db3-9b46-4317-255a",
-                "constraints": [{"id": "f0c0-3c5a-9359-470d", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 5}]
-              },
-              {
-                "name": "Mortar team",
-                "id": "870e-8a27-43e3-c785",
-                "hidden": false,
-                "targetId": "c962-a159-684b-8434",
-                "constraints": [{"id": "ae72-9f1d-3ec2-66fe", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 5}]
-              },
-              {
-                "name": "Anti-tank team",
-                "id": "1e26-5fa8-84ea-6986",
-                "hidden": false,
-                "targetId": "337f-4c4b-44e3-0501",
-                "constraints": [{"id": "258f-4b14-0bc1-5307", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 3}]
-              },
-              {
-                "name": "Transport vehicle",
-                "id": "d11f-123c-6dc3-6066",
-                "hidden": false,
-                "targetId": "727b-b399-e4a6-f1e1",
-                "constraints": [{"id": "34c7-7319-ee78-f1a7", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 0}],
-                "modifiers": [
-                  {
-                    "field": "34c7-7319-ee78-f1a7",
-                    "type": "increment",
-                    "value": 1,
-                    "conditions": [{"childId": "832b-b467-f671-7cf0", "childName": "nonvehicle unit", "field": "selections", "scope": "parent", "shared": true, "type": "instanceOf", "value": 1}]
-                  }
-                ]
-              }
-            ],
-            "rules": [
-              {
-                "name": "platoon composition (heavy weapons)",
-                "id": "8789-d9a7-26ec-a545",
-                "description": "composition:\nplatoon commander: 1\nmachine gun or mortar team: 2\nmachine gun: 0-3\nmortar team: 0-3\nanti-tank team: 0-3\ntransport vehicle: 0-12 (up to 1 per nonvehicle unit)",
                 "hidden": false
               }
             ]
@@ -230,11 +285,12 @@
         "hidden": false,
         "kind": "model",
         "characteristicTypes": [
-          {"name": "base size", "id": "6b5c-b67a-16a5-05c8"},
-          {"name": "movement rate", "id": "13d7-4ad1-36a5-25ac"},
+          {"name": "advance rate", "id": "13d7-4ad1-36a5-25ac"},
+          {"name": "run rate", "id": "44fc-5e79-0003-21b1"},
           {"name": "quality", "id": "eea9-be51-f1cf-c5a0"},
           {"name": "damage value", "id": "d7d0-6fbe-65f5-e4cd"},
-          {"name": "morale value", "id": "874f-76b8-b3a2-a165"}
+          {"name": "morale value", "id": "874f-76b8-b3a2-a165"},
+          {"name": "base size", "id": "6b5c-b67a-16a5-05c8"}
         ]
       },
       {
@@ -275,10 +331,13 @@
         "kind": "model",
         "characteristicTypes": [
           {"name": "vehicle type", "id": "dc3e-cef8-bc05-d739"},
-          {"name": "movement rate", "id": "e6c9-e5cf-2716-2ec7"},
+          {"name": "advance rate", "id": "e6c9-e5cf-2716-2ec7"},
+          {"name": "run rate", "id": "3e8f-e44f-c11c-7600"},
           {"name": "quality", "id": "ae4a-e376-0373-b61f"},
           {"name": "damage value", "id": "5a66-2cf9-eca0-5992"},
-          {"name": "morale value", "id": "5b73-3cda-a2ed-841d"}
+          {"name": "morale value", "id": "5b73-3cda-a2ed-841d"},
+          {"name": "transport capacity", "id": "0588-c593-be13-2fa3"},
+          {"name": "tow capability", "id": "0a25-ed8a-c0be-4e44"}
         ]
       }
     ],
@@ -287,7 +346,7 @@
         "name": "Rifle",
         "id": "089a-ec9a-fa20-4c9e",
         "hidden": false,
-        "typeId": "892e-6b89-8c3c-5543",
+        "typeId": "w_stats",
         "typeName": "weapon",
         "characteristics": [
           {"name": "range", "$text": "24\"", "typeId": "0fa9-a3c9-d7da-2e6e"},
@@ -300,7 +359,7 @@
         "name": "Assault Rifle",
         "id": "6625-e180-2453-366c",
         "hidden": false,
-        "typeId": "892e-6b89-8c3c-5543",
+        "typeId": "w_stats",
         "typeName": "weapon",
         "characteristics": [
           {"name": "range", "$text": "18\"", "typeId": "0fa9-a3c9-d7da-2e6e"},
@@ -313,7 +372,7 @@
         "name": "Automatic Rifle",
         "id": "4257-9607-dc79-6f54",
         "hidden": false,
-        "typeId": "892e-6b89-8c3c-5543",
+        "typeId": "w_stats",
         "typeName": "weapon",
         "characteristics": [
           {"name": "range", "$text": "30\"", "typeId": "0fa9-a3c9-d7da-2e6e"},
@@ -326,7 +385,7 @@
         "name": "Infantry Flamethrower",
         "id": "eded-3522-65b8-a92c",
         "hidden": false,
-        "typeId": "892e-6b89-8c3c-5543",
+        "typeId": "w_stats",
         "typeName": "weapon",
         "characteristics": [
           {"name": "range", "$text": "6\"", "typeId": "0fa9-a3c9-d7da-2e6e"},
@@ -339,7 +398,7 @@
         "name": "Infantry Light Machine Gun",
         "id": "1506-4fee-1711-17d1",
         "hidden": false,
-        "typeId": "892e-6b89-8c3c-5543",
+        "typeId": "w_stats",
         "typeName": "weapon",
         "characteristics": [
           {"name": "range", "$text": "36\"", "typeId": "0fa9-a3c9-d7da-2e6e"},
@@ -352,7 +411,7 @@
         "name": "Pistol",
         "id": "f868-3dce-09c9-fdc2",
         "hidden": false,
-        "typeId": "892e-6b89-8c3c-5543",
+        "typeId": "w_stats",
         "typeName": "weapon",
         "characteristics": [
           {"name": "range", "$text": "6\"", "typeId": "0fa9-a3c9-d7da-2e6e"},
@@ -365,13 +424,26 @@
         "name": "Submachine Gun",
         "id": "a55f-9a07-85d4-dcfe",
         "hidden": false,
-        "typeId": "892e-6b89-8c3c-5543",
+        "typeId": "w_stats",
         "typeName": "weapon",
         "characteristics": [
           {"name": "range", "$text": "12\"", "typeId": "0fa9-a3c9-d7da-2e6e"},
           {"name": "shots", "$text": "2", "typeId": "4e5d-8016-2340-6789"},
           {"name": "pen", "$text": "-", "typeId": "d212-35ab-fbf6-9588"},
           {"name": "special rules", "$text": "Assault", "typeId": "8d46-fd5f-5386-1410"}
+        ]
+      },
+      {
+        "name": "vehicle Medium machine gun",
+        "id": "45f5-9d2b-370a-8509",
+        "hidden": false,
+        "typeId": "w_stats",
+        "typeName": "weapon",
+        "characteristics": [
+          {"name": "range", "$text": "36\"", "typeId": "0fa9-a3c9-d7da-2e6e"},
+          {"name": "shots", "$text": "3", "typeId": "4e5d-8016-2340-6789"},
+          {"name": "pen", "$text": "-", "typeId": "d212-35ab-fbf6-9588"},
+          {"name": "special rules", "$text": "-", "typeId": "8d46-fd5f-5386-1410"}
         ]
       }
     ],
@@ -402,7 +474,14 @@
         "description": "if a unit with hard to kill is on open ground, it has a 5+ cover save. if a unit with hard to kill would have a cover save, add 2 to cover save rolls with this unit.",
         "hidden": false
       },
-      {"name": "Horror", "id": "9b1d-9704-90f3-6326", "hidden": false}
+      {"name": "Horror", "id": "9b1d-9704-90f3-6326", "hidden": false},
+      {
+        "name": "arc (x)",
+        "id": "91e6-2704-e29b-6f6d",
+        "description": "a weapon with this special rule can only select targets within its range and within the arc(s) identified in this special rule.",
+        "hidden": false,
+        "alias": ["arc (front)", "arc (rear)", "arc (left)", "arc (right)"]
+      }
     ],
     "sharedSelectionEntries": [
       {
@@ -460,6 +539,14 @@
         "import": true,
         "type": "upgrade",
         "infoLinks": [{"name": "Infantry Flamethrower", "id": "d15e-6055-b33b-b9f6", "hidden": false, "targetId": "eded-3522-65b8-a92c", "type": "profile"}]
+      },
+      {
+        "name": "Vehicle medium machine gun",
+        "id": "42cd-f0dc-7614-bb34",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [{"name": "vehicle Medium machine gun", "id": "7b1a-c17e-6da1-d71a", "hidden": false, "targetId": "45f5-9d2b-370a-8509", "type": "profile"}]
       }
     ]
   }

@@ -8,13 +8,28 @@
     "library": false,
     "revision": 1,
     "type": "catalogue",
+    "forceEntries": [
+      {
+        "name": "Army list (assault platoon based)",
+        "id": "3dfb-f030-8bf9-6346",
+        "hidden": false,
+        "forceEntryLinks": [
+          {"name": "Assault Platoon", "id": "3ce0-d638-d278-7be0", "hidden": false, "sortIndex": 1, "targetId": "1971-0894-aefe-a5f3", "type": "forceEntry"},
+          {"name": "Heavy Weapons Platoon", "id": "fd7b-d817-0cf2-a3f9", "hidden": false, "sortIndex": 2, "targetId": "fd68-c31f-45dd-db52", "type": "forceEntry"},
+          {"name": "totenrotte platoon", "id": "e3e1-0c55-7c42-c25f", "hidden": false, "sortIndex": 1, "targetId": "7246-f40c-b343-638a", "type": "forceEntry"},
+          {"name": "artillery platoon", "id": "6bc3-dd64-65e3-8e24", "hidden": false, "sortIndex": 3, "targetId": "fe04-6682-df61-471f", "type": "forceEntry"},
+          {"name": "armored platoon", "id": "6303-5329-80b1-05b3", "hidden": false, "sortIndex": 4, "targetId": "6c02-f233-60cd-ef7f", "type": "forceEntry"},
+          {"name": "armored walker platoon", "id": "63dc-17c4-3378-5853", "hidden": false, "sortIndex": 5, "targetId": "89b2-efd1-3594-e6bd", "type": "forceEntry"}
+        ]
+      }
+    ],
     "selectionEntries": [
       {
         "name": "Schreckwulfen squad",
         "id": "9f40-abf8-1b0c-eee9",
         "hidden": false,
         "import": true,
-        "type": "upgrade",
+        "type": "unit",
         "categoryLinks": [
           {"name": "specialist infantry", "id": "505f-4a47-b867-9b32", "hidden": false, "primary": true, "targetId": "afb0-6ed6-ee90-d5fa"},
           {"name": "Infantry", "id": "0059-f2e4-4fa9-9573", "hidden": false, "primary": false, "targetId": "d013-452d-3733-7f93"},
@@ -40,11 +55,12 @@
                 "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 43}],
                 "infoLinks": [
                   {"name": "Teeth and Claws", "id": "662a-943c-5970-5f4a", "hidden": false, "targetId": "7e38-dfbf-da04-07f8", "type": "profile"},
-                  {"name": "Deadly (x)", "id": "450d-c200-4601-14b0", "hidden": false, "targetId": "3e3f-37c8-755b-9c6c", "type": "rule"},
+                  {"name": "Deadly (3)", "id": "450d-c200-4601-14b0", "hidden": false, "targetId": "3e3f-37c8-755b-9c6c", "type": "rule"},
                   {"name": "Fast (infantry)", "id": "673c-15d6-5013-f384", "hidden": false, "targetId": "40fb-3722-8538-5ab5", "type": "rule"},
                   {"name": "Hard to Kill", "id": "c681-2edb-c7cb-1144", "hidden": false, "targetId": "ca36-6280-3a43-5117", "type": "rule"},
                   {"name": "Fearless", "id": "86b6-8cbc-c6db-7d4b", "hidden": false, "targetId": "58f1-2edf-da89-b289", "type": "rule"},
-                  {"name": "Horror", "id": "6bc0-5bbc-04b3-0342", "hidden": false, "targetId": "9b1d-9704-90f3-6326", "type": "rule"}
+                  {"name": "Horror", "id": "6bc0-5bbc-04b3-0342", "hidden": false, "targetId": "9b1d-9704-90f3-6326", "type": "rule"},
+                  {"name": "Schreckwulfen", "id": "f83e-0225-47e1-8322", "hidden": false, "targetId": "d309-c2e4-aa0a-afa2", "type": "profile"}
                 ]
               }
             ]
@@ -79,6 +95,7 @@
                   {"id": "8a2f-6f84-1ae6-9f4b-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
                 ],
                 "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 30}],
+                "infoLinks": [{"name": "Officer", "id": "9cae-a58c-c359-4fcf", "hidden": false, "targetId": "85bc-d1f2-8c2f-6f71", "type": "profile"}],
                 "selectionEntryGroups": [
                   {
                     "name": "Weapon Options",
@@ -220,6 +237,7 @@
                 "type": "upgrade",
                 "constraints": [{"id": "2ac2-a028-c76f-8ef8", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
                 "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 9}],
+                "infoLinks": [{"name": "Volksgrenadier", "id": "1a5a-94de-8ddd-d949", "hidden": false, "targetId": "d665-7272-49e6-0d0d", "type": "profile"}],
                 "selectionEntryGroups": [
                   {
                     "name": "Weapon Options",
@@ -510,6 +528,104 @@
               },
               {"name": "squad upgrades", "id": "afcd-3a5b-3614-2424", "hidden": false, "import": true, "sortIndex": 3, "type": "upgrade"}
             ]
+          },
+          {
+            "name": "Quality",
+            "id": "e28f-22b9-3d94-59a6",
+            "hidden": false,
+            "constraints": [
+              {"id": "04ac-8c7c-dfaf-f196-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "04ac-8c7c-dfaf-f196-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ],
+            "selectionEntries": [
+              {
+                "name": "inexperienced",
+                "id": "91ef-5901-7a88-1635",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": -3}],
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {"affects": "profiles.infantry unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "8"},
+                      {"affects": "profiles.infantry unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "3+"},
+                      {"affects": "profiles.infantry unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "inexperienced"},
+                      {
+                        "field": "2eda-e484-fddf-506a",
+                        "type": "increment",
+                        "value": -3,
+                        "repeats": [
+                          {
+                            "childId": "d507-bb77-6d5b-540d",
+                            "childName": "Volksgrenadier",
+                            "field": "selections",
+                            "repeats": 1,
+                            "roundUp": false,
+                            "scope": "parent",
+                            "shared": true,
+                            "value": 1
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "regular",
+                "id": "04d0-5a39-f61b-5d1e",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {"affects": "profiles.infantry unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "9"},
+                      {"affects": "profiles.infantry unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "4+"},
+                      {"affects": "profiles.infantry unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "regular"}
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "veteran",
+                "id": "4c44-0cdc-9afc-1d76",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 3}],
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {"affects": "profiles.infantry unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "10"},
+                      {"affects": "profiles.infantry unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "5+"},
+                      {"affects": "profiles.infantry unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "veteran"},
+                      {
+                        "field": "2eda-e484-fddf-506a",
+                        "type": "increment",
+                        "value": 3,
+                        "repeats": [
+                          {
+                            "childId": "d507-bb77-6d5b-540d",
+                            "childName": "Volksgrenadier",
+                            "field": "selections",
+                            "repeats": 1,
+                            "roundUp": false,
+                            "scope": "parent",
+                            "shared": true,
+                            "value": 1
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -522,11 +638,12 @@
         "typeId": "i_stats",
         "typeName": "infantry unit",
         "characteristics": [
-          {"name": "base size", "$text": "25mm", "typeId": "6b5c-b67a-16a5-05c8"},
-          {"name": "movement rate", "$text": "6\"(advance)\n12\"(run)", "typeId": "13d7-4ad1-36a5-25ac"},
+          {"name": "advance rate", "$text": "6\"", "typeId": "13d7-4ad1-36a5-25ac"},
+          {"name": "run rate", "$text": "12\"", "typeId": "44fc-5e79-0003-21b1"},
           {"name": "quality", "$text": "-", "typeId": "eea9-be51-f1cf-c5a0"},
           {"name": "damage value", "$text": "-", "typeId": "d7d0-6fbe-65f5-e4cd"},
-          {"name": "morale value", "$text": "-", "typeId": "874f-76b8-b3a2-a165"}
+          {"name": "morale value", "$text": "-", "typeId": "874f-76b8-b3a2-a165"},
+          {"name": "base size", "$text": "25mm", "typeId": "6b5c-b67a-16a5-05c8"}
         ]
       },
       {
@@ -536,11 +653,12 @@
         "typeId": "i_stats",
         "typeName": "infantry unit",
         "characteristics": [
-          {"name": "base size", "$text": "25mm", "typeId": "6b5c-b67a-16a5-05c8"},
-          {"name": "movement rate", "$text": "6\"(advance)\n12\"(run)", "typeId": "13d7-4ad1-36a5-25ac"},
+          {"name": "advance rate", "$text": "6\"", "typeId": "13d7-4ad1-36a5-25ac"},
+          {"name": "run rate", "$text": "12\"", "typeId": "44fc-5e79-0003-21b1"},
           {"name": "quality", "$text": "-", "typeId": "eea9-be51-f1cf-c5a0"},
           {"name": "damage value", "$text": "-", "typeId": "d7d0-6fbe-65f5-e4cd"},
-          {"name": "morale value", "$text": "-", "typeId": "874f-76b8-b3a2-a165"}
+          {"name": "morale value", "$text": "-", "typeId": "874f-76b8-b3a2-a165"},
+          {"name": "base size", "$text": "25mm", "typeId": "6b5c-b67a-16a5-05c8"}
         ]
       },
       {
@@ -576,11 +694,12 @@
         "typeId": "i_stats",
         "typeName": "infantry unit",
         "characteristics": [
-          {"name": "base size", "$text": "40mm", "typeId": "6b5c-b67a-16a5-05c8"},
-          {"name": "movement rate", "$text": "8\"(advance)\n16\"(run)", "typeId": "13d7-4ad1-36a5-25ac"},
+          {"name": "advance rate", "$text": "8\"", "typeId": "13d7-4ad1-36a5-25ac"},
+          {"name": "run rate", "$text": "16\"", "typeId": "44fc-5e79-0003-21b1"},
           {"name": "quality", "$text": "veteran", "typeId": "eea9-be51-f1cf-c5a0"},
           {"name": "damage value", "$text": "7+", "typeId": "d7d0-6fbe-65f5-e4cd"},
-          {"name": "morale value", "$text": "10 (fearless)", "typeId": "874f-76b8-b3a2-a165"}
+          {"name": "morale value", "$text": "10 (fearless)", "typeId": "874f-76b8-b3a2-a165"},
+          {"name": "base size", "$text": "40mm", "typeId": "6b5c-b67a-16a5-05c8"}
         ]
       },
       {
@@ -594,6 +713,27 @@
           {"name": "shots", "$text": "-", "typeId": "4e5d-8016-2340-6789"},
           {"name": "pen", "$text": "-", "typeId": "d212-35ab-fbf6-9588"},
           {"name": "special rules", "$text": "+2 pen in melee", "typeId": "8d46-fd5f-5386-1410"}
+        ]
+      },
+      {
+        "name": "SD.KFZ.251 half track \"hanomag\"",
+        "id": "f742-f37c-1bf8-7f4c",
+        "hidden": false,
+        "typeId": "v_stats",
+        "typeName": "vehicle unit",
+        "characteristics": [
+          {"name": "vehicle type", "$text": "half track", "typeId": "dc3e-cef8-bc05-d739"},
+          {"name": "advance rate", "$text": "9\"", "typeId": "e6c9-e5cf-2716-2ec7"},
+          {"name": "run rate", "$text": "9-18\"", "typeId": "3e8f-e44f-c11c-7600"},
+          {"name": "quality", "$text": "-", "typeId": "ae4a-e376-0373-b61f"},
+          {"name": "damage value", "$text": "7+", "typeId": "5a66-2cf9-eca0-5992"},
+          {"name": "morale value", "$text": "-", "typeId": "5b73-3cda-a2ed-841d"},
+          {"name": "transport capacity", "$text": "12", "typeId": "0588-c593-be13-2fa3"},
+          {
+            "name": "tow capability",
+            "$text": "light-medium howitzers\nlight-heavy anti tank guns\nlight or heavy anti aircraft guns\nschwerefeld projektor",
+            "typeId": "0a25-ed8a-c0be-4e44"
+          }
         ]
       }
     ]
