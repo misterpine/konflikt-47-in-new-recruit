@@ -49,235 +49,6 @@
             ]
           }
         ]
-      }
-    ],
-    "sharedProfiles": [
-      {
-        "name": "Volksgrenadier",
-        "id": "d665-7272-49e6-0d0d",
-        "hidden": false,
-        "typeId": "8230-ff01-d021-4ee9",
-        "typeName": "infantry unit",
-        "characteristics": [
-          {"name": "base size", "$text": "25mm", "typeId": "6b5c-b67a-16a5-05c8"},
-          {"name": "movement rate", "$text": "6\"(advance)\n12\"(run)", "typeId": "13d7-4ad1-36a5-25ac"},
-          {"name": "quality", "$text": "-", "typeId": "eea9-be51-f1cf-c5a0"},
-          {"name": "damage value", "$text": "-", "typeId": "d7d0-6fbe-65f5-e4cd"},
-          {"name": "morale value", "$text": "-", "typeId": "874f-76b8-b3a2-a165"}
-        ]
-      },
-      {
-        "name": "Officer",
-        "id": "85bc-d1f2-8c2f-6f71",
-        "hidden": false,
-        "typeId": "8230-ff01-d021-4ee9",
-        "typeName": "infantry unit",
-        "characteristics": [
-          {"name": "base size", "$text": "25mm", "typeId": "6b5c-b67a-16a5-05c8"},
-          {"name": "movement rate", "$text": "6\"(advance)\n12\"(run)", "typeId": "13d7-4ad1-36a5-25ac"},
-          {"name": "quality", "$text": "-", "typeId": "eea9-be51-f1cf-c5a0"},
-          {"name": "damage value", "$text": "-", "typeId": "d7d0-6fbe-65f5-e4cd"},
-          {"name": "morale value", "$text": "-", "typeId": "874f-76b8-b3a2-a165"}
-        ]
-      },
-      {
-        "name": "SL luger",
-        "id": "28a3-a111-d167-426a",
-        "hidden": false,
-        "typeId": "892e-6b89-8c3c-5543",
-        "typeName": "weapon",
-        "characteristics": [
-          {"name": "range", "$text": "6\"", "typeId": "0fa9-a3c9-d7da-2e6e"},
-          {"name": "shots", "$text": "1", "typeId": "4e5d-8016-2340-6789"},
-          {"name": "pen", "$text": "+1", "typeId": "d212-35ab-fbf6-9588"},
-          {"name": "special rules", "$text": "Assault", "typeId": "8d46-fd5f-5386-1410"}
-        ]
-      },
-      {
-        "name": "SL schmeisser",
-        "id": "fb7e-47c2-8c0e-476c",
-        "hidden": false,
-        "typeId": "892e-6b89-8c3c-5543",
-        "typeName": "weapon",
-        "characteristics": [
-          {"name": "range", "$text": "12\"", "typeId": "0fa9-a3c9-d7da-2e6e"},
-          {"name": "shots", "$text": "2", "typeId": "4e5d-8016-2340-6789"},
-          {"name": "pen", "$text": "+1", "typeId": "d212-35ab-fbf6-9588"},
-          {"name": "special rules", "$text": "Assault", "typeId": "8d46-fd5f-5386-1410"}
-        ]
-      },
-      {
-        "name": "Schreckwulfen",
-        "id": "d309-c2e4-aa0a-afa2",
-        "hidden": false,
-        "typeId": "8230-ff01-d021-4ee9",
-        "typeName": "infantry unit",
-        "characteristics": [
-          {"name": "base size", "$text": "40mm", "typeId": "6b5c-b67a-16a5-05c8"},
-          {"name": "movement rate", "$text": "8\"(advance)\n16\"(run)", "typeId": "13d7-4ad1-36a5-25ac"},
-          {"name": "quality", "$text": "veteran", "typeId": "eea9-be51-f1cf-c5a0"},
-          {"name": "damage value", "$text": "7+", "typeId": "d7d0-6fbe-65f5-e4cd"},
-          {"name": "morale value", "$text": "10 (fearless)", "typeId": "874f-76b8-b3a2-a165"}
-        ]
-      },
-      {
-        "name": "Teeth and Claws",
-        "id": "7e38-dfbf-da04-07f8",
-        "hidden": false,
-        "typeId": "892e-6b89-8c3c-5543",
-        "typeName": "weapon",
-        "characteristics": [
-          {"name": "range", "$text": "-", "typeId": "0fa9-a3c9-d7da-2e6e"},
-          {"name": "shots", "$text": "-", "typeId": "4e5d-8016-2340-6789"},
-          {"name": "pen", "$text": "-", "typeId": "d212-35ab-fbf6-9588"},
-          {"name": "special rules", "$text": "+2 pen in melee", "typeId": "8d46-fd5f-5386-1410"}
-        ]
-      }
-    ],
-    "sharedSelectionEntries": [
-      {
-        "name": "Volksgrenadier Squad",
-        "id": "8582-2089-bb6c-51b0",
-        "hidden": false,
-        "import": true,
-        "type": "unit",
-        "categoryLinks": [
-          {"name": "basic infantry", "id": "5878-a5f5-4eaf-d3bd", "hidden": false, "primary": false, "targetId": "a5af-4276-4e0f-cd76"},
-          {"name": "Infantry", "id": "b46d-200f-1f06-39ed", "hidden": false, "primary": false, "targetId": "d013-452d-3733-7f93"}
-        ],
-        "selectionEntryGroups": [
-          {
-            "name": "Unit Configuration",
-            "id": "d5f6-f46f-ba97-15de",
-            "hidden": false,
-            "selectionEntries": [
-              {
-                "name": "NCO",
-                "id": "566a-3b52-b8a0-bd37",
-                "hidden": false,
-                "import": true,
-                "sortIndex": 1,
-                "type": "upgrade",
-                "constraints": [
-                  {"id": "a3ab-436a-d2d6-ab25-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
-                  {"id": "a3ab-436a-d2d6-ab25-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
-                ],
-                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 10}],
-                "infoLinks": [{"name": "Volksgrenadier", "id": "9818-a893-ce5c-7962", "hidden": false, "targetId": "d665-7272-49e6-0d0d", "type": "profile"}],
-                "selectionEntryGroups": [
-                  {
-                    "name": "Weapon Options",
-                    "id": "d7ee-ccc1-466d-a042",
-                    "hidden": false,
-                    "constraints": [
-                      {"id": "7316-2262-f064-cedf-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
-                      {"id": "7316-2262-f064-cedf-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
-                    ],
-                    "selectionEntries": [
-                      {
-                        "name": "Rifle",
-                        "id": "23e8-1d1f-ff9f-c336",
-                        "hidden": false,
-                        "import": true,
-                        "sortIndex": 1,
-                        "type": "upgrade",
-                        "infoLinks": [{"name": "Rifle", "id": "ed28-275c-1bac-5ef1", "hidden": false, "targetId": "089a-ec9a-fa20-4c9e", "type": "profile"}]
-                      },
-                      {
-                        "name": "Submachine Gun",
-                        "id": "dea4-4e34-938e-4081",
-                        "hidden": false,
-                        "import": true,
-                        "sortIndex": 2,
-                        "type": "upgrade",
-                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 4}],
-                        "infoLinks": [{"name": "Submachine Gun", "id": "8598-72cf-3265-e2f9", "hidden": false, "targetId": "a55f-9a07-85d4-dcfe", "type": "profile"}]
-                      },
-                      {
-                        "name": "Assault Rifle",
-                        "id": "f225-8ba8-d152-1fc5",
-                        "hidden": false,
-                        "import": true,
-                        "sortIndex": 3,
-                        "type": "upgrade",
-                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 6}],
-                        "infoLinks": [{"name": "Assault Rifle", "id": "e34c-8bbf-1c3e-656a", "hidden": false, "targetId": "6625-e180-2453-366c", "type": "profile"}]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "name": "Volksgrenadier",
-                "id": "d507-bb77-6d5b-540d",
-                "hidden": false,
-                "import": true,
-                "sortIndex": 2,
-                "type": "upgrade",
-                "constraints": [
-                  {"id": "f0d7-1fa2-fe9b-cb6c", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 4},
-                  {"id": "22c2-c949-da4f-e1d8", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 11}
-                ],
-                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 10}],
-                "infoLinks": [{"name": "Volksgrenadier", "id": "10ab-2917-db11-b0be", "hidden": false, "targetId": "d665-7272-49e6-0d0d", "type": "profile"}],
-                "selectionEntryGroups": [
-                  {
-                    "name": "Weapon Options",
-                    "id": "3413-5873-9468-8b4f",
-                    "hidden": false,
-                    "constraints": [
-                      {"id": "92b7-eab6-ac95-1a99-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
-                      {"id": "92b7-eab6-ac95-1a99-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
-                    ],
-                    "selectionEntries": [
-                      {
-                        "name": "Rifle",
-                        "id": "27c6-a3a8-27ad-1c87",
-                        "hidden": false,
-                        "import": true,
-                        "sortIndex": 1,
-                        "type": "upgrade",
-                        "infoLinks": [{"name": "Rifle", "id": "c9e1-4045-ef69-37d1", "hidden": false, "targetId": "089a-ec9a-fa20-4c9e", "type": "profile"}]
-                      },
-                      {
-                        "name": "Submachine Gun",
-                        "id": "f09f-616e-7366-1d32",
-                        "hidden": false,
-                        "import": true,
-                        "sortIndex": 2,
-                        "type": "upgrade",
-                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 4}],
-                        "infoLinks": [{"name": "Submachine Gun", "id": "64c0-075b-fda4-950e", "hidden": false, "targetId": "a55f-9a07-85d4-dcfe", "type": "profile"}]
-                      },
-                      {
-                        "name": "Assault Rifle",
-                        "id": "9bc5-44e5-e393-fd86",
-                        "hidden": false,
-                        "import": true,
-                        "sortIndex": 3,
-                        "type": "upgrade",
-                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 6}],
-                        "infoLinks": [{"name": "Assault Rifle", "id": "a437-6a1c-1b08-963d", "hidden": false, "targetId": "6625-e180-2453-366c", "type": "profile"}]
-                      },
-                      {
-                        "name": "Light Machine Gun",
-                        "id": "6177-9a3a-b366-c14f",
-                        "hidden": false,
-                        "import": true,
-                        "sortIndex": 4,
-                        "type": "upgrade",
-                        "constraints": [{"id": "126e-a190-9f14-2045", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
-                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 15}],
-                        "infoLinks": [{"name": "Infantry Light Machine Gun", "id": "40fa-0eff-674b-4ab2", "hidden": false, "targetId": "1506-4fee-1711-17d1", "type": "profile"}]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {"name": "squad upgrades", "id": "afcd-3a5b-3614-2424", "hidden": false, "import": true, "sortIndex": 3, "type": "upgrade"}
-            ]
-          }
-        ]
       },
       {
         "name": "Platoon Commander - Officer",
@@ -285,7 +56,7 @@
         "hidden": false,
         "import": true,
         "type": "unit",
-        "categoryLinks": [{"name": "platoon commander", "id": "3ccd-1bf6-c776-bd60", "hidden": false, "primary": false, "targetId": "35bf-bece-817b-6874"}],
+        "categoryLinks": [{"name": "platoon commander", "id": "3865-dcbd-2b18-7e58", "hidden": false, "primary": true, "targetId": "35bf-bece-817b-6874"}],
         "selectionEntryGroups": [
           {
             "name": "Unit Configuration",
@@ -511,6 +282,234 @@
               {"name": "Squad Upgrades", "id": "68c5-67fd-635e-574a", "hidden": false, "import": true, "sortIndex": 3, "type": "upgrade"}
             ]
           }
+        ]
+      },
+      {
+        "name": "Volksgrenadier Squad",
+        "id": "8582-2089-bb6c-51b0",
+        "hidden": false,
+        "import": true,
+        "type": "unit",
+        "categoryLinks": [
+          {"name": "Infantry", "id": "b46d-200f-1f06-39ed", "hidden": false, "primary": false, "targetId": "d013-452d-3733-7f93"},
+          {"name": "basic infantry", "id": "bb3c-d4c1-f5c9-06a6", "hidden": false, "primary": true, "targetId": "a5af-4276-4e0f-cd76"},
+          {"name": "Basic or Advanced infantry", "id": "b44e-ced3-2529-8dfb", "hidden": false, "primary": false, "targetId": "d6d7-014d-1a7d-49c5"}
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Unit Configuration",
+            "id": "d5f6-f46f-ba97-15de",
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "NCO",
+                "id": "566a-3b52-b8a0-bd37",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 1,
+                "type": "upgrade",
+                "constraints": [
+                  {"id": "a3ab-436a-d2d6-ab25-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "a3ab-436a-d2d6-ab25-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ],
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 10}],
+                "infoLinks": [{"name": "Volksgrenadier", "id": "9818-a893-ce5c-7962", "hidden": false, "targetId": "d665-7272-49e6-0d0d", "type": "profile"}],
+                "selectionEntryGroups": [
+                  {
+                    "name": "Weapon Options",
+                    "id": "d7ee-ccc1-466d-a042",
+                    "hidden": false,
+                    "constraints": [
+                      {"id": "7316-2262-f064-cedf-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "7316-2262-f064-cedf-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ],
+                    "selectionEntries": [
+                      {
+                        "name": "Rifle",
+                        "id": "23e8-1d1f-ff9f-c336",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 1,
+                        "type": "upgrade",
+                        "infoLinks": [{"name": "Rifle", "id": "ed28-275c-1bac-5ef1", "hidden": false, "targetId": "089a-ec9a-fa20-4c9e", "type": "profile"}]
+                      },
+                      {
+                        "name": "Submachine Gun",
+                        "id": "dea4-4e34-938e-4081",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 2,
+                        "type": "upgrade",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 4}],
+                        "infoLinks": [{"name": "Submachine Gun", "id": "8598-72cf-3265-e2f9", "hidden": false, "targetId": "a55f-9a07-85d4-dcfe", "type": "profile"}]
+                      },
+                      {
+                        "name": "Assault Rifle",
+                        "id": "f225-8ba8-d152-1fc5",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 3,
+                        "type": "upgrade",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 6}],
+                        "infoLinks": [{"name": "Assault Rifle", "id": "e34c-8bbf-1c3e-656a", "hidden": false, "targetId": "6625-e180-2453-366c", "type": "profile"}]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Volksgrenadier",
+                "id": "d507-bb77-6d5b-540d",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 2,
+                "type": "upgrade",
+                "constraints": [
+                  {"id": "f0d7-1fa2-fe9b-cb6c", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 4},
+                  {"id": "22c2-c949-da4f-e1d8", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 11}
+                ],
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 10}],
+                "infoLinks": [{"name": "Volksgrenadier", "id": "10ab-2917-db11-b0be", "hidden": false, "targetId": "d665-7272-49e6-0d0d", "type": "profile"}],
+                "selectionEntryGroups": [
+                  {
+                    "name": "Weapon Options",
+                    "id": "3413-5873-9468-8b4f",
+                    "hidden": false,
+                    "constraints": [
+                      {"id": "92b7-eab6-ac95-1a99-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "92b7-eab6-ac95-1a99-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ],
+                    "selectionEntries": [
+                      {
+                        "name": "Rifle",
+                        "id": "27c6-a3a8-27ad-1c87",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 1,
+                        "type": "upgrade",
+                        "infoLinks": [{"name": "Rifle", "id": "c9e1-4045-ef69-37d1", "hidden": false, "targetId": "089a-ec9a-fa20-4c9e", "type": "profile"}]
+                      },
+                      {
+                        "name": "Submachine Gun",
+                        "id": "f09f-616e-7366-1d32",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 2,
+                        "type": "upgrade",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 4}],
+                        "infoLinks": [{"name": "Submachine Gun", "id": "64c0-075b-fda4-950e", "hidden": false, "targetId": "a55f-9a07-85d4-dcfe", "type": "profile"}]
+                      },
+                      {
+                        "name": "Assault Rifle",
+                        "id": "9bc5-44e5-e393-fd86",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 3,
+                        "type": "upgrade",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 6}],
+                        "infoLinks": [{"name": "Assault Rifle", "id": "a437-6a1c-1b08-963d", "hidden": false, "targetId": "6625-e180-2453-366c", "type": "profile"}]
+                      },
+                      {
+                        "name": "Light Machine Gun",
+                        "id": "6177-9a3a-b366-c14f",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 4,
+                        "type": "upgrade",
+                        "constraints": [{"id": "126e-a190-9f14-2045", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 15}],
+                        "infoLinks": [{"name": "Infantry Light Machine Gun", "id": "40fa-0eff-674b-4ab2", "hidden": false, "targetId": "1506-4fee-1711-17d1", "type": "profile"}]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {"name": "squad upgrades", "id": "afcd-3a5b-3614-2424", "hidden": false, "import": true, "sortIndex": 3, "type": "upgrade"}
+            ]
+          }
+        ]
+      }
+    ],
+    "sharedProfiles": [
+      {
+        "name": "Volksgrenadier",
+        "id": "d665-7272-49e6-0d0d",
+        "hidden": false,
+        "typeId": "8230-ff01-d021-4ee9",
+        "typeName": "infantry unit",
+        "characteristics": [
+          {"name": "base size", "$text": "25mm", "typeId": "6b5c-b67a-16a5-05c8"},
+          {"name": "movement rate", "$text": "6\"(advance)\n12\"(run)", "typeId": "13d7-4ad1-36a5-25ac"},
+          {"name": "quality", "$text": "-", "typeId": "eea9-be51-f1cf-c5a0"},
+          {"name": "damage value", "$text": "-", "typeId": "d7d0-6fbe-65f5-e4cd"},
+          {"name": "morale value", "$text": "-", "typeId": "874f-76b8-b3a2-a165"}
+        ]
+      },
+      {
+        "name": "Officer",
+        "id": "85bc-d1f2-8c2f-6f71",
+        "hidden": false,
+        "typeId": "8230-ff01-d021-4ee9",
+        "typeName": "infantry unit",
+        "characteristics": [
+          {"name": "base size", "$text": "25mm", "typeId": "6b5c-b67a-16a5-05c8"},
+          {"name": "movement rate", "$text": "6\"(advance)\n12\"(run)", "typeId": "13d7-4ad1-36a5-25ac"},
+          {"name": "quality", "$text": "-", "typeId": "eea9-be51-f1cf-c5a0"},
+          {"name": "damage value", "$text": "-", "typeId": "d7d0-6fbe-65f5-e4cd"},
+          {"name": "morale value", "$text": "-", "typeId": "874f-76b8-b3a2-a165"}
+        ]
+      },
+      {
+        "name": "SL luger",
+        "id": "28a3-a111-d167-426a",
+        "hidden": false,
+        "typeId": "892e-6b89-8c3c-5543",
+        "typeName": "weapon",
+        "characteristics": [
+          {"name": "range", "$text": "6\"", "typeId": "0fa9-a3c9-d7da-2e6e"},
+          {"name": "shots", "$text": "1", "typeId": "4e5d-8016-2340-6789"},
+          {"name": "pen", "$text": "+1", "typeId": "d212-35ab-fbf6-9588"},
+          {"name": "special rules", "$text": "Assault", "typeId": "8d46-fd5f-5386-1410"}
+        ]
+      },
+      {
+        "name": "SL schmeisser",
+        "id": "fb7e-47c2-8c0e-476c",
+        "hidden": false,
+        "typeId": "892e-6b89-8c3c-5543",
+        "typeName": "weapon",
+        "characteristics": [
+          {"name": "range", "$text": "12\"", "typeId": "0fa9-a3c9-d7da-2e6e"},
+          {"name": "shots", "$text": "2", "typeId": "4e5d-8016-2340-6789"},
+          {"name": "pen", "$text": "+1", "typeId": "d212-35ab-fbf6-9588"},
+          {"name": "special rules", "$text": "Assault", "typeId": "8d46-fd5f-5386-1410"}
+        ]
+      },
+      {
+        "name": "Schreckwulfen",
+        "id": "d309-c2e4-aa0a-afa2",
+        "hidden": false,
+        "typeId": "8230-ff01-d021-4ee9",
+        "typeName": "infantry unit",
+        "characteristics": [
+          {"name": "base size", "$text": "40mm", "typeId": "6b5c-b67a-16a5-05c8"},
+          {"name": "movement rate", "$text": "8\"(advance)\n16\"(run)", "typeId": "13d7-4ad1-36a5-25ac"},
+          {"name": "quality", "$text": "veteran", "typeId": "eea9-be51-f1cf-c5a0"},
+          {"name": "damage value", "$text": "7+", "typeId": "d7d0-6fbe-65f5-e4cd"},
+          {"name": "morale value", "$text": "10 (fearless)", "typeId": "874f-76b8-b3a2-a165"}
+        ]
+      },
+      {
+        "name": "Teeth and Claws",
+        "id": "7e38-dfbf-da04-07f8",
+        "hidden": false,
+        "typeId": "892e-6b89-8c3c-5543",
+        "typeName": "weapon",
+        "characteristics": [
+          {"name": "range", "$text": "-", "typeId": "0fa9-a3c9-d7da-2e6e"},
+          {"name": "shots", "$text": "-", "typeId": "4e5d-8016-2340-6789"},
+          {"name": "pen", "$text": "-", "typeId": "d212-35ab-fbf6-9588"},
+          {"name": "special rules", "$text": "+2 pen in melee", "typeId": "8d46-fd5f-5386-1410"}
         ]
       }
     ]
