@@ -35,7 +35,6 @@
         "name": "auxiliary platoons",
         "id": "7979-9fd0-4425-d3d4",
         "hidden": true,
-        "constraints": [{"id": "54f4-b9c6-dd7b-c46e", "field": "forces", "scope": "parent", "shared": true, "type": "max", "value": 0}],
         "forceEntries": [
           {
             "name": "Heavy Weapons Platoon",
@@ -100,6 +99,124 @@
                 ]
               }
             ],
+            "constraints": [{"id": "9fd0-0f83-0d21-4147", "field": "forces", "scope": "parent", "shared": true, "type": "max", "value": 0}],
+            "modifierGroups": [
+              {
+                "type": "and",
+                "modifiers": [
+                  {
+                    "field": "9fd0-0f83-0d21-4147",
+                    "type": "decrement",
+                    "value": 1,
+                    "repeats": [
+                      {
+                        "childId": "fe04-6682-df61-471f",
+                        "childName": "artillery platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      },
+                      {
+                        "childId": "6c02-f233-60cd-ef7f",
+                        "childName": "armored platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      },
+                      {
+                        "childId": "89b2-efd1-3594-e6bd",
+                        "childName": "armored walker platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      }
+                    ]
+                  },
+                  {
+                    "field": "9fd0-0f83-0d21-4147",
+                    "type": "increment",
+                    "value": 1,
+                    "repeats": [
+                      {
+                        "childId": "7246-f40c-b343-638a",
+                        "childName": "totenrotte platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      },
+                      {
+                        "childId": "1971-0894-aefe-a5f3",
+                        "childName": "Assault Platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      },
+                      {
+                        "childId": "ebab-4e6b-111f-b75c",
+                        "childName": "Firefly platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      },
+                      {
+                        "childId": "c60a-0fa1-3b73-6177",
+                        "childName": "Ghost Infiltration Platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      },
+                      {
+                        "childId": "67a7-67d6-d911-72f1",
+                        "childName": "Automated Infantry Platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
             "rules": [
               {
                 "name": "platoon composition (heavy weapons)",
@@ -109,27 +226,372 @@
               }
             ]
           },
-          {"name": "artillery platoon", "id": "fe04-6682-df61-471f", "hidden": false},
-          {"name": "armored platoon", "id": "6c02-f233-60cd-ef7f", "hidden": false},
-          {"name": "armored walker platoon", "id": "89b2-efd1-3594-e6bd", "hidden": false}
-        ],
-        "modifiers": [
           {
-            "field": "54f4-b9c6-dd7b-c46e",
-            "type": "increment",
-            "value": 1,
-            "repeats": [
+            "name": "artillery platoon",
+            "id": "fe04-6682-df61-471f",
+            "hidden": false,
+            "constraints": [{"id": "97e4-77fc-f0ef-dbb5", "field": "forces", "scope": "parent", "shared": true, "type": "max", "value": 0}],
+            "modifierGroups": [
               {
-                "childId": "413b-e7cd-dffe-1626",
-                "childName": "core platoons",
-                "field": "selections",
-                "includeChildForces": true,
-                "includeChildSelections": true,
-                "repeats": 1,
-                "roundUp": false,
-                "scope": "roster",
-                "shared": true,
-                "value": 1
+                "type": "and",
+                "modifiers": [
+                  {
+                    "field": "97e4-77fc-f0ef-dbb5",
+                    "type": "decrement",
+                    "value": 1,
+                    "repeats": [
+                      {
+                        "childId": "6c02-f233-60cd-ef7f",
+                        "childName": "armored platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      },
+                      {
+                        "childId": "fd68-c31f-45dd-db52",
+                        "childName": "Heavy Weapons Platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      },
+                      {
+                        "childId": "89b2-efd1-3594-e6bd",
+                        "childName": "armored walker platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      }
+                    ]
+                  },
+                  {
+                    "field": "97e4-77fc-f0ef-dbb5",
+                    "type": "increment",
+                    "value": 1,
+                    "repeats": [
+                      {
+                        "childId": "7246-f40c-b343-638a",
+                        "childName": "totenrotte platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      },
+                      {
+                        "childId": "1971-0894-aefe-a5f3",
+                        "childName": "Assault Platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      },
+                      {
+                        "childId": "ebab-4e6b-111f-b75c",
+                        "childName": "Firefly platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      },
+                      {
+                        "childId": "c60a-0fa1-3b73-6177",
+                        "childName": "Ghost Infiltration Platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      },
+                      {
+                        "childId": "67a7-67d6-d911-72f1",
+                        "childName": "Automated Infantry Platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "armored platoon",
+            "id": "6c02-f233-60cd-ef7f",
+            "hidden": false,
+            "constraints": [{"id": "caf3-547a-6ea6-32e1", "field": "forces", "scope": "parent", "shared": true, "type": "max", "value": 0}],
+            "modifierGroups": [
+              {
+                "type": "and",
+                "modifiers": [
+                  {
+                    "field": "caf3-547a-6ea6-32e1",
+                    "type": "decrement",
+                    "value": 1,
+                    "repeats": [
+                      {
+                        "childId": "fe04-6682-df61-471f",
+                        "childName": "artillery platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      },
+                      {
+                        "childId": "fd68-c31f-45dd-db52",
+                        "childName": "Heavy Weapons Platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      },
+                      {
+                        "childId": "89b2-efd1-3594-e6bd",
+                        "childName": "armored walker platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      }
+                    ]
+                  },
+                  {
+                    "field": "caf3-547a-6ea6-32e1",
+                    "type": "increment",
+                    "value": 1,
+                    "repeats": [
+                      {
+                        "childId": "7246-f40c-b343-638a",
+                        "childName": "totenrotte platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      },
+                      {
+                        "childId": "1971-0894-aefe-a5f3",
+                        "childName": "Assault Platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      },
+                      {
+                        "childId": "ebab-4e6b-111f-b75c",
+                        "childName": "Firefly platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      },
+                      {
+                        "childId": "c60a-0fa1-3b73-6177",
+                        "childName": "Ghost Infiltration Platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      },
+                      {
+                        "childId": "67a7-67d6-d911-72f1",
+                        "childName": "Automated Infantry Platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "armored walker platoon",
+            "id": "89b2-efd1-3594-e6bd",
+            "hidden": false,
+            "constraints": [{"id": "01fd-4738-1a86-39c3", "field": "forces", "scope": "parent", "shared": true, "type": "max", "value": 0}],
+            "modifierGroups": [
+              {
+                "type": "and",
+                "modifiers": [
+                  {
+                    "field": "01fd-4738-1a86-39c3",
+                    "type": "decrement",
+                    "value": 1,
+                    "repeats": [
+                      {
+                        "childId": "fe04-6682-df61-471f",
+                        "childName": "artillery platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      },
+                      {
+                        "childId": "6c02-f233-60cd-ef7f",
+                        "childName": "armored platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      },
+                      {
+                        "childId": "fd68-c31f-45dd-db52",
+                        "childName": "Heavy Weapons Platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      }
+                    ]
+                  },
+                  {
+                    "field": "01fd-4738-1a86-39c3",
+                    "type": "increment",
+                    "value": 1,
+                    "repeats": [
+                      {
+                        "childId": "7246-f40c-b343-638a",
+                        "childName": "totenrotte platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      },
+                      {
+                        "childId": "1971-0894-aefe-a5f3",
+                        "childName": "Assault Platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      },
+                      {
+                        "childId": "ebab-4e6b-111f-b75c",
+                        "childName": "Firefly platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      },
+                      {
+                        "childId": "c60a-0fa1-3b73-6177",
+                        "childName": "Ghost Infiltration Platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      },
+                      {
+                        "childId": "67a7-67d6-d911-72f1",
+                        "childName": "Automated Infantry Platoon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -274,7 +736,10 @@
                 "hidden": false
               }
             ]
-          }
+          },
+          {"name": "Firefly platoon", "id": "ebab-4e6b-111f-b75c", "hidden": false},
+          {"name": "Ghost Infiltration Platoon", "id": "c60a-0fa1-3b73-6177", "hidden": false},
+          {"name": "Automated Infantry Platoon", "id": "67a7-67d6-d911-72f1", "hidden": false}
         ]
       }
     ],
