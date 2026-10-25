@@ -8,6 +8,49 @@
     "library": false,
     "revision": 1,
     "type": "catalogue",
+    "selectionEntries": [
+      {
+        "name": "Schreckwulfen squad",
+        "id": "9f40-abf8-1b0c-eee9",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "specialist infantry", "id": "505f-4a47-b867-9b32", "hidden": false, "primary": true, "targetId": "afb0-6ed6-ee90-d5fa"},
+          {"name": "Specialist or Advanced Infantry", "id": "e092-120e-1314-0305", "hidden": false, "primary": false, "targetId": "18b5-bdcf-20f0-e1a8"},
+          {"name": "Infantry", "id": "0059-f2e4-4fa9-9573", "hidden": false, "primary": false, "targetId": "d013-452d-3733-7f93"}
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Unit Configuration",
+            "id": "3e30-04f8-ef2c-f62e",
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "Schreckwulfen",
+                "id": "35fd-0e3c-6bf7-5852",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "constraints": [
+                  {"id": "5b1e-22f7-ded1-0d6c", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 3},
+                  {"id": "0b6b-0060-bff7-96ec", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 6}
+                ],
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 43}],
+                "infoLinks": [
+                  {"name": "Teeth and Claws", "id": "662a-943c-5970-5f4a", "hidden": false, "targetId": "7e38-dfbf-da04-07f8", "type": "profile"},
+                  {"name": "Deadly (x)", "id": "450d-c200-4601-14b0", "hidden": false, "targetId": "3e3f-37c8-755b-9c6c", "type": "rule"},
+                  {"name": "Fast (infantry)", "id": "673c-15d6-5013-f384", "hidden": false, "targetId": "40fb-3722-8538-5ab5", "type": "rule"},
+                  {"name": "Hard to Kill", "id": "c681-2edb-c7cb-1144", "hidden": false, "targetId": "ca36-6280-3a43-5117", "type": "rule"},
+                  {"name": "Fearless", "id": "86b6-8cbc-c6db-7d4b", "hidden": false, "targetId": "58f1-2edf-da89-b289", "type": "rule"},
+                  {"name": "Horror", "id": "6bc0-5bbc-04b3-0342", "hidden": false, "targetId": "9b1d-9704-90f3-6326", "type": "rule"}
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "sharedProfiles": [
       {
         "name": "Volksgrenadier",
@@ -232,33 +275,6 @@
                 ]
               },
               {"name": "squad upgrades", "id": "afcd-3a5b-3614-2424", "hidden": false, "import": true, "sortIndex": 3, "type": "upgrade"}
-            ]
-          },
-          {
-            "name": "Quality",
-            "id": "cff4-e22e-c658-484b",
-            "hidden": false,
-            "constraints": [
-              {"id": "4cdc-8dc3-8d5c-1f24-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
-              {"id": "4cdc-8dc3-8d5c-1f24-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
-            ],
-            "selectionEntries": [
-              {"name": "inexperienced", "id": "f6f8-e1a6-0b06-2937", "hidden": false, "import": true, "type": "upgrade"},
-              {"name": "regular", "id": "6fff-f0a2-ff10-377d", "hidden": false, "import": true, "type": "upgrade"},
-              {
-                "name": "veteran",
-                "id": "c252-c745-22a0-9fc9",
-                "hidden": false,
-                "import": true,
-                "type": "upgrade",
-                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 0}],
-                "modifiers": [
-                  {"affects": "profiles.unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "veteran"},
-                  {"affects": "profiles.unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "5+"},
-                  {"affects": "profiles.unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "10"},
-                  {"affects": "model.profiles.unit", "field": "2eda-e484-fddf-506a", "type": "increment", "value": 3}
-                ]
-              }
             ]
           }
         ]
@@ -493,43 +509,6 @@
                 ]
               },
               {"name": "Squad Upgrades", "id": "68c5-67fd-635e-574a", "hidden": false, "import": true, "sortIndex": 3, "type": "upgrade"}
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Schreckwulfen squad",
-        "id": "9f40-abf8-1b0c-eee9",
-        "hidden": false,
-        "import": true,
-        "type": "upgrade",
-        "categoryLinks": [
-          {"name": "specialist infantry", "id": "7c94-a69e-ec95-21aa", "hidden": false, "primary": false, "targetId": "afb0-6ed6-ee90-d5fa"},
-          {"name": "Specialist or Advanced Infantry", "id": "89d9-94c5-36eb-23e3", "hidden": false, "primary": false, "targetId": "18b5-bdcf-20f0-e1a8"},
-          {"name": "Infantry", "id": "4ca5-1122-511d-c068", "hidden": false, "primary": false, "targetId": "d013-452d-3733-7f93"}
-        ],
-        "selectionEntryGroups": [
-          {
-            "name": "Unit Configuration",
-            "id": "3e30-04f8-ef2c-f62e",
-            "hidden": false,
-            "selectionEntries": [
-              {
-                "name": "Schreckwulfen",
-                "id": "35fd-0e3c-6bf7-5852",
-                "hidden": false,
-                "import": true,
-                "type": "upgrade",
-                "constraints": [
-                  {"id": "5b1e-22f7-ded1-0d6c", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 3},
-                  {"id": "0b6b-0060-bff7-96ec", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 6}
-                ],
-                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 43}],
-                "infoLinks": [
-                  {"name": "Teeth and Claws", "id": "662a-943c-5970-5f4a", "hidden": false, "targetId": "7e38-dfbf-da04-07f8", "type": "profile"},
-                  {"name": "Deadly (x)", "id": "450d-c200-4601-14b0", "hidden": false, "targetId": "3e3f-37c8-755b-9c6c", "type": "rule"}
-                ]
-              }
             ]
           }
         ]

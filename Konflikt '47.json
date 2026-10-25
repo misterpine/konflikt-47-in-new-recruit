@@ -192,15 +192,12 @@
             ]
           }
         ]
-      },
-      {"name": "artillery platoon", "id": "7255-b135-fe8a-65e0", "hidden": false},
-      {"name": "armored platoon", "id": "2569-cb3b-cfeb-48af", "hidden": false},
-      {"name": "armored walker platoon", "id": "9694-2631-336f-301a", "hidden": false}
+      }
     ],
     "profileTypes": [
       {
         "name": "infantry unit",
-        "id": "8230-ff01-d021-4ee9",
+        "id": "i_stats",
         "hidden": false,
         "kind": "model",
         "characteristicTypes": [
@@ -213,7 +210,7 @@
       },
       {
         "name": "weapon",
-        "id": "892e-6b89-8c3c-5543",
+        "id": "w_stats",
         "hidden": false,
         "kind": "weapon",
         "characteristicTypes": [
@@ -225,7 +222,7 @@
       },
       {
         "name": "Rift ability",
-        "id": "8285-44c7-71ca-c0eb",
+        "id": "r_stats",
         "hidden": false,
         "kind": "ability",
         "characteristicTypes": [
@@ -237,14 +234,14 @@
       },
       {
         "name": "Hero Statistics",
-        "id": "f390-ebfa-e5b3-192f",
+        "id": "h_stats",
         "hidden": false,
         "kind": "model",
         "characteristicTypes": [{"name": "Guts", "id": "586d-9d30-8830-1c71"}, {"name": "Rift Mastery", "id": "f4dc-544b-85d6-7ac1"}, {"name": "Luck", "id": "f48c-63c7-341b-e425"}]
       },
       {
         "name": "vehicle unit",
-        "id": "6d46-1cc8-b1b9-621c",
+        "id": "v_stats",
         "hidden": false,
         "kind": "model",
         "characteristicTypes": [
