@@ -284,6 +284,86 @@
                 ]
               }
             ]
+          },
+          {
+            "name": "Quality",
+            "id": "44be-16c6-5a9e-57d0",
+            "hidden": false,
+            "constraints": [
+              {"id": "3615-36de-967e-1f29-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "3615-36de-967e-1f29-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ],
+            "selectionEntries": [
+              {
+                "name": "inexperienced",
+                "id": "8054-8e26-6f05-517f",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": -9}],
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {"affects": "profiles.infantry unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "8"},
+                      {"affects": "profiles.infantry unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "3+"},
+                      {"affects": "profiles.infantry unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "inexperienced"},
+                      {
+                        "field": "2eda-e484-fddf-506a",
+                        "type": "increment",
+                        "value": -3,
+                        "repeats": [
+                          {"childId": "220a-274e-5b50-7632", "childName": "Soldier", "field": "selections", "repeats": 1, "roundUp": false, "scope": "parent", "shared": true, "value": 1}
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "regular",
+                "id": "ed91-a634-b8d5-d074",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {"affects": "profiles.infantry unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "9"},
+                      {"affects": "profiles.infantry unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "4+"},
+                      {"affects": "profiles.infantry unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "regular"}
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "veteran",
+                "id": "5a83-26b2-29e2-caa5",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 9}],
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {"affects": "profiles.infantry unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "10"},
+                      {"affects": "profiles.infantry unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "5+"},
+                      {"affects": "profiles.infantry unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "veteran"},
+                      {
+                        "field": "2eda-e484-fddf-506a",
+                        "type": "increment",
+                        "value": 3,
+                        "repeats": [
+                          {"childId": "220a-274e-5b50-7632", "childName": "Soldier", "field": "selections", "repeats": 1, "roundUp": false, "scope": "parent", "shared": true, "value": 1}
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -420,7 +500,7 @@
                         "import": true,
                         "sortIndex": 4,
                         "type": "upgrade",
-                        "constraints": [{"id": "126e-a190-9f14-2045", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
+                        "constraints": [{"id": "126e-a190-9f14-2045", "field": "selections", "scope": "8582-2089-bb6c-51b0", "shared": true, "type": "max", "value": 2}],
                         "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 15}],
                         "infoLinks": [{"name": "Infantry Light Machine Gun", "id": "40fa-0eff-674b-4ab2", "hidden": false, "targetId": "1506-4fee-1711-17d1", "type": "profile"}]
                       }

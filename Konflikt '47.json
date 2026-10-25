@@ -56,6 +56,7 @@
                 "id": "1e99-cd79-8c7e-e63f",
                 "hidden": true,
                 "targetId": "18b5-bdcf-20f0-e1a8",
+                "tracked": true,
                 "constraints": [{"id": "d0f7-0bcd-a03b-22b3", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 2}]
               },
               {
@@ -63,6 +64,7 @@
                 "id": "3fa7-a0ac-2abd-68de",
                 "hidden": true,
                 "targetId": "d013-452d-3733-7f93",
+                "tracked": true,
                 "constraints": [{"id": "1aca-dd40-382d-a98b", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 4}]
               },
               {
