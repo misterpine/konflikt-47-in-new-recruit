@@ -8,6 +8,7 @@
     "library": false,
     "revision": 1,
     "type": "catalogue",
+    "categoryEntries": [{"name": "totenrotte platoon", "id": "a7ee-bc97-675e-c07e", "hidden": false}],
     "forceEntries": [
       {
         "name": "Army list (assault platoon based)",
@@ -19,7 +20,8 @@
           {"name": "totenrotte platoon", "id": "e3e1-0c55-7c42-c25f", "hidden": false, "sortIndex": 1, "targetId": "7246-f40c-b343-638a", "type": "forceEntry"},
           {"name": "artillery platoon", "id": "6bc3-dd64-65e3-8e24", "hidden": false, "sortIndex": 3, "targetId": "fe04-6682-df61-471f", "type": "forceEntry"},
           {"name": "armored platoon", "id": "6303-5329-80b1-05b3", "hidden": false, "sortIndex": 4, "targetId": "6c02-f233-60cd-ef7f", "type": "forceEntry"},
-          {"name": "armored walker platoon", "id": "63dc-17c4-3378-5853", "hidden": false, "sortIndex": 5, "targetId": "89b2-efd1-3594-e6bd", "type": "forceEntry"}
+          {"name": "armored walker platoon", "id": "63dc-17c4-3378-5853", "hidden": false, "sortIndex": 5, "targetId": "89b2-efd1-3594-e6bd", "type": "forceEntry"},
+          {"name": "Company commander", "id": "4231-dfd4-dd0e-b391", "hidden": false, "sortIndex": 6, "targetId": "21ab-5303-d07f-c436", "type": "forceEntry"}
         ]
       }
     ],
@@ -399,9 +401,10 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Unit Configuration",
+            "name": "Options",
             "id": "d5f6-f46f-ba97-15de",
             "hidden": false,
+            "sortIndex": 2,
             "selectionEntries": [
               {
                 "name": "NCO",
@@ -533,6 +536,7 @@
             "name": "Quality",
             "id": "e28f-22b9-3d94-59a6",
             "hidden": false,
+            "sortIndex": 1,
             "constraints": [
               {"id": "04ac-8c7c-dfaf-f196-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
               {"id": "04ac-8c7c-dfaf-f196-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
@@ -626,7 +630,866 @@
                 ]
               }
             ]
+          },
+          {
+            "name": "Squad upgrades",
+            "id": "0142-bf22-593c-6114",
+            "hidden": false,
+            "sortIndex": 3,
+            "selectionEntries": [
+              {
+                "name": "Panzerfausts",
+                "id": "3f68-e5a3-3584-9bbd",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 1,
+                "type": "upgrade",
+                "constraints": [{"id": "0a78-e9e6-522e-9443", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 5}],
+                "modifiers": [
+                  {
+                    "field": "2eda-e484-fddf-506a",
+                    "type": "increment",
+                    "value": 5,
+                    "repeats": [
+                      {
+                        "childId": "d507-bb77-6d5b-540d",
+                        "childName": "Volksgrenadier",
+                        "field": "selections",
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "parent",
+                        "shared": true,
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
+        ]
+      },
+      {
+        "name": "Hauptmann Heinrich Gross",
+        "id": "e446-9136-c01c-e933",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "Hero", "id": "47e1-f0c8-9ff4-106c", "hidden": false, "primary": true, "targetId": "1393-8cec-caff-46d4"},
+          {"name": "nonvehicle unit", "id": "3c90-bcbd-e84f-a4c1", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ],
+        "constraints": [{"id": "f331-e024-1f7e-5a2f", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 0}],
+        "infoLinks": [
+          {"name": "Heinrich Gross", "id": "177f-8cff-8fad-fd28", "hidden": false, "targetId": "5b35-2bfc-e080-e620", "type": "profile"},
+          {"name": "Hauptmann Heinrich Gross", "id": "f5c2-f8d8-68dd-4326", "hidden": false, "targetId": "92cf-8fe3-bb8a-4274", "type": "profile"},
+          {"name": "Fast (infantry)", "id": "3500-f710-9d95-9fcb", "hidden": false, "targetId": "40fb-3722-8538-5ab5", "type": "rule"},
+          {"name": "Fearless", "id": "296c-be6c-e724-8dec", "hidden": false, "targetId": "58f1-2edf-da89-b289", "type": "rule"},
+          {"name": "advanced body armor", "id": "9591-fb5a-9f69-8a6a", "hidden": false, "targetId": "57a7-54a6-a7ab-743c", "type": "rule"},
+          {"name": "only human", "id": "13ce-5ab8-14b7-1261", "hidden": false, "targetId": "f34e-931f-5458-cb4f", "type": "rule"}
+        ],
+        "selectionEntries": [
+          {
+            "name": "Heinrich gross",
+            "id": "af84-95b7-ca34-604f",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "constraints": [
+              {"id": "3577-218e-5018-561a-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "3577-218e-5018-561a-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ],
+            "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 170}],
+            "infoLinks": [
+              {"name": "Deadly (x)", "id": "7b6f-63a7-08ad-7213", "hidden": false, "targetId": "3e3f-37c8-755b-9c6c", "type": "rule"},
+              {"name": "Heinrich Gross", "id": "2edf-5fcf-0532-30f8", "hidden": false, "targetId": "fa68-07fd-7ebd-9dd8", "type": "profile"},
+              {"name": "SL luger", "id": "5467-2811-f320-365e", "hidden": false, "targetId": "28a3-a111-d167-426a", "type": "profile"}
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Unit configuration",
+            "id": "58eb-a200-099c-9677",
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "Soldier",
+                "id": "d0d2-5b3c-b53d-2055",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "constraints": [{"id": "5a5b-6bb6-b765-b665", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 3}],
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 30}],
+                "selectionEntryGroups": [
+                  {
+                    "name": "weapon",
+                    "id": "4fbc-66b6-9225-8f6b",
+                    "hidden": false,
+                    "constraints": [
+                      {"id": "1a5d-e6f3-4d25-ce09-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "1a5d-e6f3-4d25-ce09-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ],
+                    "entryLinks": [
+                      {
+                        "name": "Assault Rifle",
+                        "id": "3a33-c531-551b-ccbc",
+                        "hidden": false,
+                        "import": true,
+                        "targetId": "a37c-1833-f773-07be",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 0}]
+                      },
+                      {
+                        "name": "Rifle",
+                        "id": "876a-4883-870d-b693",
+                        "hidden": false,
+                        "import": true,
+                        "targetId": "54e5-13dc-90ac-8327",
+                        "type": "selectionEntry",
+                        "constraints": [{"id": "f5f5-faef-56b7-f720", "field": "selections", "scope": "e446-9136-c01c-e933", "shared": true, "type": "max", "value": 1}],
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 9}],
+                        "infoLinks": [{"name": "sniper", "id": "2751-1028-d585-3e66", "hidden": false, "targetId": "e10a-fd36-e30a-65a3", "type": "rule"}]
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "name": "SL scmeisser",
+                        "id": "a90d-20b6-581d-98fa",
+                        "hidden": false,
+                        "import": true,
+                        "type": "upgrade",
+                        "infoLinks": [{"name": "SL schmeisser", "id": "5564-1e24-bc26-d5c1", "hidden": false, "targetId": "fb7e-47c2-8c0e-476c", "type": "profile"}]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Medic",
+                "id": "e1c5-cf31-932b-d2fc",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 41}],
+                "entryLinks": [
+                  {
+                    "name": "Pistol",
+                    "id": "47fb-e6c3-79e2-0d6d",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "76a4-3033-579c-e93f",
+                    "type": "selectionEntry",
+                    "constraints": [
+                      {"id": "f054-0ff3-f29f-7f48-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "f054-0ff3-f29f-7f48-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ]
+                  }
+                ],
+                "infoLinks": [{"name": "medic", "id": "1d96-a439-d9b6-9a0b", "hidden": false, "targetId": "acb1-abff-7495-a0d8", "type": "rule"}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Specialist Officer - Totenrotte Platoon Commander",
+        "id": "5b6a-560f-ce5b-d104",
+        "hidden": false,
+        "import": true,
+        "type": "unit",
+        "categoryLinks": [
+          {"name": "platoon commander", "id": "22ec-71f5-bc4c-4e0f", "hidden": false, "primary": true, "targetId": "35bf-bece-817b-6874"},
+          {"name": "nonvehicle unit", "id": "6c66-3616-1563-f054", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"},
+          {"name": "totenrotte platoon", "id": "292c-03f2-d1b1-c3e7", "hidden": false, "primary": false, "targetId": "a7ee-bc97-675e-c07e"}
+        ],
+        "infoLinks": [{"name": "advanced body armor", "id": "8804-0d75-6eb1-8fd8", "hidden": false, "targetId": "57a7-54a6-a7ab-743c", "type": "rule"}],
+        "selectionEntryGroups": [
+          {
+            "name": "Unit Configuration",
+            "id": "57e4-2587-a3be-ff87",
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "Officer",
+                "id": "49d4-b74f-63e2-2470",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 1,
+                "type": "upgrade",
+                "constraints": [
+                  {"id": "b8d0-f00b-3dd0-c181", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "1e15-2a65-a61b-cc26", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ],
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 40}],
+                "infoLinks": [{"name": "totenrotte platoon personnel", "id": "9b40-6d36-54af-53b9", "hidden": false, "targetId": "49ff-b665-11b9-2220", "type": "profile"}],
+                "selectionEntryGroups": [
+                  {
+                    "name": "Weapon Options",
+                    "id": "215b-ddd9-a0dd-8376",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {"id": "aa55-0677-654e-9fb9", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "904e-1e05-8ff7-3d5b", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ],
+                    "selectionEntries": [
+                      {
+                        "name": "Schwarzlicht P 08SzL Luger ",
+                        "id": "6752-6206-33c6-3b80",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 2,
+                        "type": "upgrade",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 3}],
+                        "infoLinks": [{"name": "SL luger", "id": "1272-e658-ed6c-d1d6", "hidden": false, "targetId": "28a3-a111-d167-426a", "type": "profile"}]
+                      },
+                      {
+                        "name": "Submachine Gun",
+                        "id": "219f-5b39-5273-5e52",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 3,
+                        "type": "upgrade",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 5}],
+                        "infoLinks": [{"name": "Submachine Gun", "id": "95ff-5f3c-12d5-577f", "hidden": false, "targetId": "a55f-9a07-85d4-dcfe", "type": "profile"}]
+                      },
+                      {
+                        "name": "Assault Rifle",
+                        "id": "2ddc-a55e-88d5-0a62",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 4,
+                        "type": "upgrade",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 7}],
+                        "infoLinks": [{"name": "Assault Rifle", "id": "9032-ff3d-8681-da69", "hidden": false, "targetId": "6625-e180-2453-366c", "type": "profile"}]
+                      },
+                      {
+                        "name": "Schwarzlicht MP 40SzL Schmeisser",
+                        "id": "2e1f-d52c-c0d9-d602",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 5,
+                        "type": "upgrade",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 7}],
+                        "infoLinks": [{"name": "SL schmeisser", "id": "517a-873b-8282-30f8", "hidden": false, "targetId": "fb7e-47c2-8c0e-476c", "type": "profile"}]
+                      },
+                      {
+                        "name": "Pistol",
+                        "id": "25e3-fdde-1be8-b8ce",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 1,
+                        "type": "upgrade",
+                        "infoLinks": [{"name": "Pistol", "id": "07de-7850-8627-c562", "hidden": false, "targetId": "f868-3dce-09c9-fdc2", "type": "profile"}]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Hero Statistics",
+                    "id": "be76-e9c9-c8ba-5e44",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [{"id": "b9b0-c393-d436-6c0c", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                    "selectionEntries": [
+                      {
+                        "name": "Guts",
+                        "id": "a0a1-2473-dc79-5841",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 1,
+                        "type": "upgrade",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 10}],
+                        "profiles": [
+                          {
+                            "name": "Guts",
+                            "id": "4459-ddc7-0459-99d5",
+                            "hidden": false,
+                            "typeId": "h_stats",
+                            "typeName": "Hero Statistics",
+                            "characteristics": [
+                              {"name": "Guts", "$text": "1", "typeId": "586d-9d30-8830-1c71"},
+                              {"name": "Rift Mastery", "$text": "-", "typeId": "f4dc-544b-85d6-7ac1"},
+                              {"name": "Luck", "$text": "-", "typeId": "f48c-63c7-341b-e425"}
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Rift Mastery",
+                        "id": "d70a-3bde-70eb-3409",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 2,
+                        "type": "upgrade",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 15}],
+                        "profiles": [
+                          {
+                            "name": "Rift Mastery",
+                            "id": "53c4-ad53-12c2-23d1",
+                            "hidden": false,
+                            "typeId": "h_stats",
+                            "typeName": "Hero Statistics",
+                            "characteristics": [
+                              {"name": "Guts", "$text": "-", "typeId": "586d-9d30-8830-1c71"},
+                              {"name": "Rift Mastery", "$text": "1", "typeId": "f4dc-544b-85d6-7ac1"},
+                              {"name": "Luck", "$text": "-", "typeId": "f48c-63c7-341b-e425"}
+                            ]
+                          },
+                          {
+                            "name": "Rift Mastery",
+                            "id": "7668-087b-4d38-68ec",
+                            "hidden": false,
+                            "typeId": "r_stats",
+                            "typeName": "Rift ability",
+                            "characteristics": [
+                              {"name": "active rift enhancement", "$text": "-", "typeId": "cbaa-91a6-d3fd-af8e"},
+                              {"name": "surging bonus", "$text": "-", "typeId": "9d0b-7a64-d1e2-5de4"},
+                              {"name": "exhausted penalty", "$text": "-", "typeId": "e2f8-7c71-9549-0100"},
+                              {"name": "Rift dice", "$text": "1", "typeId": "f13e-857d-bdde-754e"}
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Soldier",
+                "id": "ddd5-0b24-905a-6a6c",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 2,
+                "type": "upgrade",
+                "constraints": [{"id": "ba9e-129f-e0ea-587d", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 13}],
+                "infoLinks": [{"name": "totenrotte platoon personnel", "id": "0b04-30ff-84e5-4f59", "hidden": false, "targetId": "49ff-b665-11b9-2220", "type": "profile"}],
+                "selectionEntryGroups": [
+                  {
+                    "name": "Weapon Options",
+                    "id": "2348-5f87-357c-893b",
+                    "hidden": false,
+                    "constraints": [
+                      {"id": "bdf4-0021-c22e-4e83", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "6c07-2a7b-bbae-bc52", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ],
+                    "selectionEntries": [
+                      {
+                        "name": "Schwarzlicht P 08SzL Luger ",
+                        "id": "8ed1-3069-4f3f-d494",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 2,
+                        "type": "upgrade",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 3}],
+                        "infoLinks": [{"name": "SL luger", "id": "2957-98a2-5be6-c4ac", "hidden": false, "targetId": "28a3-a111-d167-426a", "type": "profile"}]
+                      },
+                      {
+                        "name": "Submachine Gun",
+                        "id": "5043-45a8-4e04-bd76",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 3,
+                        "type": "upgrade",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 5}],
+                        "infoLinks": [{"name": "Submachine Gun", "id": "7644-d86f-6fcf-9378", "hidden": false, "targetId": "a55f-9a07-85d4-dcfe", "type": "profile"}]
+                      },
+                      {
+                        "name": "Assault Rifle",
+                        "id": "7dfb-f1d0-5cdd-f50a",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 4,
+                        "type": "upgrade",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 7}],
+                        "infoLinks": [{"name": "Assault Rifle", "id": "3cb6-4347-2da1-2396", "hidden": false, "targetId": "6625-e180-2453-366c", "type": "profile"}]
+                      },
+                      {
+                        "name": "Schwarzlicht MP 40SzL Schmeisser",
+                        "id": "446f-eb74-371d-5649",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 5,
+                        "type": "upgrade",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 7}],
+                        "infoLinks": [{"name": "SL schmeisser", "id": "3af3-c993-beff-47c4", "hidden": false, "targetId": "fb7e-47c2-8c0e-476c", "type": "profile"}]
+                      },
+                      {
+                        "name": "Pistol",
+                        "id": "382f-5ef7-81e5-3f13",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 1,
+                        "type": "upgrade",
+                        "infoLinks": [{"name": "Pistol", "id": "33f2-c87b-3e11-3449", "hidden": false, "targetId": "f868-3dce-09c9-fdc2", "type": "profile"}]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Platoon Commander - Schwertruppen Officer",
+        "id": "f9af-6ee8-9af3-94c7",
+        "hidden": false,
+        "import": true,
+        "type": "unit",
+        "categoryLinks": [
+          {"name": "platoon commander", "id": "144c-817d-40b6-342f", "hidden": false, "primary": true, "targetId": "35bf-bece-817b-6874"},
+          {"name": "nonvehicle unit", "id": "047a-b6f8-60e0-1395", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ],
+        "infoLinks": [{"name": "Heavy", "id": "0344-e76d-3e00-f2c1", "hidden": false, "targetId": "3e19-8788-b6d7-2f55", "type": "rule"}],
+        "selectionEntryGroups": [
+          {
+            "name": "Options",
+            "id": "c647-23f8-14a6-6f43",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntries": [
+              {
+                "name": "Officer",
+                "id": "959c-9143-9dc2-15c1",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 1,
+                "type": "upgrade",
+                "constraints": [
+                  {"id": "88e7-3ff6-ce0b-d13f", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "3ded-db41-8a6b-af0c", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ],
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 30}],
+                "infoLinks": [{"name": "Officer", "id": "8292-f653-86a2-f2f5", "hidden": false, "targetId": "85bc-d1f2-8c2f-6f71", "type": "profile"}],
+                "selectionEntryGroups": [
+                  {
+                    "name": "Weapon Options",
+                    "id": "1715-bf3e-0035-d62b",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {"id": "2ab7-e5da-b603-dc8f", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "61fd-b08c-6946-56a6", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ],
+                    "entryLinks": [
+                      {
+                        "name": "Infantry Light Machine Gun",
+                        "id": "5b3b-24e3-5ba6-4281",
+                        "hidden": false,
+                        "import": true,
+                        "targetId": "0f3c-09a4-504d-84bd",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 9}]
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "name": "Assault Rifle",
+                        "id": "f713-3cd1-b518-fe34",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 1,
+                        "type": "upgrade",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 0}],
+                        "infoLinks": [{"name": "Assault Rifle", "id": "e99c-68f1-c3fb-c2a5", "hidden": false, "targetId": "6625-e180-2453-366c", "type": "profile"}]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Hero Statistics",
+                    "id": "0e92-54c1-708e-94c6",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [{"id": "a67c-3415-2ae5-6c39", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                    "selectionEntries": [
+                      {
+                        "name": "Guts",
+                        "id": "62c3-75f2-663a-4fce",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 1,
+                        "type": "upgrade",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 10}],
+                        "profiles": [
+                          {
+                            "name": "Guts",
+                            "id": "e4a3-8577-ca9c-5ed0",
+                            "hidden": false,
+                            "typeId": "h_stats",
+                            "typeName": "Hero Statistics",
+                            "characteristics": [
+                              {"name": "Guts", "$text": "1", "typeId": "586d-9d30-8830-1c71"},
+                              {"name": "Rift Mastery", "$text": "-", "typeId": "f4dc-544b-85d6-7ac1"},
+                              {"name": "Luck", "$text": "-", "typeId": "f48c-63c7-341b-e425"}
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Rift Mastery",
+                        "id": "577b-bf82-3a19-186f",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 2,
+                        "type": "upgrade",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 15}],
+                        "profiles": [
+                          {
+                            "name": "Rift Mastery",
+                            "id": "b2aa-3a6a-33f6-084f",
+                            "hidden": false,
+                            "typeId": "h_stats",
+                            "typeName": "Hero Statistics",
+                            "characteristics": [
+                              {"name": "Guts", "$text": "-", "typeId": "586d-9d30-8830-1c71"},
+                              {"name": "Rift Mastery", "$text": "1", "typeId": "f4dc-544b-85d6-7ac1"},
+                              {"name": "Luck", "$text": "-", "typeId": "f48c-63c7-341b-e425"}
+                            ]
+                          },
+                          {
+                            "name": "Rift Mastery",
+                            "id": "39c8-229f-7ba3-fff2",
+                            "hidden": false,
+                            "typeId": "r_stats",
+                            "typeName": "Rift ability",
+                            "characteristics": [
+                              {"name": "active rift enhancement", "$text": "-", "typeId": "cbaa-91a6-d3fd-af8e"},
+                              {"name": "surging bonus", "$text": "-", "typeId": "9d0b-7a64-d1e2-5de4"},
+                              {"name": "exhausted penalty", "$text": "-", "typeId": "e2f8-7c71-9549-0100"},
+                              {"name": "Rift dice", "$text": "1", "typeId": "f13e-857d-bdde-754e"}
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Soldier",
+                "id": "dcc1-bd9a-48b7-1320",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 2,
+                "type": "upgrade",
+                "constraints": [{"id": "14a6-0e43-a931-775c", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 9}],
+                "infoLinks": [{"name": "Volksgrenadier", "id": "7238-bf44-e446-a415", "hidden": false, "targetId": "d665-7272-49e6-0d0d", "type": "profile"}],
+                "selectionEntryGroups": [
+                  {
+                    "name": "Weapon Options",
+                    "id": "34e6-c0e8-fae8-9d89",
+                    "hidden": false,
+                    "constraints": [
+                      {"id": "ad70-6353-f22f-74c9", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "465f-41fb-d9ac-d10e", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ],
+                    "entryLinks": [
+                      {
+                        "name": "Infantry Light Machine Gun",
+                        "id": "cc8b-3f45-4855-f11a",
+                        "hidden": false,
+                        "import": true,
+                        "targetId": "0f3c-09a4-504d-84bd",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 9}]
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "name": "Assault Rifle",
+                        "id": "b170-d856-3b08-7256",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 1,
+                        "type": "upgrade",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 0}],
+                        "infoLinks": [{"name": "Assault Rifle", "id": "5969-c3ae-0163-23fb", "hidden": false, "targetId": "6625-e180-2453-366c", "type": "profile"}]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Quality",
+            "id": "d2ae-38f6-43d0-1293",
+            "hidden": false,
+            "sortIndex": 1,
+            "constraints": [
+              {"id": "839a-9d55-6bec-6f89-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "839a-9d55-6bec-6f89-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ],
+            "selectionEntries": [
+              {
+                "name": "regular",
+                "id": "fc89-ebd0-769a-60ef",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {"affects": "profiles.infantry unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "9"},
+                      {"affects": "profiles.infantry unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "5+"},
+                      {"affects": "profiles.infantry unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "regular"}
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "veteran",
+                "id": "25ea-70cb-31b3-af4d",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 9}],
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {"affects": "profiles.infantry unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "10"},
+                      {"affects": "profiles.infantry unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "6+"},
+                      {"affects": "profiles.infantry unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "veteran"},
+                      {
+                        "field": "2eda-e484-fddf-506a",
+                        "type": "increment",
+                        "value": 3,
+                        "repeats": [
+                          {"childId": "dcc1-bd9a-48b7-1320", "childName": "Soldier", "field": "selections", "repeats": 1, "roundUp": false, "scope": "parent", "shared": true, "value": 1}
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {"name": "Squad upgrades", "id": "2df2-b7a5-f539-df52", "hidden": false, "sortIndex": 3}
+        ]
+      },
+      {
+        "name": "Platoon Commander - Stahltruppen Officer",
+        "id": "6530-5f81-6442-dead",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "entryLinks": [
+          {
+            "name": "Quality",
+            "id": "c727-d8be-dd4d-3610",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "d0e1-57f9-609c-ca74",
+            "type": "selectionEntryGroup"
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Options",
+            "id": "78df-939e-758f-9cb6",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntries": [
+              {
+                "name": "Officer",
+                "id": "8bbd-8ab6-493e-a4bc",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "infoLinks": [{"name": "Stahltrup", "id": "9362-6f97-779c-50d3", "hidden": false, "targetId": "6a01-b555-93f9-e611", "type": "profile"}],
+                "selectionEntryGroups": [
+                  {
+                    "name": "Weapon Options",
+                    "id": "f204-c989-68b3-1aef",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {"id": "561f-2e49-5bb0-deb1-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "561f-2e49-5bb0-deb1-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ],
+                    "entryLinks": [
+                      {"name": "STG 44Z", "id": "13dd-85b3-1f52-7982", "hidden": false, "import": true, "sortIndex": 1, "targetId": "998c-7fcc-f0f5-9a88", "type": "selectionEntry"},
+                      {
+                        "name": "Infantry Light Machine Gun",
+                        "id": "8281-2376-1395-34f0",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 2,
+                        "targetId": "0f3c-09a4-504d-84bd",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 8}]
+                      },
+                      {
+                        "name": "Light Anti-tank Gun",
+                        "id": "7818-08bc-326b-3c24",
+                        "hidden": false,
+                        "import": true,
+                        "targetId": "e56e-f860-e8a4-b724",
+                        "type": "selectionEntry",
+                        "constraints": [{"id": "05e8-a472-a2cf-902b", "field": "selections", "scope": "6530-5f81-6442-dead", "shared": true, "type": "max", "value": 1}],
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 35}],
+                        "modifiers": [
+                          {
+                            "field": "05e8-a472-a2cf-902b",
+                            "type": "decrement",
+                            "value": 1,
+                            "conditions": [
+                              {
+                                "childId": "7818-08bc-326b-3c24",
+                                "childName": "Light Anti-tank Gun",
+                                "field": "selections",
+                                "scope": "6530-5f81-6442-dead",
+                                "shared": true,
+                                "type": "atLeast",
+                                "value": 1
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Hero Statistics",
+                    "id": "c3ae-e879-7bbe-9d47",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [{"id": "cfa8-be56-fed6-a6f0", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                    "selectionEntries": [
+                      {
+                        "name": "Guts",
+                        "id": "f433-1293-071b-b433",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 1,
+                        "type": "upgrade",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 10}],
+                        "profiles": [
+                          {
+                            "name": "Guts",
+                            "id": "3372-93c8-6f35-a1ec",
+                            "hidden": false,
+                            "typeId": "h_stats",
+                            "typeName": "Hero Statistics",
+                            "characteristics": [
+                              {"name": "Guts", "$text": "1", "typeId": "586d-9d30-8830-1c71"},
+                              {"name": "Rift Mastery", "$text": "-", "typeId": "f4dc-544b-85d6-7ac1"},
+                              {"name": "Luck", "$text": "-", "typeId": "f48c-63c7-341b-e425"}
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Rift Mastery",
+                        "id": "7030-4212-3f79-3a26",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 2,
+                        "type": "upgrade",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 15}],
+                        "profiles": [
+                          {
+                            "name": "Rift Mastery",
+                            "id": "1898-57b1-87ec-f706",
+                            "hidden": false,
+                            "typeId": "h_stats",
+                            "typeName": "Hero Statistics",
+                            "characteristics": [
+                              {"name": "Guts", "$text": "-", "typeId": "586d-9d30-8830-1c71"},
+                              {"name": "Rift Mastery", "$text": "1", "typeId": "f4dc-544b-85d6-7ac1"},
+                              {"name": "Luck", "$text": "-", "typeId": "f48c-63c7-341b-e425"}
+                            ]
+                          },
+                          {
+                            "name": "Rift Mastery",
+                            "id": "3c58-a5a2-8df9-8910",
+                            "hidden": false,
+                            "typeId": "r_stats",
+                            "typeName": "Rift ability",
+                            "characteristics": [
+                              {"name": "active rift enhancement", "$text": "-", "typeId": "cbaa-91a6-d3fd-af8e"},
+                              {"name": "surging bonus", "$text": "-", "typeId": "9d0b-7a64-d1e2-5de4"},
+                              {"name": "exhausted penalty", "$text": "-", "typeId": "e2f8-7c71-9549-0100"},
+                              {"name": "Rift dice", "$text": "1", "typeId": "f13e-857d-bdde-754e"}
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Stahltruppen",
+                "id": "eca7-fffc-24ad-4e07",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 30}],
+                "selectionEntryGroups": [
+                  {
+                    "name": "Weapon Options",
+                    "id": "8d9c-e6fa-c611-9a32",
+                    "hidden": false,
+                    "constraints": [
+                      {"id": "f3fd-524c-a529-546f-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "f3fd-524c-a529-546f-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ],
+                    "entryLinks": [
+                      {"name": "STG 44Z", "id": "6892-4d63-5795-7df7", "hidden": false, "import": true, "sortIndex": 1, "targetId": "998c-7fcc-f0f5-9a88", "type": "selectionEntry"},
+                      {
+                        "name": "Infantry Light Machine Gun",
+                        "id": "3f13-1ce4-8bf7-8b00",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 2,
+                        "targetId": "0f3c-09a4-504d-84bd",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 8}]
+                      },
+                      {
+                        "name": "Light Anti-tank Gun",
+                        "id": "20b2-d92a-e1f2-82dc",
+                        "hidden": false,
+                        "import": true,
+                        "targetId": "e56e-f860-e8a4-b724",
+                        "type": "selectionEntry",
+                        "constraints": [{"id": "5315-917c-56a3-a0d7", "field": "selections", "scope": "6530-5f81-6442-dead", "shared": true, "type": "max", "value": 1}],
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 35}],
+                        "modifiers": [
+                          {
+                            "field": "5315-917c-56a3-a0d7",
+                            "type": "decrement",
+                            "value": 1,
+                            "conditions": [
+                              {
+                                "childId": "7818-08bc-326b-3c24",
+                                "childName": "Light Anti-tank Gun",
+                                "field": "selections",
+                                "scope": "6530-5f81-6442-dead",
+                                "shared": true,
+                                "type": "atLeast",
+                                "value": 1
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {"name": "Squad Upgrades", "id": "5ee8-fbd3-7cda-f8f3", "hidden": false, "sortIndex": 3}
         ]
       }
     ],
@@ -735,6 +1598,127 @@
             "typeId": "0a25-ed8a-c0be-4e44"
           }
         ]
+      },
+      {
+        "name": "Hauptmann Heinrich Gross",
+        "id": "92cf-8fe3-bb8a-4274",
+        "hidden": false,
+        "typeId": "i_stats",
+        "typeName": "infantry unit",
+        "characteristics": [
+          {"name": "advance rate", "$text": "8\"", "typeId": "13d7-4ad1-36a5-25ac"},
+          {"name": "run rate", "$text": "16\"", "typeId": "44fc-5e79-0003-21b1"},
+          {"name": "quality", "$text": "veteran", "typeId": "eea9-be51-f1cf-c5a0"},
+          {"name": "damage value", "$text": "5+", "typeId": "d7d0-6fbe-65f5-e4cd"},
+          {"name": "morale value", "$text": "10 (fearless)", "typeId": "874f-76b8-b3a2-a165"},
+          {"name": "base size", "$text": "25mm", "typeId": "6b5c-b67a-16a5-05c8"}
+        ]
+      },
+      {
+        "name": "Heinrich Gross",
+        "id": "5b35-2bfc-e080-e620",
+        "hidden": false,
+        "typeId": "r_stats",
+        "typeName": "Rift ability",
+        "characteristics": [
+          {
+            "name": "active rift enhancement",
+            "$text": "Relentless:\nWhen using the Snap to Action! ability, Gross can issue Orders to units within 6\" that have already been assigned an Order Die. For each unit he attempts to Snap to Action! in this way, he must have an Active or Surging Rift Die. Each unit nominated must pass an Order Test, even if they are not Pinned. If they succeed they may execute another Order using their existing Order Die. If they fail, their Order Die is changed to Down instead. If Gross uses the Relentless enhancement, after he and all affected units have executed their Orders, exhaust one of his Rift Dice for each unit ordered in this way, whether they were successful or not. ",
+            "typeId": "cbaa-91a6-d3fd-af8e"
+          },
+          {"name": "surging bonus", "$text": "gain the hard to kill special rule (whole squad)", "typeId": "9d0b-7a64-d1e2-5de4"},
+          {"name": "exhausted penalty", "$text": "lose the fast special rule", "typeId": "e2f8-7c71-9549-0100"},
+          {"name": "Rift dice", "$text": "3 (including rift mastery)", "typeId": "f13e-857d-bdde-754e"}
+        ]
+      },
+      {
+        "name": "Heinrich Gross",
+        "id": "fa68-07fd-7ebd-9dd8",
+        "hidden": false,
+        "typeId": "h_stats",
+        "typeName": "Hero Statistics",
+        "characteristics": [
+          {"name": "Guts", "$text": "2", "typeId": "586d-9d30-8830-1c71"},
+          {"name": "Rift Mastery", "$text": "2", "typeId": "f4dc-544b-85d6-7ac1"},
+          {"name": "Luck", "$text": "1", "typeId": "f48c-63c7-341b-e425"}
+        ]
+      },
+      {
+        "name": "totenrotte platoon personnel",
+        "id": "49ff-b665-11b9-2220",
+        "hidden": false,
+        "typeId": "i_stats",
+        "typeName": "infantry unit",
+        "characteristics": [
+          {"name": "advance rate", "$text": "6\"", "typeId": "13d7-4ad1-36a5-25ac"},
+          {"name": "run rate", "$text": "12\"", "typeId": "44fc-5e79-0003-21b1"},
+          {"name": "quality", "$text": "veteran", "typeId": "eea9-be51-f1cf-c5a0"},
+          {"name": "damage value", "$text": "5+", "typeId": "d7d0-6fbe-65f5-e4cd"},
+          {"name": "morale value", "$text": "10", "typeId": "874f-76b8-b3a2-a165"},
+          {"name": "base size", "$text": "25mm", "typeId": "6b5c-b67a-16a5-05c8"}
+        ]
+      },
+      {
+        "name": "STG 44Z",
+        "id": "07f9-2164-b1c5-9aaf",
+        "hidden": false,
+        "typeId": "w_stats",
+        "typeName": "weapon",
+        "characteristics": [
+          {"name": "range", "$text": "18\"", "typeId": "0fa9-a3c9-d7da-2e6e"},
+          {"name": "shots", "$text": "3", "typeId": "4e5d-8016-2340-6789"},
+          {"name": "pen", "$text": "-", "typeId": "d212-35ab-fbf6-9588"},
+          {"name": "special rules", "$text": "assault", "typeId": "8d46-fd5f-5386-1410"}
+        ]
+      },
+      {
+        "name": "Stahltrup",
+        "id": "6a01-b555-93f9-e611",
+        "hidden": false,
+        "typeId": "i_stats",
+        "typeName": "infantry unit",
+        "characteristics": [
+          {"name": "advance rate", "$text": "6\"", "typeId": "13d7-4ad1-36a5-25ac"},
+          {"name": "run rate", "$text": "12\"", "typeId": "44fc-5e79-0003-21b1"},
+          {"name": "quality", "$text": "veteran", "typeId": "eea9-be51-f1cf-c5a0"},
+          {"name": "damage value", "$text": "7+", "typeId": "d7d0-6fbe-65f5-e4cd"},
+          {"name": "morale value", "$text": "10", "typeId": "874f-76b8-b3a2-a165"},
+          {"name": "base size", "$text": "32mm", "typeId": "6b5c-b67a-16a5-05c8"}
+        ]
+      }
+    ],
+    "sharedSelectionEntries": [
+      {
+        "name": "STG 44Z",
+        "id": "998c-7fcc-f0f5-9a88",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [{"name": "New Profile", "id": "4197-b71a-6984-0f26", "hidden": false, "targetId": "07f9-2164-b1c5-9aaf", "type": "profile"}]
+      },
+      {
+        "name": "Schwarzlicht MP 40SzL Schmeisser",
+        "id": "6d68-a27c-08a6-6af5",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [{"name": "SL schmeisser", "id": "83bd-de20-4028-db7d", "hidden": false, "targetId": "fb7e-47c2-8c0e-476c", "type": "profile"}]
+      },
+      {
+        "name": "Schwarzlicht P 08SzL Luger",
+        "id": "b69e-b35d-19a4-3b0b",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [{"name": "SL luger", "id": "1c09-41b4-4083-3a72", "hidden": false, "targetId": "28a3-a111-d167-426a", "type": "profile"}]
+      },
+      {
+        "name": "teeth and claws",
+        "id": "0a5f-89bc-5f73-152a",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [{"name": "Teeth and Claws", "id": "3c93-dc03-e21c-25f1", "hidden": false, "targetId": "7e38-dfbf-da04-07f8", "type": "profile"}]
       }
     ]
   }
