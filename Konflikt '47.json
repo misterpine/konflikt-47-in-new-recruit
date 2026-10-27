@@ -29,7 +29,8 @@
       {"name": "light mortar team", "id": "fff3-9026-78e4-303d", "hidden": false},
       {"name": "nonvehicle unit", "id": "832b-b467-f671-7cf0", "hidden": false},
       {"name": "Hero", "id": "1393-8cec-caff-46d4", "hidden": false},
-      {"name": "Company commander", "id": "157e-1aef-12e6-2da8", "hidden": false}
+      {"name": "Company commander", "id": "157e-1aef-12e6-2da8", "hidden": false},
+      {"name": "Flamethrower Team", "id": "03fd-491d-6b30-e5ed", "hidden": false}
     ],
     "costTypes": [{"name": "points", "id": "2eda-e484-fddf-506a", "defaultCostLimit": -1}],
     "forceEntries": [
@@ -788,7 +789,8 @@
           {"name": "quality", "id": "eea9-be51-f1cf-c5a0"},
           {"name": "damage value", "id": "d7d0-6fbe-65f5-e4cd"},
           {"name": "morale value", "id": "874f-76b8-b3a2-a165"},
-          {"name": "base size", "id": "6b5c-b67a-16a5-05c8"}
+          {"name": "base size", "id": "6b5c-b67a-16a5-05c8"},
+          {"name": "special rules", "id": "9e09-34a3-3073-c2f4"}
         ]
       },
       {
@@ -835,7 +837,8 @@
           {"name": "damage value", "id": "5a66-2cf9-eca0-5992"},
           {"name": "morale value", "id": "5b73-3cda-a2ed-841d"},
           {"name": "transport capacity", "id": "0588-c593-be13-2fa3"},
-          {"name": "tow capability", "id": "0a25-ed8a-c0be-4e44"}
+          {"name": "tow capability", "id": "0a25-ed8a-c0be-4e44"},
+          {"name": "special rules", "id": "df1b-e75b-1983-ec69"}
         ]
       }
     ],
@@ -956,6 +959,32 @@
           {"name": "pen", "$text": "+4", "typeId": "d212-35ab-fbf6-9588"},
           {"name": "special rules", "$text": "team, fixed, anti-tank gun, HE (1\")", "typeId": "8d46-fd5f-5386-1410"}
         ]
+      },
+      {
+        "name": "Light Automatic Cannon",
+        "id": "f6e2-8581-a5ff-ca5f",
+        "hidden": false,
+        "typeId": "w_stats",
+        "typeName": "weapon",
+        "characteristics": [
+          {"name": "range", "$text": "48\"", "typeId": "0fa9-a3c9-d7da-2e6e"},
+          {"name": "shots", "$text": "2", "typeId": "4e5d-8016-2340-6789"},
+          {"name": "pen", "$text": "+2", "typeId": "d212-35ab-fbf6-9588"},
+          {"name": "special rules", "$text": "Team\nFixed\nHE (1\")", "typeId": "8d46-fd5f-5386-1410"}
+        ]
+      },
+      {
+        "name": "Heavy Automatic Cannon",
+        "id": "ae8a-c5d9-085b-d67c",
+        "hidden": false,
+        "typeId": "w_stats",
+        "typeName": "weapon",
+        "characteristics": [
+          {"name": "range", "$text": "72\"", "typeId": "0fa9-a3c9-d7da-2e6e"},
+          {"name": "shots", "$text": "2", "typeId": "4e5d-8016-2340-6789"},
+          {"name": "pen", "$text": "+3", "typeId": "d212-35ab-fbf6-9588"},
+          {"name": "special rules", "$text": "Team\nFixed\nHE (1\")", "typeId": "8d46-fd5f-5386-1410"}
+        ]
       }
     ],
     "sharedRules": [
@@ -1017,7 +1046,25 @@
         "description": "this unit can benefit from the medic special rule regardless of its status as a rift unit.",
         "hidden": false
       },
-      {"name": "Heavy", "id": "3e19-8788-b6d7-2f55", "description": "ignore the team weapon special rule for any weapon this model carries.", "hidden": false}
+      {"name": "Heavy", "id": "3e19-8788-b6d7-2f55", "description": "ignore the team weapon special rule for any weapon this model carries.", "hidden": false},
+      {
+        "name": "Tough Fighters",
+        "id": "a59d-721f-0c70-7dc1",
+        "description": "When fighting in close combat against a non-vehicle unit, a model with this special rule may make one additional damage roll.",
+        "hidden": false
+      },
+      {
+        "name": "Stubborn",
+        "id": "9493-209f-ba31-417f",
+        "description": "When making morale checks, a unit with stubborn ignores morale penalties from pins. this does not apply to order tests, only morale checks.",
+        "hidden": false
+      },
+      {
+        "name": "Tank Hunters",
+        "id": "182a-1137-c269-cb40",
+        "description": "a unit with tank hunters ignores tank fear and can deal full damage against an armored target rather than just superficial damage.",
+        "hidden": false
+      }
     ],
     "sharedSelectionEntries": [
       {
@@ -1091,6 +1138,22 @@
         "import": true,
         "type": "upgrade",
         "infoLinks": [{"name": "Light Anti-tank Gun", "id": "974f-0216-891e-72ae", "hidden": false, "targetId": "296c-0702-2bb3-99fb", "type": "profile"}]
+      },
+      {
+        "name": "Light Automatic Cannon",
+        "id": "5ef2-89bc-5d22-d746",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [{"name": "Light Automatic Cannon", "id": "0d03-3f16-884c-a41b", "hidden": false, "targetId": "f6e2-8581-a5ff-ca5f", "type": "profile"}]
+      },
+      {
+        "name": "Heavy Automatic Cannon",
+        "id": "75f5-f18e-3ffc-5bbd",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [{"name": "Heavy Automatic Cannon", "id": "2854-a2c8-5803-4f6c", "hidden": false, "targetId": "ae8a-c5d9-085b-d67c", "type": "profile"}]
       }
     ],
     "sharedSelectionEntryGroups": [
@@ -1103,30 +1166,6 @@
           {"id": "99c3-bea9-e124-796e-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
         ],
         "selectionEntries": [
-          {
-            "name": "inexperienced",
-            "id": "bfe5-28d6-f9d8-7742",
-            "hidden": false,
-            "import": true,
-            "type": "upgrade",
-            "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": -6}],
-            "modifierGroups": [
-              {
-                "type": "and",
-                "modifiers": [
-                  {"affects": "profiles.infantry unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "8"},
-                  {"affects": "profiles.infantry unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "3+"},
-                  {"affects": "profiles.infantry unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "inexperienced"},
-                  {
-                    "field": "2eda-e484-fddf-506a",
-                    "type": "increment",
-                    "value": -3,
-                    "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "parent", "shared": true, "value": 1}]
-                  }
-                ]
-              }
-            ]
-          },
           {
             "name": "regular",
             "id": "5a11-f4f9-b02e-0e50",
@@ -1150,7 +1189,7 @@
             "hidden": false,
             "import": true,
             "type": "upgrade",
-            "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 6}],
+            "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 0}],
             "modifierGroups": [
               {
                 "type": "and",
@@ -1162,6 +1201,30 @@
                     "field": "2eda-e484-fddf-506a",
                     "type": "increment",
                     "value": 3,
+                    "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "parent", "shared": true, "value": 1}]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "inexperienced",
+            "id": "0c99-bdcf-9b8b-2244",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 0}],
+            "modifierGroups": [
+              {
+                "type": "and",
+                "modifiers": [
+                  {"affects": "profiles.infantry unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "8"},
+                  {"affects": "profiles.infantry unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "3+"},
+                  {"affects": "profiles.infantry unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "inexperienced"},
+                  {
+                    "field": "2eda-e484-fddf-506a",
+                    "type": "increment",
+                    "value": -3,
                     "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "parent", "shared": true, "value": 1}]
                   }
                 ]

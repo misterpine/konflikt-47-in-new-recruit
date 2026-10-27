@@ -1,0 +1,1993 @@
+{
+  "catalogue": {
+    "name": "The British Commonwealth",
+    "id": "be3d-e9d0-e53a-69ca",
+    "battleScribeVersion": "2.03",
+    "gameSystemId": "sys-562d-57ab-dfd1-a508",
+    "gameSystemRevision": 1,
+    "library": false,
+    "revision": 1,
+    "type": "catalogue",
+    "categoryEntries": [{"name": "automated", "id": "fbed-c057-7ad4-9a3a", "hidden": false}],
+    "selectionEntries": [
+      {
+        "name": "Company commander -- Officer",
+        "id": "02de-91f2-8d0e-2898",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "Company commander", "id": "8981-1177-c171-d6eb", "hidden": false, "primary": true, "targetId": "157e-1aef-12e6-2da8"},
+          {"name": "nonvehicle unit", "id": "bd4f-08e9-2d32-acc2", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Options",
+            "id": "1860-c08a-ba5a-47ae",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntries": [
+              {
+                "name": "Officer",
+                "id": "711b-5cf5-1b46-d6be",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 1,
+                "type": "model",
+                "constraints": [
+                  {"id": "0144-a6d8-d21e-336d-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "0144-a6d8-d21e-336d-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ],
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 60}],
+                "selectionEntryGroups": [
+                  {
+                    "name": "Weapon",
+                    "id": "9331-166d-817a-4e97",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {"id": "c261-0cee-c68b-7e59-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "c261-0cee-c68b-7e59-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ],
+                    "entryLinks": [
+                      {"name": "Pistol", "id": "64ff-6615-ebcd-6d99", "hidden": false, "import": true, "sortIndex": 1, "targetId": "76a4-3033-579c-e93f", "type": "selectionEntry"},
+                      {
+                        "name": "Rifle",
+                        "id": "7c8e-7ce2-8e87-ccdb",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 2,
+                        "targetId": "54e5-13dc-90ac-8327",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 1}]
+                      },
+                      {
+                        "name": "Submachine Gun",
+                        "id": "3ddc-acee-b28b-a3d3",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 3,
+                        "targetId": "3693-3302-b253-2948",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 5}]
+                      },
+                      {
+                        "name": "Assault Rifle",
+                        "id": "7ae0-018c-9145-ce83",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 4,
+                        "targetId": "a37c-1833-f773-07be",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 7}]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Hero Stat Point",
+                    "id": "902b-af10-ae08-9cbf",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [{"id": "10be-4592-fe05-a4a2", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                    "selectionEntries": [
+                      {
+                        "name": "Guts",
+                        "id": "1f47-c29b-9ba5-0cf1",
+                        "hidden": false,
+                        "import": true,
+                        "type": "upgrade",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 10}],
+                        "infoLinks": [{"name": "Selected Guts", "id": "c43e-1495-390f-7674", "hidden": false, "targetId": "d7c5-42a0-8bc2-fd07", "type": "profile"}]
+                      },
+                      {
+                        "name": "Rift Mastery",
+                        "id": "e04e-3f12-2d20-0269",
+                        "hidden": false,
+                        "import": true,
+                        "type": "upgrade",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 15}],
+                        "infoLinks": [
+                          {"name": "Selected Rift Mastery", "id": "112d-8993-f249-0e98", "hidden": false, "targetId": "c24d-d9e6-37be-4400", "type": "profile"},
+                          {"name": "Not Rift Unit By Default", "id": "2a3d-e94d-9770-56a3", "hidden": false, "targetId": "5947-3224-fa60-74d0", "type": "profile"}
+                        ],
+                        "modifiers": [{"affects": "profiles.Rift ability", "field": "f13e-857d-bdde-754e", "type": "increment", "value": 1}]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Soldier",
+                "id": "fcca-097b-aedb-6655",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 2,
+                "type": "model",
+                "constraints": [{"id": "e2c4-c85f-f8b5-a239", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 9}],
+                "selectionEntryGroups": [
+                  {
+                    "name": "Weapon",
+                    "id": "2419-e53d-becb-0e83",
+                    "hidden": false,
+                    "constraints": [
+                      {"id": "18a6-1a41-7f10-fed3-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "18a6-1a41-7f10-fed3-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ],
+                    "entryLinks": [
+                      {"name": "Pistol", "id": "7e46-09e9-8800-c2b2", "hidden": false, "import": true, "sortIndex": 1, "targetId": "76a4-3033-579c-e93f", "type": "selectionEntry"},
+                      {
+                        "name": "Rifle",
+                        "id": "7e6b-d90e-b317-79e4",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 2,
+                        "targetId": "54e5-13dc-90ac-8327",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 1}]
+                      },
+                      {
+                        "name": "Submachine Gun",
+                        "id": "d5f1-bbda-1854-cadd",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 3,
+                        "targetId": "3693-3302-b253-2948",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 5}]
+                      },
+                      {
+                        "name": "Assault Rifle",
+                        "id": "2c80-318a-1d19-09b3",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 4,
+                        "targetId": "a37c-1833-f773-07be",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 7}]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Squad Upgrades",
+            "id": "24e5-4c34-5b30-16c1",
+            "hidden": false,
+            "sortIndex": 3,
+            "entryLinks": [
+              {
+                "name": "PRIAMs",
+                "id": "451c-e128-6997-8e8f",
+                "hidden": false,
+                "import": true,
+                "targetId": "ea34-8b85-d79e-af6d",
+                "type": "selectionEntry",
+                "modifiers": [
+                  {
+                    "field": "2eda-e484-fddf-506a",
+                    "type": "increment",
+                    "value": 5,
+                    "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "parent", "shared": true, "value": 1}]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Quality",
+            "id": "8dba-2199-3433-bcd8",
+            "hidden": false,
+            "sortIndex": 1,
+            "constraints": [
+              {"id": "1bf7-fa62-fbe5-a013-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "1bf7-fa62-fbe5-a013-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ],
+            "selectionEntries": [
+              {
+                "name": "regular",
+                "id": "f62e-cd51-7981-13b8",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {"affects": "profiles.infantry unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "9"},
+                      {"affects": "profiles.infantry unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "4+"},
+                      {"affects": "profiles.infantry unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "regular"}
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "veteran",
+                "id": "3c99-d951-d055-7df6",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 15}],
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {"affects": "profiles.infantry unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "10"},
+                      {"affects": "profiles.infantry unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "5+"},
+                      {"affects": "profiles.infantry unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "veteran"},
+                      {
+                        "field": "2eda-e484-fddf-506a",
+                        "type": "increment",
+                        "value": 3,
+                        "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "parent", "shared": true, "value": 1}]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "inexperienced",
+                "id": "6971-4304-dfa9-d3e1",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": -15}],
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {"affects": "profiles.infantry unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "8"},
+                      {"affects": "profiles.infantry unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "3+"},
+                      {"affects": "profiles.infantry unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "inexperienced"},
+                      {
+                        "field": "2eda-e484-fddf-506a",
+                        "type": "increment",
+                        "value": -3,
+                        "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "parent", "shared": true, "value": 1}]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Company commander -- Officer in Galahad heavy armor",
+        "id": "69a7-057e-b046-aee6",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "Company commander", "id": "f653-453f-9fd5-7031", "hidden": false, "primary": true, "targetId": "157e-1aef-12e6-2da8"},
+          {"name": "nonvehicle unit", "id": "deef-45d0-4b57-0b5c", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Options",
+            "id": "e198-e2f9-dc4b-63db",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntries": [
+              {
+                "name": "Officer in Grade 1 Heavy Powered Armor",
+                "id": "9dee-8380-c634-8f8f",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 1,
+                "type": "model",
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 80}],
+                "profiles": [
+                  {
+                    "name": "Officer in Grade 1 Heavy Powered Armor",
+                    "id": "31f9-ac00-b2bb-c52f",
+                    "hidden": false,
+                    "typeId": "i_stats",
+                    "typeName": "infantry unit",
+                    "characteristics": [
+                      {"name": "advance rate", "$text": "6\"", "typeId": "13d7-4ad1-36a5-25ac"},
+                      {"name": "run rate", "$text": "12\"", "typeId": "44fc-5e79-0003-21b1"},
+                      {"name": "quality", "$text": "-", "typeId": "eea9-be51-f1cf-c5a0"},
+                      {"name": "damage value", "$text": "-", "typeId": "d7d0-6fbe-65f5-e4cd"},
+                      {"name": "morale value", "$text": "-", "typeId": "874f-76b8-b3a2-a165"},
+                      {"name": "base size", "$text": "25mm", "typeId": "6b5c-b67a-16a5-05c8"},
+                      {"name": "special rules", "$text": "Heavy", "typeId": "9e09-34a3-3073-c2f4"}
+                    ]
+                  }
+                ],
+                "selectionEntryGroups": [
+                  {
+                    "name": "Weapon",
+                    "id": "0e95-71ab-d66d-f263",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "entryLinks": [
+                      {
+                        "name": "Infantry Light Machine Gun",
+                        "id": "18db-8ee7-405f-24b8",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 1,
+                        "targetId": "0f3c-09a4-504d-84bd",
+                        "type": "selectionEntry"
+                      },
+                      {
+                        "name": "Heavy Tesla Rifle",
+                        "id": "c512-5b30-5c30-3e68",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 2,
+                        "targetId": "26e4-0241-49bd-710c",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": -5}],
+                        "infoLinks": [{"name": "Not Rift Unit By Default", "id": "68ef-0823-553d-d4fc", "hidden": false, "targetId": "5947-3224-fa60-74d0", "type": "profile"}],
+                        "modifiers": [{"affects": "profiles.Rift ability", "field": "f13e-857d-bdde-754e", "type": "increment", "value": 1}]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Hero Stat Point",
+                    "id": "4ed0-82fd-980e-5bae",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [{"id": "144c-2bb4-13b5-3463", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                    "selectionEntries": [
+                      {
+                        "name": "Guts",
+                        "id": "7d97-66cb-8739-f728",
+                        "hidden": false,
+                        "import": true,
+                        "type": "upgrade",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 10}],
+                        "infoLinks": [{"name": "Selected Guts", "id": "bb1c-1ed5-cb72-317d", "hidden": false, "targetId": "d7c5-42a0-8bc2-fd07", "type": "profile"}]
+                      },
+                      {
+                        "name": "Rift Mastery",
+                        "id": "d1aa-8c71-ad15-440c",
+                        "hidden": false,
+                        "import": true,
+                        "type": "upgrade",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 15}],
+                        "infoLinks": [
+                          {"name": "Selected Rift Mastery", "id": "7743-73b9-9436-208f", "hidden": false, "targetId": "c24d-d9e6-37be-4400", "type": "profile"},
+                          {"name": "Not Rift Unit By Default", "id": "b4cf-bd42-3377-5605", "hidden": false, "targetId": "5947-3224-fa60-74d0", "type": "profile"}
+                        ],
+                        "modifiers": [{"affects": "profiles.Rift ability", "field": "f13e-857d-bdde-754e", "type": "increment", "value": 1}]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Soldier in Grade 1 Heavy Powered Armor",
+                "id": "f075-a936-e512-d802",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 2,
+                "type": "model",
+                "constraints": [{"id": "6a77-a645-5334-8e63", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 30}],
+                "entryLinks": [
+                  {
+                    "name": "Infantry Light Machine Gun",
+                    "id": "a080-4255-b53e-ae0a",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "0f3c-09a4-504d-84bd",
+                    "type": "selectionEntry",
+                    "constraints": [
+                      {"id": "e8b8-7f17-541f-3ac4-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "e8b8-7f17-541f-3ac4-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ]
+                  }
+                ],
+                "infoLinks": [{"name": "Soldier in Grade 1 Powered Armor", "id": "c117-6c89-2460-e287", "hidden": false, "targetId": "d99f-54d3-e28a-783c", "type": "profile"}]
+              }
+            ]
+          },
+          {
+            "name": "Squad Upgrades",
+            "id": "cb80-65a6-712c-19c7",
+            "hidden": false,
+            "sortIndex": 3,
+            "entryLinks": [
+              {
+                "name": "PRIAMs",
+                "id": "506d-6b88-af5e-3a78",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 1,
+                "targetId": "ea34-8b85-d79e-af6d",
+                "type": "selectionEntry",
+                "constraints": [{"id": "aa5d-d9ca-21d0-ad77", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "modifiers": [
+                  {
+                    "field": "2eda-e484-fddf-506a",
+                    "type": "increment",
+                    "value": 5,
+                    "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "parent", "shared": true, "value": 1}]
+                  }
+                ]
+              }
+            ],
+            "selectionEntries": [
+              {
+                "name": "Anti-tank Grenades",
+                "id": "60a8-6775-00d3-fb16",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 2,
+                "type": "upgrade",
+                "constraints": [{"id": "cabb-ec32-d7bc-cf98", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "infoLinks": [{"name": "Tank Hunters", "id": "0c4d-b88a-094c-6164", "hidden": false, "targetId": "182a-1137-c269-cb40", "type": "rule"}],
+                "modifiers": [
+                  {
+                    "field": "2eda-e484-fddf-506a",
+                    "type": "increment",
+                    "value": 2,
+                    "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "parent", "shared": true, "value": 1}]
+                  }
+                ]
+              },
+              {
+                "name": "Stubborn",
+                "id": "ac6c-47ff-79c8-eae8",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 3,
+                "type": "upgrade",
+                "constraints": [{"id": "cee0-1e38-90fe-9b97", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "infoLinks": [{"name": "Stubborn", "id": "f2fe-b018-4f5a-0430", "hidden": false, "targetId": "9493-209f-ba31-417f", "type": "rule"}],
+                "modifiers": [
+                  {
+                    "field": "2eda-e484-fddf-506a",
+                    "type": "increment",
+                    "value": 1,
+                    "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "parent", "shared": true, "value": 1}]
+                  }
+                ]
+              },
+              {
+                "name": "Tough Fighters",
+                "id": "8f03-a389-4d36-d3f6",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 4,
+                "type": "upgrade",
+                "constraints": [{"id": "8a29-1f66-f6f5-a505", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "infoLinks": [{"name": "Tough Fighters", "id": "2ee4-cd1e-f998-7ad4", "hidden": false, "targetId": "a59d-721f-0c70-7dc1", "type": "rule"}],
+                "modifiers": [
+                  {
+                    "field": "2eda-e484-fddf-506a",
+                    "type": "increment",
+                    "value": 1,
+                    "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "parent", "shared": true, "value": 1}]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Quality",
+            "id": "84a8-1b34-9b5e-fe51",
+            "hidden": false,
+            "sortIndex": 1,
+            "constraints": [
+              {"id": "7c03-d087-2a5b-5197-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "7c03-d087-2a5b-5197-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ],
+            "selectionEntries": [
+              {
+                "name": "regular",
+                "id": "ad4c-4251-e6bb-7089",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {"affects": "profiles.infantry unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "9"},
+                      {"affects": "profiles.infantry unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "5+"},
+                      {"affects": "profiles.infantry unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "regular"}
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "veteran",
+                "id": "bfaa-246a-517d-df77",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 15}],
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {"affects": "profiles.infantry unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "10"},
+                      {"affects": "profiles.infantry unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "6+"},
+                      {"affects": "profiles.infantry unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "veteran"},
+                      {
+                        "field": "2eda-e484-fddf-506a",
+                        "type": "increment",
+                        "value": 3,
+                        "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "parent", "shared": true, "value": 1}]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Platoon commander -- Officer",
+        "id": "59b9-6a27-e84a-f6b3",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "platoon commander", "id": "97bd-04d4-8270-3a57", "hidden": false, "primary": true, "targetId": "35bf-bece-817b-6874"},
+          {"name": "nonvehicle unit", "id": "7ade-4ca4-b232-943f", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Quality",
+            "id": "4358-ee1b-d413-cc4f",
+            "hidden": false,
+            "sortIndex": 1,
+            "constraints": [
+              {"id": "2253-0af6-2486-543d-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "2253-0af6-2486-543d-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ],
+            "selectionEntries": [
+              {
+                "name": "regular",
+                "id": "3b70-dfa2-28e4-a364",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {"affects": "profiles.infantry unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "9"},
+                      {"affects": "profiles.infantry unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "4+"},
+                      {"affects": "profiles.infantry unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "regular"}
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "veteran",
+                "id": "144b-d51f-b745-7934",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 6}],
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {"affects": "profiles.infantry unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "10"},
+                      {"affects": "profiles.infantry unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "5+"},
+                      {"affects": "profiles.infantry unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "veteran"},
+                      {
+                        "field": "2eda-e484-fddf-506a",
+                        "type": "increment",
+                        "value": 3,
+                        "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "parent", "shared": true, "value": 1}]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "inexperienced",
+                "id": "9a54-37c4-ccdb-874d",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": -6}],
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {"affects": "profiles.infantry unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "8"},
+                      {"affects": "profiles.infantry unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "3+"},
+                      {"affects": "profiles.infantry unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "inexperienced"},
+                      {
+                        "field": "2eda-e484-fddf-506a",
+                        "type": "increment",
+                        "value": -3,
+                        "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "parent", "shared": true, "value": 1}]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Options",
+            "id": "5852-2334-9be3-f88c",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntries": [
+              {
+                "name": "Officer",
+                "id": "0e4a-c4dd-81aa-1d94",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 1,
+                "type": "model",
+                "constraints": [
+                  {"id": "38ef-fd8a-4734-c901-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "38ef-fd8a-4734-c901-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ],
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 30}],
+                "selectionEntryGroups": [
+                  {
+                    "name": "Weapon",
+                    "id": "24fd-e2a4-0b9e-b09a",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {"id": "7ecb-4d3a-2eb8-349e-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "7ecb-4d3a-2eb8-349e-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ],
+                    "entryLinks": [
+                      {"name": "Pistol", "id": "4945-5809-f2fc-0c9e", "hidden": false, "import": true, "sortIndex": 1, "targetId": "76a4-3033-579c-e93f", "type": "selectionEntry"},
+                      {
+                        "name": "Rifle",
+                        "id": "8afd-8978-b34e-91f9",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 2,
+                        "targetId": "54e5-13dc-90ac-8327",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 1}]
+                      },
+                      {
+                        "name": "Submachine Gun",
+                        "id": "2d5d-69d1-038c-8176",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 3,
+                        "targetId": "3693-3302-b253-2948",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 5}]
+                      },
+                      {
+                        "name": "Assault Rifle",
+                        "id": "c976-aca9-2a58-62cb",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 4,
+                        "targetId": "a37c-1833-f773-07be",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 7}]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Hero Stat Point",
+                    "id": "b5f4-2f06-b799-54b7",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [{"id": "7fd7-aa21-27d0-ea1b", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                    "selectionEntries": [
+                      {
+                        "name": "Guts",
+                        "id": "4fb3-c16c-466c-503e",
+                        "hidden": false,
+                        "import": true,
+                        "type": "upgrade",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 10}],
+                        "infoLinks": [{"name": "Selected Guts", "id": "890f-7b7d-2b73-6ab8", "hidden": false, "targetId": "d7c5-42a0-8bc2-fd07", "type": "profile"}]
+                      },
+                      {
+                        "name": "Rift Mastery",
+                        "id": "9d73-96dc-48c6-e852",
+                        "hidden": false,
+                        "import": true,
+                        "type": "upgrade",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 15}],
+                        "infoLinks": [
+                          {"name": "Selected Rift Mastery", "id": "d2a9-d009-9059-89bb", "hidden": false, "targetId": "c24d-d9e6-37be-4400", "type": "profile"},
+                          {"name": "Not Rift Unit By Default", "id": "e693-7dd6-f9b0-1630", "hidden": false, "targetId": "5947-3224-fa60-74d0", "type": "profile"}
+                        ],
+                        "modifiers": [{"affects": "profiles.Rift ability", "field": "f13e-857d-bdde-754e", "type": "increment", "value": 1}]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Soldier",
+                "id": "8e44-4b42-6bed-b50a",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 2,
+                "type": "model",
+                "constraints": [{"id": "161f-ca12-b882-009f", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 9}],
+                "selectionEntryGroups": [
+                  {
+                    "name": "Weapon",
+                    "id": "f07d-7317-eb48-0720",
+                    "hidden": false,
+                    "constraints": [
+                      {"id": "dc0c-9bb8-3322-9e76-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "dc0c-9bb8-3322-9e76-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ],
+                    "entryLinks": [
+                      {"name": "Pistol", "id": "5cce-43b0-bba2-5987", "hidden": false, "import": true, "sortIndex": 1, "targetId": "76a4-3033-579c-e93f", "type": "selectionEntry"},
+                      {
+                        "name": "Rifle",
+                        "id": "83fa-c143-b39e-c76e",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 2,
+                        "targetId": "54e5-13dc-90ac-8327",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 1}]
+                      },
+                      {
+                        "name": "Submachine Gun",
+                        "id": "029f-2ca6-ce84-d9c2",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 3,
+                        "targetId": "3693-3302-b253-2948",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 5}]
+                      },
+                      {
+                        "name": "Assault Rifle",
+                        "id": "a947-1576-552b-2d6b",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 4,
+                        "targetId": "a37c-1833-f773-07be",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 7}]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Squad Upgrades",
+            "id": "3761-540b-486e-a637",
+            "hidden": false,
+            "sortIndex": 3,
+            "entryLinks": [
+              {
+                "name": "PRIAMs",
+                "id": "b868-c32c-c1d9-84b7",
+                "hidden": false,
+                "import": true,
+                "targetId": "ea34-8b85-d79e-af6d",
+                "type": "selectionEntry",
+                "modifiers": [
+                  {
+                    "field": "2eda-e484-fddf-506a",
+                    "type": "increment",
+                    "value": 5,
+                    "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "parent", "shared": true, "value": 1}]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Platoon commander -- Officer in Galahad heavy armor",
+        "id": "7c5a-0341-904f-2797",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "platoon commander", "id": "c1a4-f433-6d11-1457", "hidden": false, "primary": true, "targetId": "35bf-bece-817b-6874"},
+          {"name": "nonvehicle unit", "id": "b773-35b4-8291-daf1", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Quality",
+            "id": "0667-0bf1-7609-7a91",
+            "hidden": false,
+            "sortIndex": 1,
+            "constraints": [
+              {"id": "84dd-22a8-95a3-a3b3-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "84dd-22a8-95a3-a3b3-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ],
+            "selectionEntries": [
+              {
+                "name": "regular",
+                "id": "05a3-c5a8-79bc-32a4",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {"affects": "profiles.infantry unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "9"},
+                      {"affects": "profiles.infantry unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "5+"},
+                      {"affects": "profiles.infantry unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "regular"}
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "veteran",
+                "id": "279e-1523-47e7-c513",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 6}],
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {"affects": "profiles.infantry unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "10"},
+                      {"affects": "profiles.infantry unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "6+"},
+                      {"affects": "profiles.infantry unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "veteran"},
+                      {
+                        "field": "2eda-e484-fddf-506a",
+                        "type": "increment",
+                        "value": 3,
+                        "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "parent", "shared": true, "value": 1}]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Options",
+            "id": "2549-3316-7f91-1a3b",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntries": [
+              {
+                "name": "Officer in Grade 1 Heavy Powered Armor",
+                "id": "6f8c-9ac6-e484-3a2d",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 1,
+                "type": "model",
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 50}],
+                "profiles": [
+                  {
+                    "name": "Officer in Grade 1 Heavy Powered Armor",
+                    "id": "378c-53b1-6d86-6a5c",
+                    "hidden": false,
+                    "typeId": "i_stats",
+                    "typeName": "infantry unit",
+                    "characteristics": [
+                      {"name": "advance rate", "$text": "6\"", "typeId": "13d7-4ad1-36a5-25ac"},
+                      {"name": "run rate", "$text": "12\"", "typeId": "44fc-5e79-0003-21b1"},
+                      {"name": "quality", "$text": "-", "typeId": "eea9-be51-f1cf-c5a0"},
+                      {"name": "damage value", "$text": "-", "typeId": "d7d0-6fbe-65f5-e4cd"},
+                      {"name": "morale value", "$text": "-", "typeId": "874f-76b8-b3a2-a165"},
+                      {"name": "base size", "$text": "25mm", "typeId": "6b5c-b67a-16a5-05c8"},
+                      {"name": "special rules", "$text": "Heavy", "typeId": "9e09-34a3-3073-c2f4"}
+                    ]
+                  }
+                ],
+                "selectionEntryGroups": [
+                  {
+                    "name": "Weapon",
+                    "id": "e77d-d318-bc4b-0100",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "entryLinks": [
+                      {
+                        "name": "Infantry Light Machine Gun",
+                        "id": "1ec9-0193-ecde-07c5",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 1,
+                        "targetId": "0f3c-09a4-504d-84bd",
+                        "type": "selectionEntry"
+                      },
+                      {
+                        "name": "Heavy Tesla Rifle",
+                        "id": "b413-c898-6058-e17c",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 2,
+                        "targetId": "26e4-0241-49bd-710c",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": -5}],
+                        "infoLinks": [{"name": "Not Rift Unit By Default", "id": "ee11-6dd8-6467-de1c", "hidden": false, "targetId": "5947-3224-fa60-74d0", "type": "profile"}],
+                        "modifiers": [{"affects": "profiles.Rift ability", "field": "f13e-857d-bdde-754e", "type": "increment", "value": 1}]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Hero Stat Point",
+                    "id": "dbf7-c95f-773a-b055",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [{"id": "556b-b58e-0666-2df3", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                    "selectionEntries": [
+                      {
+                        "name": "Guts",
+                        "id": "0761-1643-891c-8f09",
+                        "hidden": false,
+                        "import": true,
+                        "type": "upgrade",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 10}],
+                        "infoLinks": [{"name": "Selected Guts", "id": "bc02-2070-f457-2342", "hidden": false, "targetId": "d7c5-42a0-8bc2-fd07", "type": "profile"}]
+                      },
+                      {
+                        "name": "Rift Mastery",
+                        "id": "ce58-af3d-c0e5-24f2",
+                        "hidden": false,
+                        "import": true,
+                        "type": "upgrade",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 15}],
+                        "infoLinks": [
+                          {"name": "Selected Rift Mastery", "id": "122f-53af-b2e0-0a70", "hidden": false, "targetId": "c24d-d9e6-37be-4400", "type": "profile"},
+                          {"name": "Not Rift Unit By Default", "id": "4980-db96-9bb2-5b41", "hidden": false, "targetId": "5947-3224-fa60-74d0", "type": "profile"}
+                        ],
+                        "modifiers": [{"affects": "profiles.Rift ability", "field": "f13e-857d-bdde-754e", "type": "increment", "value": 1}]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Soldier in Grade 1 Heavy Powered Armor",
+                "id": "f57e-50ec-5e76-f0fc",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 2,
+                "type": "model",
+                "constraints": [{"id": "69f3-f4c5-d5ef-381e", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 30}],
+                "entryLinks": [
+                  {
+                    "name": "Infantry Light Machine Gun",
+                    "id": "fbf3-b560-3c1e-be21",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "0f3c-09a4-504d-84bd",
+                    "type": "selectionEntry",
+                    "constraints": [
+                      {"id": "ffb5-9312-238a-c74f-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "ffb5-9312-238a-c74f-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ]
+                  }
+                ],
+                "infoLinks": [{"name": "Soldier in Grade 1 Powered Armor", "id": "d83c-9560-1055-98c0", "hidden": false, "targetId": "d99f-54d3-e28a-783c", "type": "profile"}]
+              }
+            ]
+          },
+          {
+            "name": "Squad Upgrades",
+            "id": "a28d-962e-bcbb-48b4",
+            "hidden": false,
+            "sortIndex": 3,
+            "entryLinks": [
+              {
+                "name": "PRIAMs",
+                "id": "8de1-753e-2691-e24c",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 1,
+                "targetId": "ea34-8b85-d79e-af6d",
+                "type": "selectionEntry",
+                "constraints": [{"id": "da9e-0432-030f-f3c0", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "modifiers": [
+                  {
+                    "field": "2eda-e484-fddf-506a",
+                    "type": "increment",
+                    "value": 5,
+                    "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "parent", "shared": true, "value": 1}]
+                  }
+                ]
+              }
+            ],
+            "selectionEntries": [
+              {
+                "name": "Anti-tank Grenades",
+                "id": "c8ea-c636-4c52-dce1",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 2,
+                "type": "upgrade",
+                "constraints": [{"id": "ab6b-3db0-773f-0fd7", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "infoLinks": [{"name": "Tank Hunters", "id": "d380-1f4c-9ee9-cf27", "hidden": false, "targetId": "182a-1137-c269-cb40", "type": "rule"}],
+                "modifiers": [
+                  {
+                    "field": "2eda-e484-fddf-506a",
+                    "type": "increment",
+                    "value": 2,
+                    "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "parent", "shared": true, "value": 1}]
+                  }
+                ]
+              },
+              {
+                "name": "Stubborn",
+                "id": "47fd-dd2b-9f92-11ea",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 3,
+                "type": "upgrade",
+                "constraints": [{"id": "0a60-e856-d5f7-996b", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "infoLinks": [{"name": "Stubborn", "id": "e0cf-720c-e7ec-f284", "hidden": false, "targetId": "9493-209f-ba31-417f", "type": "rule"}],
+                "modifiers": [
+                  {
+                    "field": "2eda-e484-fddf-506a",
+                    "type": "increment",
+                    "value": 1,
+                    "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "parent", "shared": true, "value": 1}]
+                  }
+                ]
+              },
+              {
+                "name": "Tough Fighters",
+                "id": "2602-7d88-8313-d228",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 4,
+                "type": "upgrade",
+                "constraints": [{"id": "0dd6-c2cc-0005-df01", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "infoLinks": [{"name": "Tough Fighters", "id": "9e45-a4fa-8ccf-d9c9", "hidden": false, "targetId": "a59d-721f-0c70-7dc1", "type": "rule"}],
+                "modifiers": [
+                  {
+                    "field": "2eda-e484-fddf-506a",
+                    "type": "increment",
+                    "value": 1,
+                    "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "parent", "shared": true, "value": 1}]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "MKIIc Automated Director",
+        "id": "84a7-4681-7594-6280",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "platoon commander", "id": "1de7-b7a3-c299-d900", "hidden": false, "primary": true, "targetId": "35bf-bece-817b-6874"},
+          {"name": "nonvehicle unit", "id": "b07e-aa5f-0c5d-e134", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"},
+          {"name": "automated", "id": "9cd9-0129-2d3b-a330", "hidden": false, "primary": false, "targetId": "fbed-c057-7ad4-9a3a"}
+        ],
+        "profiles": [
+          {
+            "name": "MKIIc Automated Director",
+            "id": "b12d-5cad-88de-78ea",
+            "hidden": false,
+            "typeId": "r_stats",
+            "typeName": "Rift ability",
+            "characteristics": [
+              {
+                "name": "active rift enhancement",
+                "$text": "Command Relay:\nWhen a Mk IIC Automated Director uses the Snap to Action! ability, it may use this enhancement. The Automated Director may issue Orders to up to two units with the Computational Systems special rule anywhere on the table, rather than within 6\". If this Rift Enhancement is used, exhaust one of the Automated Director's Rift Dice after it has executed its own Order.",
+                "typeId": "cbaa-91a6-d3fd-af8e"
+              },
+              {
+                "name": "surging bonus",
+                "$text": "Lose the Lumbering special rule. When using the Snap to Action! ability, the Automated Director may issue Orders to up to 3 friendly units.",
+                "typeId": "9d0b-7a64-d1e2-5de4"
+              },
+              {"name": "exhausted penalty", "$text": "May not be issued Run Orders. May not use the Snap to Action! ability", "typeId": "e2f8-7c71-9549-0100"},
+              {"name": "Rift dice", "$text": "2", "typeId": "f13e-857d-bdde-754e"}
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Options",
+            "id": "ee02-5c76-e60d-8c98",
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "MKIIc Automated Director",
+                "id": "a70e-a907-344f-51e5",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 1,
+                "type": "model",
+                "constraints": [
+                  {"id": "6ee2-ec9a-db7a-95a2-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "6ee2-ec9a-db7a-95a2-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ],
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 110}],
+                "entryLinks": [
+                  {
+                    "name": "M21 Light Tesla Cannon",
+                    "id": "a76f-88d7-a848-9b2c",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "7776-6378-ac5a-498a",
+                    "type": "selectionEntry",
+                    "constraints": [
+                      {"id": "f8ba-c9a6-cdd7-c001-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "f8ba-c9a6-cdd7-c001-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ]
+                  }
+                ],
+                "profiles": [
+                  {
+                    "name": "MKIIc Automated Director",
+                    "id": "9db6-f626-30e5-4725",
+                    "hidden": false,
+                    "typeId": "i_stats",
+                    "typeName": "infantry unit",
+                    "characteristics": [
+                      {"name": "advance rate", "$text": "4\"", "typeId": "13d7-4ad1-36a5-25ac"},
+                      {"name": "run rate", "$text": "8\"", "typeId": "44fc-5e79-0003-21b1"},
+                      {"name": "quality", "$text": "Veteran", "typeId": "eea9-be51-f1cf-c5a0"},
+                      {"name": "damage value", "$text": "7+", "typeId": "d7d0-6fbe-65f5-e4cd"},
+                      {"name": "morale value", "$text": "10 (fearless)", "typeId": "874f-76b8-b3a2-a165"},
+                      {"name": "base size", "$text": "40mm", "typeId": "6b5c-b67a-16a5-05c8"},
+                      {
+                        "name": "special rules",
+                        "$text": "Augmented\nAutomated Director\nComputational Systems\nData Transmission\nFearless\nHard to Kill\nLarge\nLumbering\nWide Formation",
+                        "typeId": "9e09-34a3-3073-c2f4"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "MKII Heavy Automated Infantry",
+                "id": "5f65-b246-f192-6b3b",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 2,
+                "type": "model",
+                "constraints": [{"id": "16d8-ce31-c77f-530f", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
+                "infoLinks": [{"name": "MKII Heavy Automated Infantry", "id": "d1c1-e71e-95e7-eca3", "hidden": false, "targetId": "caa8-57e1-136e-0ac8", "type": "profile"}],
+                "selectionEntryGroups": [
+                  {
+                    "name": "Weapon",
+                    "id": "023e-7d16-b44c-639a",
+                    "hidden": false,
+                    "constraints": [
+                      {"id": "d274-ebfe-1e3c-c393-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "d274-ebfe-1e3c-c393-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ],
+                    "entryLinks": [
+                      {
+                        "name": "Light Automatic Cannon",
+                        "id": "06a9-23b0-f8f4-66d2",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 1,
+                        "targetId": "5ef2-89bc-5d22-d746",
+                        "type": "selectionEntry"
+                      },
+                      {
+                        "name": "Light Automatic Cannon w/ Combat Blade",
+                        "id": "1c71-9349-15f0-ec54",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 2,
+                        "targetId": "dea8-9485-5761-0e7a",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 3}]
+                      },
+                      {
+                        "name": "Heavy Automatic Cannon",
+                        "id": "e434-8127-872f-ccdc",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 3,
+                        "targetId": "75f5-f18e-3ffc-5bbd",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 10}]
+                      },
+                      {
+                        "name": "M21 Light Tesla Cannon",
+                        "id": "a53f-d611-6cb8-9944",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 4,
+                        "targetId": "7776-6378-ac5a-498a",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 20}]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Medic",
+        "id": "6dca-c9b9-6b2b-7ec0",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "Medic", "id": "5788-a05b-1149-913f", "hidden": false, "primary": true, "targetId": "b80d-a889-28b3-8f4b"},
+          {"name": "nonvehicle unit", "id": "5ecc-bb3b-4610-f6a8", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Options",
+            "id": "e11c-ce47-d8ed-fc6b",
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "Medic",
+                "id": "adc6-93e6-3601-c45c",
+                "hidden": false,
+                "import": true,
+                "type": "model",
+                "constraints": [
+                  {"id": "41be-1aa6-0dbf-0973-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "41be-1aa6-0dbf-0973-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ],
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 30}],
+                "entryLinks": [{"name": "Pistol", "id": "46b8-9bdb-40ab-284f", "hidden": false, "import": true, "targetId": "76a4-3033-579c-e93f", "type": "selectionEntry"}],
+                "profiles": [
+                  {
+                    "name": "Medic",
+                    "id": "7672-e7be-4ed7-a671",
+                    "hidden": false,
+                    "typeId": "i_stats",
+                    "typeName": "infantry unit",
+                    "characteristics": [
+                      {"name": "advance rate", "$text": "6\"", "typeId": "13d7-4ad1-36a5-25ac"},
+                      {"name": "run rate", "$text": "12\"", "typeId": "44fc-5e79-0003-21b1"},
+                      {"name": "quality", "$text": "Veteran", "typeId": "eea9-be51-f1cf-c5a0"},
+                      {"name": "damage value", "$text": "5+", "typeId": "d7d0-6fbe-65f5-e4cd"},
+                      {"name": "morale value", "$text": "10", "typeId": "874f-76b8-b3a2-a165"},
+                      {"name": "base size", "$text": "25mm", "typeId": "6b5c-b67a-16a5-05c8"},
+                      {"name": "special rules", "$text": "Medic", "typeId": "9e09-34a3-3073-c2f4"}
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Soldier",
+                "id": "e2e7-5458-0602-ffb4",
+                "hidden": false,
+                "import": true,
+                "type": "model",
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 12}],
+                "infoLinks": [{"name": "Soldier", "id": "6a23-d2e0-e77d-48ea", "hidden": false, "targetId": "57ae-f2a0-e3bd-a4b1", "type": "profile"}],
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {"affects": "e2e7-5458-0602-ffb4.profiles.infantry unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "Veteran"},
+                      {"affects": "e2e7-5458-0602-ffb4.profiles.infantry unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "5+"},
+                      {"affects": "e2e7-5458-0602-ffb4.profiles.infantry unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "10"}
+                    ]
+                  }
+                ],
+                "selectionEntryGroups": [
+                  {
+                    "name": "Weapon",
+                    "id": "a9e4-549f-5218-39a5",
+                    "hidden": false,
+                    "entryLinks": [
+                      {"name": "Pistol", "id": "9671-f6cf-215e-e834", "hidden": false, "import": true, "sortIndex": 1, "targetId": "76a4-3033-579c-e93f", "type": "selectionEntry"},
+                      {
+                        "name": "Rifle",
+                        "id": "63b2-4eb9-41e9-8d3a",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 2,
+                        "targetId": "54e5-13dc-90ac-8327",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 1}]
+                      },
+                      {
+                        "name": "Submachine Gun",
+                        "id": "00c1-f212-1a2f-e86f",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 3,
+                        "targetId": "3693-3302-b253-2948",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 5}]
+                      },
+                      {
+                        "name": "Assault Rifle",
+                        "id": "8654-3a42-1367-c8cc",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 4,
+                        "targetId": "a37c-1833-f773-07be",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 7}]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Artillery Forward Observer",
+        "id": "7304-e3ac-b7b9-be2c",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "forward observer", "id": "ef67-8582-5839-2044", "hidden": false, "primary": true, "targetId": "f53e-dfd3-ad86-30d6"},
+          {"name": "nonvehicle unit", "id": "560f-14e8-c775-e3be", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ]
+      },
+      {
+        "name": "Air Force Forward Observer",
+        "id": "f120-026f-73d9-88ed",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "forward observer", "id": "c8a0-e99b-33e5-5d63", "hidden": false, "primary": true, "targetId": "f53e-dfd3-ad86-30d6"},
+          {"name": "nonvehicle unit", "id": "dc55-f148-e906-aa2e", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ]
+      },
+      {
+        "name": "Rifle Squad",
+        "id": "7d51-2b2e-aace-851e",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "basic infantry", "id": "4267-bd06-18af-a522", "hidden": false, "primary": true, "targetId": "a5af-4276-4e0f-cd76"},
+          {"name": "nonvehicle unit", "id": "a76d-a820-6815-3f7a", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ]
+      },
+      {
+        "name": "Galahad armored Infantry Squad",
+        "id": "bca3-6dca-c4ac-2f45",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "advanced infantry", "id": "b12c-3c3a-e9fa-58c1", "hidden": false, "primary": true, "targetId": "2bf0-01bb-f369-5f59"},
+          {"name": "nonvehicle unit", "id": "b947-2490-a660-48d1", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ]
+      },
+      {
+        "name": "Italian Bersaglieri Squad",
+        "id": "4396-e4a6-64ea-d224",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "advanced infantry", "id": "9e90-ab5b-5da0-455d", "hidden": false, "primary": true, "targetId": "2bf0-01bb-f369-5f59"},
+          {"name": "nonvehicle unit", "id": "14c0-abd2-8710-4aac", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ]
+      },
+      {
+        "name": "MKI Automated Infantry",
+        "id": "f339-04d0-9d45-c0c5",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "specialist infantry", "id": "12d9-b1b3-2274-838e", "hidden": false, "primary": true, "targetId": "afb0-6ed6-ee90-d5fa"},
+          {"name": "automated", "id": "f5b8-0a11-0c35-fce6", "hidden": false, "primary": false, "targetId": "fbed-c057-7ad4-9a3a"},
+          {"name": "nonvehicle unit", "id": "62f9-e5bc-cde2-0e12", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ]
+      },
+      {
+        "name": "MKII Heavy Automated Infantry",
+        "id": "32e9-3213-93b7-28db",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "specialist infantry", "id": "6910-f287-61c7-def6", "hidden": false, "primary": true, "targetId": "afb0-6ed6-ee90-d5fa"},
+          {"name": "nonvehicle unit", "id": "caa1-b432-b990-247f", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"},
+          {"name": "automated", "id": "f93f-8791-c732-25d4", "hidden": false, "primary": false, "targetId": "fbed-c057-7ad4-9a3a"}
+        ]
+      },
+      {
+        "name": "British Grenadiers",
+        "id": "0cc9-8483-7b08-2fc9",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "specialist infantry", "id": "34c8-e5e3-f3ae-9df8", "hidden": false, "primary": true, "targetId": "afb0-6ed6-ee90-d5fa"},
+          {"name": "nonvehicle unit", "id": "1862-bf74-c083-f731", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ]
+      },
+      {
+        "name": "Cerberus Squad",
+        "id": "b10f-6713-a660-bbd9",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "specialist infantry", "id": "ed00-a3c7-0d99-ccb2", "hidden": false, "primary": true, "targetId": "afb0-6ed6-ee90-d5fa"},
+          {"name": "nonvehicle unit", "id": "b3c0-647a-30ac-e860", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ]
+      },
+      {
+        "name": "MMG Team",
+        "id": "4922-666b-6d92-3214",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "Machine gun team", "id": "869e-51a4-852c-81c2", "hidden": false, "primary": true, "targetId": "9db3-9b46-4317-255a"},
+          {"name": "nonvehicle unit", "id": "283f-3db2-eee4-2b88", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ]
+      },
+      {
+        "name": "HMG Team",
+        "id": "5c5a-6c9f-f401-d892",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "Machine gun team", "id": "99d5-f10d-4a80-c77d", "hidden": false, "primary": true, "targetId": "9db3-9b46-4317-255a"},
+          {"name": "nonvehicle unit", "id": "12b7-dac8-8e4f-eeae", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ]
+      },
+      {
+        "name": "Automated Mobile Platform \"Lancer\"",
+        "id": "8d1c-c67a-8829-6f25",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "Machine gun team", "id": "6664-727a-05c8-ec68", "hidden": false, "primary": true, "targetId": "9db3-9b46-4317-255a"},
+          {"name": "nonvehicle unit", "id": "2c22-030a-0454-35cc", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"},
+          {"name": "automated", "id": "500d-e1ae-4859-23f6", "hidden": false, "primary": false, "targetId": "fbed-c057-7ad4-9a3a"}
+        ]
+      },
+      {
+        "name": "PIAT Team",
+        "id": "b569-3bb7-3557-4fa1",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "Anti-tank team", "id": "3e21-891c-9132-9b13", "hidden": false, "primary": true, "targetId": "337f-4c4b-44e3-0501"},
+          {"name": "nonvehicle unit", "id": "e49d-90ef-1100-24cc", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ]
+      },
+      {
+        "name": "Super Bazooka Team",
+        "id": "3892-467e-93f0-e18d",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "Anti-tank team", "id": "ce23-f556-c559-48c5", "hidden": false, "primary": true, "targetId": "337f-4c4b-44e3-0501"},
+          {"name": "nonvehicle unit", "id": "b92c-d751-e054-3857", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ]
+      },
+      {
+        "name": "Automated Mobile Platform \"Hunter\"",
+        "id": "7d5c-f9b1-5787-e71e",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "Anti-tank team", "id": "7556-2a30-cf88-0c05", "hidden": false, "primary": true, "targetId": "337f-4c4b-44e3-0501"},
+          {"name": "automated", "id": "febe-ee8a-f77f-8ed2", "hidden": false, "primary": false, "targetId": "fbed-c057-7ad4-9a3a"},
+          {"name": "nonvehicle unit", "id": "bc95-3aed-b358-69c7", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ]
+      },
+      {
+        "name": "Sniper Team",
+        "id": "ba6d-4988-5455-5329",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "sniper team", "id": "1c90-501a-98f7-3de5", "hidden": false, "primary": true, "targetId": "1a91-d7ad-0674-5498"},
+          {"name": "nonvehicle unit", "id": "4661-4e7f-4032-dcd5", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ]
+      },
+      {
+        "name": "Light Mortar Team",
+        "id": "3717-0bff-62b6-3d61",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "light mortar team", "id": "8506-5a45-be6e-f55c", "hidden": false, "primary": true, "targetId": "fff3-9026-78e4-303d"},
+          {"name": "nonvehicle unit", "id": "986e-4a24-1007-1522", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ]
+      },
+      {
+        "name": "Medium Mortar Team",
+        "id": "021e-a364-64c3-88f3",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "Mortar team", "id": "94f1-6367-8fa7-ec35", "hidden": false, "primary": true, "targetId": "c962-a159-684b-8434"},
+          {"name": "nonvehicle unit", "id": "6047-c47f-7af1-63b6", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ]
+      },
+      {
+        "name": "Heavy Mortar Team",
+        "id": "7fcb-9ee9-c586-2198",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "Mortar team", "id": "289b-9e17-0670-844b", "hidden": false, "primary": true, "targetId": "c962-a159-684b-8434"},
+          {"name": "nonvehicle unit", "id": "9983-bbe0-ceba-8033", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ]
+      },
+      {
+        "name": "Automated Mobile Platform \"Bombardier\"",
+        "id": "02a8-7c72-c291-5488",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "Mortar team", "id": "30ad-6db9-b791-0364", "hidden": false, "primary": true, "targetId": "c962-a159-684b-8434"},
+          {"name": "nonvehicle unit", "id": "ca19-263c-f79a-59c9", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ]
+      },
+      {
+        "name": "Flamethrower Team",
+        "id": "3d81-dd81-2811-51bc",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "Flamethrower Team", "id": "c229-1167-ced8-788a", "hidden": false, "primary": true, "targetId": "03fd-491d-6b30-e5ed"},
+          {"name": "nonvehicle unit", "id": "7784-a640-5741-c031", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ]
+      },
+      {
+        "name": "Light Artillery Team",
+        "id": "d4d8-9589-f84b-7db3",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "Field artillery, Anti-aircraft, or Anti-tank gun", "id": "a393-53c5-b1d9-07d8", "hidden": false, "primary": true, "targetId": "61ae-2aaa-4796-9a48"},
+          {"name": "nonvehicle unit", "id": "4214-e8e2-a373-885d", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ]
+      },
+      {
+        "name": "Medium Artillery Team",
+        "id": "e8b9-dde8-850f-2a09",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "Field artillery, Anti-aircraft, or Anti-tank gun", "id": "9ede-36ce-5f36-333c", "hidden": false, "primary": true, "targetId": "61ae-2aaa-4796-9a48"},
+          {"name": "nonvehicle unit", "id": "7144-589a-9697-daa4", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ]
+      },
+      {
+        "name": "Heavy Artillery Team",
+        "id": "4662-b73c-84ee-0bf4",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "Field artillery, Anti-aircraft, or Anti-tank gun", "id": "4680-fb24-2ba3-c7e7", "hidden": false, "primary": true, "targetId": "61ae-2aaa-4796-9a48"},
+          {"name": "nonvehicle unit", "id": "b7da-abd5-0771-a3d1", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ]
+      },
+      {
+        "name": "Light Anti-tank Gun Team",
+        "id": "71e5-5b2c-39f9-b06c",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "Field artillery, Anti-aircraft, or Anti-tank gun", "id": "cb4c-88a9-4f2f-f8f6", "hidden": false, "primary": true, "targetId": "61ae-2aaa-4796-9a48"},
+          {"name": "nonvehicle unit", "id": "3698-e1e8-bab4-00de", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ]
+      },
+      {
+        "name": "Medium Anti-tank Gun Team",
+        "id": "3c21-2f61-3cd1-ecec",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "Field artillery, Anti-aircraft, or Anti-tank gun", "id": "6902-d85a-8675-5216", "hidden": false, "primary": true, "targetId": "61ae-2aaa-4796-9a48"},
+          {"name": "nonvehicle unit", "id": "86b1-0097-ffc2-9d5e", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ]
+      },
+      {
+        "name": "Heavy Anti-tank Gun Team",
+        "id": "668d-cafd-cc59-64ef",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "Field artillery, Anti-aircraft, or Anti-tank gun", "id": "4ba6-063e-7bec-3211", "hidden": false, "primary": true, "targetId": "61ae-2aaa-4796-9a48"},
+          {"name": "nonvehicle unit", "id": "1c6f-ae9d-f221-0117", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ]
+      },
+      {
+        "name": "Super-heavy Anti-tank Gun Team",
+        "id": "50fd-bc1d-a5f6-0487",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "Field artillery, Anti-aircraft, or Anti-tank gun", "id": "690d-73c9-3180-9dde", "hidden": false, "primary": true, "targetId": "61ae-2aaa-4796-9a48"},
+          {"name": "nonvehicle unit", "id": "0ff8-2caa-a351-0114", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ]
+      },
+      {
+        "name": "M17 Tesla Cannon Team",
+        "id": "f42e-108b-dc8c-c527",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "Field artillery, Anti-aircraft, or Anti-tank gun", "id": "5493-5166-806f-dbd8", "hidden": false, "primary": true, "targetId": "61ae-2aaa-4796-9a48"},
+          {"name": "nonvehicle unit", "id": "ca82-9b4e-2cb4-00f9", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ]
+      },
+      {
+        "name": "Guardian MKI Light Walker",
+        "id": "83c8-97e1-ebea-4c00",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [{"name": "Armored walker", "id": "bfa2-421d-6e52-c1f4", "hidden": false, "primary": true, "targetId": "6f56-1279-250c-0b66"}]
+      },
+      {
+        "name": "Jackal MKI Light Jump Walker",
+        "id": "5c3f-b5a3-374d-3b8a",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [{"name": "Armored walker", "id": "bc53-b8d2-4936-e216", "hidden": false, "primary": true, "targetId": "6f56-1279-250c-0b66"}]
+      },
+      {
+        "name": "Mudskipper MKI Jump Walker",
+        "id": "f1be-2223-f8d8-1479",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [{"name": "Armored walker", "id": "f333-5c15-6834-050b", "hidden": false, "primary": true, "targetId": "6f56-1279-250c-0b66"}]
+      },
+      {
+        "name": "Percival Medium Assault Walker",
+        "id": "1ac8-5685-9c29-0e09",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [{"name": "Armored walker", "id": "b285-7854-4c13-6243", "hidden": false, "primary": true, "targetId": "6f56-1279-250c-0b66"}]
+      },
+      {
+        "name": "Hornet Medium Support Walker",
+        "id": "4ca2-9ef2-a80f-bb1d",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [{"name": "Armored walker", "id": "4b6a-926e-a681-ca36", "hidden": false, "primary": true, "targetId": "6f56-1279-250c-0b66"}]
+      },
+      {
+        "name": "Merlin Heavy Walker",
+        "id": "ee33-e3ba-40a7-b07d",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [{"name": "Armored walker", "id": "495d-8357-961b-fffb", "hidden": false, "primary": true, "targetId": "6f56-1279-250c-0b66"}]
+      },
+      {
+        "name": "Cromwell-T Cruiser Tank",
+        "id": "a4a4-6788-62c7-617f",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [{"name": "Vehicle", "id": "af49-7ba6-8cd5-0ee5", "hidden": false, "primary": true, "targetId": "a2f7-3055-bd92-3d51"}]
+      },
+      {
+        "name": "Churchill Meteor Tank",
+        "id": "39bd-6227-8a25-868a",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [{"name": "Vehicle", "id": "2b6c-2898-d5be-17c7", "hidden": false, "primary": true, "targetId": "a2f7-3055-bd92-3d51"}]
+      },
+      {
+        "name": "M17 Tesla Cannon Emplacement",
+        "id": "6920-0b60-5a8d-800b",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [{"name": "Vehicle", "id": "f03f-ee3b-3713-ed33", "hidden": false, "primary": true, "targetId": "a2f7-3055-bd92-3d51"}]
+      },
+      {
+        "name": "Automated Carrier",
+        "id": "d13b-54ed-aba8-900b",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "Vehicle", "id": "67a8-b76d-7a63-5fe1", "hidden": false, "primary": true, "targetId": "a2f7-3055-bd92-3d51"},
+          {"name": "automated", "id": "ec7c-32c0-c726-adc7", "hidden": false, "primary": false, "targetId": "fbed-c057-7ad4-9a3a"}
+        ]
+      },
+      {
+        "name": "Humber Armored Car MKVII",
+        "id": "d2ab-c127-32a8-f37a",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [{"name": "Vehicle", "id": "8ba6-bfb5-051b-4037", "hidden": false, "primary": true, "targetId": "a2f7-3055-bd92-3d51"}]
+      },
+      {
+        "name": "Bren Carrier",
+        "id": "a928-8910-e1f7-4309",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [{"name": "Transport vehicle", "id": "ce31-facd-682f-73f0", "hidden": false, "primary": true, "targetId": "727b-b399-e4a6-f1e1"}]
+      },
+      {
+        "name": "Bedford QLT Troop Transport",
+        "id": "1789-ea90-2ed7-3407",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [{"name": "Transport vehicle", "id": "60c2-1e49-50f2-d3a0", "hidden": false, "primary": true, "targetId": "727b-b399-e4a6-f1e1"}]
+      },
+      {
+        "name": "Jeep",
+        "id": "0d63-6399-56a7-0d57",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [{"name": "Transport vehicle", "id": "b6bf-2d6e-5e9e-8cdc", "hidden": false, "primary": true, "targetId": "727b-b399-e4a6-f1e1"}]
+      },
+      {
+        "name": "\"B for Bertie\" -- Automated Infantry Hero",
+        "id": "681c-60af-773e-986f",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "Hero", "id": "eb9d-b455-650b-ec0e", "hidden": false, "primary": true, "targetId": "1393-8cec-caff-46d4"},
+          {"name": "automated", "id": "7f2e-1331-deea-edee", "hidden": false, "primary": false, "targetId": "fbed-c057-7ad4-9a3a"},
+          {"name": "nonvehicle unit", "id": "f507-a083-52a5-24bb", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ]
+      }
+    ],
+    "sharedProfiles": [
+      {
+        "name": "Selected Guts",
+        "id": "d7c5-42a0-8bc2-fd07",
+        "hidden": false,
+        "typeId": "h_stats",
+        "typeName": "Hero Statistics",
+        "characteristics": [
+          {"name": "Guts", "$text": "1", "typeId": "586d-9d30-8830-1c71"},
+          {"name": "Rift Mastery", "$text": "", "typeId": "f4dc-544b-85d6-7ac1"},
+          {"name": "Luck", "$text": "", "typeId": "f48c-63c7-341b-e425"}
+        ]
+      },
+      {
+        "name": "Selected Rift Mastery",
+        "id": "c24d-d9e6-37be-4400",
+        "hidden": false,
+        "typeId": "h_stats",
+        "typeName": "Hero Statistics",
+        "characteristics": [
+          {"name": "Guts", "$text": "", "typeId": "586d-9d30-8830-1c71"},
+          {"name": "Rift Mastery", "$text": "1", "typeId": "f4dc-544b-85d6-7ac1"},
+          {"name": "Luck", "$text": "", "typeId": "f48c-63c7-341b-e425"}
+        ]
+      },
+      {
+        "name": "PRIAM",
+        "id": "a61a-69f8-6322-e385",
+        "hidden": false,
+        "typeId": "w_stats",
+        "typeName": "weapon",
+        "characteristics": [
+          {"name": "range", "$text": "12\"", "typeId": "0fa9-a3c9-d7da-2e6e"},
+          {"name": "shots", "$text": "1", "typeId": "4e5d-8016-2340-6789"},
+          {"name": "pen", "$text": "+6", "typeId": "d212-35ab-fbf6-9588"},
+          {"name": "special rules", "$text": "Anti-tank Launchers\nShaped Charge", "typeId": "8d46-fd5f-5386-1410"}
+        ]
+      },
+      {
+        "name": "Not Rift Unit By Default",
+        "id": "5947-3224-fa60-74d0",
+        "hidden": false,
+        "typeId": "r_stats",
+        "typeName": "Rift ability",
+        "characteristics": [
+          {"name": "active rift enhancement", "$text": "-", "typeId": "cbaa-91a6-d3fd-af8e"},
+          {"name": "surging bonus", "$text": "-", "typeId": "9d0b-7a64-d1e2-5de4"},
+          {"name": "exhausted penalty", "$text": "-", "typeId": "e2f8-7c71-9549-0100"},
+          {"name": "Rift dice", "$text": "0", "typeId": "f13e-857d-bdde-754e"}
+        ]
+      },
+      {
+        "name": "Soldier in Grade 1 Powered Armor",
+        "id": "d99f-54d3-e28a-783c",
+        "hidden": false,
+        "typeId": "i_stats",
+        "typeName": "infantry unit",
+        "characteristics": [
+          {"name": "advance rate", "$text": "6\"", "typeId": "13d7-4ad1-36a5-25ac"},
+          {"name": "run rate", "$text": "12\"", "typeId": "44fc-5e79-0003-21b1"},
+          {"name": "quality", "$text": "-", "typeId": "eea9-be51-f1cf-c5a0"},
+          {"name": "damage value", "$text": "-", "typeId": "d7d0-6fbe-65f5-e4cd"},
+          {"name": "morale value", "$text": "-", "typeId": "874f-76b8-b3a2-a165"},
+          {"name": "base size", "$text": "25mm", "typeId": "6b5c-b67a-16a5-05c8"},
+          {"name": "special rules", "$text": "Heavy", "typeId": "9e09-34a3-3073-c2f4"}
+        ]
+      },
+      {
+        "name": "Soldier",
+        "id": "57ae-f2a0-e3bd-a4b1",
+        "hidden": false,
+        "typeId": "i_stats",
+        "typeName": "infantry unit",
+        "characteristics": [
+          {"name": "advance rate", "$text": "6\"", "typeId": "13d7-4ad1-36a5-25ac"},
+          {"name": "run rate", "$text": "12\"", "typeId": "44fc-5e79-0003-21b1"},
+          {"name": "quality", "$text": "-", "typeId": "eea9-be51-f1cf-c5a0"},
+          {"name": "damage value", "$text": "-", "typeId": "d7d0-6fbe-65f5-e4cd"},
+          {"name": "morale value", "$text": "-", "typeId": "874f-76b8-b3a2-a165"},
+          {"name": "base size", "$text": "25mm", "typeId": "6b5c-b67a-16a5-05c8"},
+          {"name": "special rules", "$text": "-", "typeId": "9e09-34a3-3073-c2f4"}
+        ]
+      },
+      {
+        "name": "Heavy Tesla Rifle -- Charge Mode",
+        "id": "fc15-34e0-bbe6-5058",
+        "hidden": false,
+        "typeId": "w_stats",
+        "typeName": "weapon",
+        "characteristics": [
+          {"name": "range", "$text": "18\"", "typeId": "0fa9-a3c9-d7da-2e6e"},
+          {"name": "shots", "$text": "1", "typeId": "4e5d-8016-2340-6789"},
+          {"name": "pen", "$text": "+1", "typeId": "d212-35ab-fbf6-9588"},
+          {"name": "special rules", "$text": "Mode\nTeam\nRift Weapon: Tesla Arc (1)", "typeId": "8d46-fd5f-5386-1410"}
+        ]
+      },
+      {
+        "name": "Heavy Tesla Rifle -- Pulse Mode",
+        "id": "a776-66bf-7bf8-c244",
+        "hidden": false,
+        "typeId": "w_stats",
+        "typeName": "weapon",
+        "characteristics": [
+          {"name": "range", "$text": "6\"", "typeId": "0fa9-a3c9-d7da-2e6e"},
+          {"name": "shots", "$text": "3", "typeId": "4e5d-8016-2340-6789"},
+          {"name": "pen", "$text": "+1", "typeId": "d212-35ab-fbf6-9588"},
+          {"name": "special rules", "$text": "Mode\nAssault", "typeId": "8d46-fd5f-5386-1410"}
+        ]
+      },
+      {
+        "name": "MKII Heavy Automated Infantry",
+        "id": "caa8-57e1-136e-0ac8",
+        "hidden": false,
+        "typeId": "i_stats",
+        "typeName": "infantry unit",
+        "characteristics": [
+          {"name": "advance rate", "$text": "4\"", "typeId": "13d7-4ad1-36a5-25ac"},
+          {"name": "run rate", "$text": "8\"", "typeId": "44fc-5e79-0003-21b1"},
+          {"name": "quality", "$text": "Veteran", "typeId": "eea9-be51-f1cf-c5a0"},
+          {"name": "damage value", "$text": "7+", "typeId": "d7d0-6fbe-65f5-e4cd"},
+          {"name": "morale value", "$text": "10 (fearless)", "typeId": "874f-76b8-b3a2-a165"},
+          {"name": "base size", "$text": "40mm", "typeId": "6b5c-b67a-16a5-05c8"},
+          {
+            "name": "special rules",
+            "$text": "Augmented\nComputational Systems\nData Transmission\nFearless\nHard to Kill\nLarge\nLumbering\nWide Formation",
+            "typeId": "9e09-34a3-3073-c2f4"
+          }
+        ]
+      },
+      {
+        "name": "M21 Light Tesla Cannon",
+        "id": "22a1-3da5-b2cf-a82c",
+        "hidden": false,
+        "typeId": "w_stats",
+        "typeName": "weapon",
+        "characteristics": [
+          {"name": "range", "$text": "30\"", "typeId": "0fa9-a3c9-d7da-2e6e"},
+          {"name": "shots", "$text": "1", "typeId": "4e5d-8016-2340-6789"},
+          {"name": "pen", "$text": "+1", "typeId": "d212-35ab-fbf6-9588"},
+          {"name": "special rules", "$text": "Team\nFixed\nRift Weapon: Tesla Arc (3)", "typeId": "8d46-fd5f-5386-1410"}
+        ]
+      },
+      {
+        "name": "Combat Blade",
+        "id": "1c1e-e89d-96f6-295b",
+        "hidden": false,
+        "typeId": "w_stats",
+        "typeName": "weapon",
+        "characteristics": [
+          {"name": "range", "$text": "-", "typeId": "0fa9-a3c9-d7da-2e6e"},
+          {"name": "shots", "$text": "-", "typeId": "4e5d-8016-2340-6789"},
+          {"name": "pen", "$text": "-", "typeId": "d212-35ab-fbf6-9588"},
+          {"name": "special rules", "$text": "+1 pen at close quarters\nTough Fighters", "typeId": "8d46-fd5f-5386-1410"}
+        ]
+      }
+    ],
+    "sharedSelectionEntries": [
+      {
+        "name": "PRIAMs",
+        "id": "ea34-8b85-d79e-af6d",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [{"name": "PRIAM", "id": "0c1e-6d22-df6d-2b5c", "hidden": false, "targetId": "a61a-69f8-6322-e385", "type": "profile"}]
+      },
+      {
+        "name": "Heavy Tesla Rifle",
+        "id": "26e4-0241-49bd-710c",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {"name": "Heavy Tesla Rifle -- Charge Mode", "id": "9a98-8ac3-3c81-a487", "hidden": false, "targetId": "fc15-34e0-bbe6-5058", "type": "profile"},
+          {"name": "Heavy Tesla Rifle -- Pulse Mode", "id": "1a12-1eef-23a1-0d30", "hidden": false, "targetId": "a776-66bf-7bf8-c244", "type": "profile"}
+        ]
+      },
+      {
+        "name": "M21 Light Tesla Cannon",
+        "id": "7776-6378-ac5a-498a",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [{"name": "M21 Light Tesla Cannon", "id": "6d67-b67f-97e3-b83e", "hidden": false, "targetId": "22a1-3da5-b2cf-a82c", "type": "profile"}]
+      },
+      {
+        "name": "Light Automatic Cannon w/ Combat Blade",
+        "id": "dea8-9485-5761-0e7a",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [{"name": "Combat Blade", "id": "233d-ce8a-ef3f-df53", "hidden": false, "targetId": "1c1e-e89d-96f6-295b", "type": "profile"}]
+      }
+    ]
+  }
+}
