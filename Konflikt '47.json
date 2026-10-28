@@ -1083,6 +1083,18 @@
         "id": "ccef-b4bb-7747-2182",
         "description": "After you roll to hit with this weapon, if the roll was successful, roll a d6 to see how many damage checks to make.\n\n\nUnits hit by this weapon do not have cover saves or medic saves.\n\n\nwhen you target a unit with this weapon and it is within range, that unit gains 1 pin. If the hit roll is successful, that unit gains an extra d3 pins. after the flamethrower is shot, the targeted unit must take an immediate morale test. If they fail, that unit is destroyed.\n\n\nAfter resolving an attack with this weapon, roll a d6. on a roll of 1 or 2, that weapon cannot be fired for the rest of the game and is considered removed from infantry units.\n\n\nWhen targeting buildings, those buildings are set on fire on a roll of 4+.\n\n\nWhen targeting vehicles with this weapon, Roll against that vehicle's top armor.\n\n\nIf a vehicle is equipped with a weapon with the flamethrower special rule, it gains the Internal Volatile Fuel Tanks special rule.",
         "hidden": false
+      },
+      {
+        "name": "Engineers",
+        "id": "4668-13b3-45f6-0f62",
+        "description": "A unit with the engineers special rule gains a +1 bonus to dice roll for clearing minefields and fortifications and this unit is not subject to a defender's defensive position bonus.",
+        "hidden": false
+      },
+      {
+        "name": "Shirkers",
+        "id": "0726-43eb-6fd3-8b58",
+        "description": "a unit with the shirkers special rule doubles the number of incoming pins and must take an order test for every order they are given even if they do not have any pins.",
+        "hidden": false
       }
     ],
     "sharedSelectionEntries": [

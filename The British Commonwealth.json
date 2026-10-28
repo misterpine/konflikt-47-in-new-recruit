@@ -1863,7 +1863,8 @@
                       }
                     ]
                   }
-                ]
+                ],
+                "modifiers": [{"affects": "d674-414a-bc6b-c810", "field": "hidden", "type": "set", "value": false}]
               }
             ]
           },
@@ -2052,8 +2053,10 @@
                 "id": "52bf-8856-f85b-5843",
                 "hidden": false,
                 "import": true,
+                "sortIndex": 1,
                 "targetId": "ea34-8b85-d79e-af6d",
                 "type": "selectionEntry",
+                "constraints": [{"id": "2f7e-a19b-d06f-77ef", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
                 "modifiers": [
                   {
                     "field": "2eda-e484-fddf-506a",
@@ -2070,13 +2073,70 @@
                 "id": "d2e5-8487-fd3b-4185",
                 "hidden": false,
                 "import": true,
+                "sortIndex": 4,
                 "type": "upgrade",
+                "constraints": [{"id": "8aaf-8e21-041d-29fb", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "infoLinks": [{"name": "Engineers", "id": "b5a4-d28c-730f-8e10", "hidden": false, "targetId": "4668-13b3-45f6-0f62", "type": "rule"}],
                 "modifiers": [
                   {"affects": "c5b7-ae5f-21ea-cef5", "field": "hidden", "scope": "7d51-2b2e-aace-851e", "type": "set", "value": false},
                   {
                     "field": "2eda-e484-fddf-506a",
                     "type": "increment",
                     "value": 1,
+                    "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "7d51-2b2e-aace-851e", "shared": true, "value": 1}]
+                  }
+                ]
+              },
+              {
+                "name": "Anti-tank Grenades",
+                "id": "87a2-4d85-0c52-7552",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 2,
+                "type": "upgrade",
+                "constraints": [{"id": "aeb5-cd0a-67d5-2139", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "infoLinks": [{"name": "Tank Hunters", "id": "9908-2b1c-6d4b-cb5f", "hidden": false, "targetId": "182a-1137-c269-cb40", "type": "rule"}],
+                "modifiers": [
+                  {
+                    "field": "2eda-e484-fddf-506a",
+                    "type": "increment",
+                    "value": 2,
+                    "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "7d51-2b2e-aace-851e", "shared": true, "value": 1}]
+                  }
+                ]
+              },
+              {
+                "name": "Stubborn",
+                "id": "b858-9607-2a21-364f",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 3,
+                "type": "upgrade",
+                "constraints": [{"id": "357d-5349-807b-eafe", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "infoLinks": [{"name": "Stubborn", "id": "fe70-741d-abce-669b", "hidden": false, "targetId": "9493-209f-ba31-417f", "type": "rule"}],
+                "modifiers": [
+                  {
+                    "field": "2eda-e484-fddf-506a",
+                    "type": "increment",
+                    "value": 1,
+                    "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "7d51-2b2e-aace-851e", "shared": true, "value": 1}]
+                  }
+                ]
+              },
+              {
+                "name": "Shirkers",
+                "id": "d674-414a-bc6b-c810",
+                "hidden": true,
+                "import": true,
+                "sortIndex": 5,
+                "type": "upgrade",
+                "constraints": [{"id": "b3ae-5bf4-f073-f79a", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "infoLinks": [{"name": "Shirkers", "id": "291b-baa7-1667-ae20", "hidden": false, "targetId": "0726-43eb-6fd3-8b58", "type": "rule"}],
+                "modifiers": [
+                  {
+                    "field": "2eda-e484-fddf-506a",
+                    "type": "decrement",
+                    "value": 2,
                     "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "7d51-2b2e-aace-851e", "shared": true, "value": 1}]
                   }
                 ]
