@@ -9,6 +9,21 @@
     "revision": 1,
     "type": "catalogue",
     "categoryEntries": [{"name": "automated", "id": "fbed-c057-7ad4-9a3a", "hidden": false}],
+    "forceEntries": [
+      {
+        "name": "Army List",
+        "id": "96f0-e910-3b6a-53a5",
+        "hidden": false,
+        "forceEntryLinks": [
+          {"name": "Assault Platoon", "id": "a957-b10f-f694-b096", "hidden": false, "targetId": "1971-0894-aefe-a5f3", "type": "forceEntry"},
+          {"name": "Automated Infantry Platoon", "id": "a06a-92ec-135b-f62b", "hidden": false, "targetId": "67a7-67d6-d911-72f1", "type": "forceEntry"},
+          {"name": "Heavy Weapons Platoon", "id": "e78b-abec-5771-3e96", "hidden": false, "targetId": "fd68-c31f-45dd-db52", "type": "forceEntry"},
+          {"name": "artillery platoon", "id": "ea55-e32f-3a36-0859", "hidden": false, "targetId": "fe04-6682-df61-471f", "type": "forceEntry"},
+          {"name": "armored platoon", "id": "ce9b-b9af-725f-9829", "hidden": false, "targetId": "6c02-f233-60cd-ef7f", "type": "forceEntry"},
+          {"name": "armored walker platoon", "id": "0c58-93e7-7f91-f607", "hidden": false, "targetId": "89b2-efd1-3594-e6bd", "type": "forceEntry"}
+        ]
+      }
+    ],
     "selectionEntries": [
       {
         "name": "Company commander -- Officer",
@@ -39,6 +54,24 @@
                   {"id": "0144-a6d8-d21e-336d-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
                 ],
                 "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 60}],
+                "profiles": [
+                  {
+                    "name": "Officer",
+                    "id": "a2c9-c595-3f38-36e4",
+                    "hidden": false,
+                    "typeId": "i_stats",
+                    "typeName": "infantry unit",
+                    "characteristics": [
+                      {"name": "advance rate", "$text": "6\"", "typeId": "13d7-4ad1-36a5-25ac"},
+                      {"name": "run rate", "$text": "12\"", "typeId": "44fc-5e79-0003-21b1"},
+                      {"name": "quality", "$text": "-", "typeId": "eea9-be51-f1cf-c5a0"},
+                      {"name": "damage value", "$text": "-", "typeId": "d7d0-6fbe-65f5-e4cd"},
+                      {"name": "morale value", "$text": "-", "typeId": "874f-76b8-b3a2-a165"},
+                      {"name": "base size", "$text": "25mm", "typeId": "6b5c-b67a-16a5-05c8"},
+                      {"name": "special rules", "$text": "-", "typeId": "9e09-34a3-3073-c2f4"}
+                    ]
+                  }
+                ],
                 "selectionEntryGroups": [
                   {
                     "name": "Weapon",
@@ -125,6 +158,7 @@
                 "type": "model",
                 "constraints": [{"id": "e2c4-c85f-f8b5-a239", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
                 "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 9}],
+                "infoLinks": [{"name": "Soldier", "id": "c9f5-e63a-c7f5-7a6a", "hidden": false, "targetId": "57ae-f2a0-e3bd-a4b1", "type": "profile"}],
                 "selectionEntryGroups": [
                   {
                     "name": "Weapon",
@@ -1354,6 +1388,194 @@
         "categoryLinks": [
           {"name": "forward observer", "id": "ef67-8582-5839-2044", "hidden": false, "primary": true, "targetId": "f53e-dfd3-ad86-30d6"},
           {"name": "nonvehicle unit", "id": "560f-14e8-c775-e3be", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Quality",
+            "id": "4a40-d904-d0b8-8ded",
+            "hidden": false,
+            "sortIndex": 1,
+            "constraints": [
+              {"id": "5695-3899-6ab0-8dba", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "21bc-e217-1911-7393", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ],
+            "selectionEntries": [
+              {
+                "name": "regular",
+                "id": "1a8f-08e1-846a-5004",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {"affects": "profiles.infantry unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "9"},
+                      {"affects": "profiles.infantry unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "4+"},
+                      {"affects": "profiles.infantry unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "regular"}
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "veteran",
+                "id": "0d0d-b158-b6d0-5152",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 12}],
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {"affects": "profiles.infantry unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "10"},
+                      {"affects": "profiles.infantry unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "5+"},
+                      {"affects": "profiles.infantry unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "veteran"},
+                      {
+                        "field": "2eda-e484-fddf-506a",
+                        "type": "increment",
+                        "value": 3,
+                        "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "parent", "shared": true, "value": 1}]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Options",
+            "id": "b6a9-ad83-6a89-e612",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntries": [
+              {
+                "name": "Forward Observer",
+                "id": "d4e4-5d74-48e2-d6e8",
+                "hidden": false,
+                "import": true,
+                "type": "model",
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 75}],
+                "profiles": [
+                  {
+                    "name": "Forward Observer",
+                    "id": "73f8-4777-eced-bd4a",
+                    "hidden": false,
+                    "typeId": "i_stats",
+                    "typeName": "infantry unit",
+                    "characteristics": [
+                      {"name": "advance rate", "$text": "6\"", "typeId": "13d7-4ad1-36a5-25ac"},
+                      {"name": "run rate", "$text": "12\"", "typeId": "44fc-5e79-0003-21b1"},
+                      {"name": "quality", "$text": "-", "typeId": "eea9-be51-f1cf-c5a0"},
+                      {"name": "damage value", "$text": "-", "typeId": "d7d0-6fbe-65f5-e4cd"},
+                      {"name": "morale value", "$text": "-", "typeId": "874f-76b8-b3a2-a165"},
+                      {"name": "base size", "$text": "25mm", "typeId": "6b5c-b67a-16a5-05c8"},
+                      {"name": "special rules", "$text": "Forward Observer (Artillery)\nInfiltrator", "typeId": "9e09-34a3-3073-c2f4"}
+                    ]
+                  }
+                ],
+                "selectionEntryGroups": [
+                  {
+                    "name": "Weapon",
+                    "id": "c550-5360-3251-44d2",
+                    "hidden": false,
+                    "constraints": [
+                      {"id": "236c-973f-e887-dbc2-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "236c-973f-e887-dbc2-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ],
+                    "entryLinks": [
+                      {"name": "Pistol", "id": "8d2a-6ac0-d89b-8814", "hidden": false, "import": true, "sortIndex": 1, "targetId": "76a4-3033-579c-e93f", "type": "selectionEntry"},
+                      {
+                        "name": "Rifle",
+                        "id": "417c-f0bf-8b1b-a709",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 2,
+                        "targetId": "54e5-13dc-90ac-8327",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 1}]
+                      },
+                      {
+                        "name": "Submachine Gun",
+                        "id": "7ae1-043d-59f3-5b91",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 3,
+                        "targetId": "3693-3302-b253-2948",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 5}]
+                      },
+                      {
+                        "name": "Assault Rifle",
+                        "id": "e3b1-4551-7dbc-666c",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 4,
+                        "targetId": "a37c-1833-f773-07be",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 7}]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Soldier",
+                "id": "e8a5-3b1e-6b6f-0e94",
+                "hidden": false,
+                "import": true,
+                "type": "model",
+                "constraints": [{"id": "8f04-a8f3-827d-7cb4", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 9}],
+                "infoLinks": [{"name": "Soldier", "id": "32d3-bef5-d08d-587b", "hidden": false, "targetId": "57ae-f2a0-e3bd-a4b1", "type": "profile"}],
+                "modifiers": [{"affects": "model.profiles.infantry unit", "field": "9e09-34a3-3073-c2f4", "type": "set", "value": "Infiltrator"}],
+                "selectionEntryGroups": [
+                  {
+                    "name": "Weapon",
+                    "id": "053c-e2ed-7b47-8a10",
+                    "hidden": false,
+                    "constraints": [
+                      {"id": "beaa-81d7-9f4a-0f3d-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "beaa-81d7-9f4a-0f3d-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ],
+                    "entryLinks": [
+                      {"name": "Pistol", "id": "fea4-4de3-5b6b-d816", "hidden": false, "import": true, "sortIndex": 1, "targetId": "76a4-3033-579c-e93f", "type": "selectionEntry"},
+                      {
+                        "name": "Rifle",
+                        "id": "20b3-460f-9c43-93ef",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 2,
+                        "targetId": "54e5-13dc-90ac-8327",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 1}]
+                      },
+                      {
+                        "name": "Submachine Gun",
+                        "id": "9c48-ffa5-f10b-bfc1",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 3,
+                        "targetId": "3693-3302-b253-2948",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 5}]
+                      },
+                      {
+                        "name": "Assault Rifle",
+                        "id": "0f9f-7016-d084-804a",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 4,
+                        "targetId": "a37c-1833-f773-07be",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 7}]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
         ]
       },
       {
@@ -1365,6 +1587,194 @@
         "categoryLinks": [
           {"name": "forward observer", "id": "c8a0-e99b-33e5-5d63", "hidden": false, "primary": true, "targetId": "f53e-dfd3-ad86-30d6"},
           {"name": "nonvehicle unit", "id": "dc55-f148-e906-aa2e", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Quality",
+            "id": "8278-67bd-0ce1-5090",
+            "hidden": false,
+            "sortIndex": 1,
+            "constraints": [
+              {"id": "7762-8390-e2bf-ff0a", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "5158-694c-253b-07f1", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ],
+            "selectionEntries": [
+              {
+                "name": "regular",
+                "id": "e5f1-92ae-514e-e454",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {"affects": "profiles.infantry unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "9"},
+                      {"affects": "profiles.infantry unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "4+"},
+                      {"affects": "profiles.infantry unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "regular"}
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "veteran",
+                "id": "9015-e2ac-dbbf-f064",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 12}],
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {"affects": "profiles.infantry unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "10"},
+                      {"affects": "profiles.infantry unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "5+"},
+                      {"affects": "profiles.infantry unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "veteran"},
+                      {
+                        "field": "2eda-e484-fddf-506a",
+                        "type": "increment",
+                        "value": 3,
+                        "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "parent", "shared": true, "value": 1}]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Options",
+            "id": "05f6-e9aa-035e-34ff",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntries": [
+              {
+                "name": "Forward Observer",
+                "id": "184e-b810-11ac-c229",
+                "hidden": false,
+                "import": true,
+                "type": "model",
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 75}],
+                "profiles": [
+                  {
+                    "name": "Forward Observer",
+                    "id": "c181-b935-83ad-1d2c",
+                    "hidden": false,
+                    "typeId": "i_stats",
+                    "typeName": "infantry unit",
+                    "characteristics": [
+                      {"name": "advance rate", "$text": "6\"", "typeId": "13d7-4ad1-36a5-25ac"},
+                      {"name": "run rate", "$text": "12\"", "typeId": "44fc-5e79-0003-21b1"},
+                      {"name": "quality", "$text": "-", "typeId": "eea9-be51-f1cf-c5a0"},
+                      {"name": "damage value", "$text": "-", "typeId": "d7d0-6fbe-65f5-e4cd"},
+                      {"name": "morale value", "$text": "-", "typeId": "874f-76b8-b3a2-a165"},
+                      {"name": "base size", "$text": "25mm", "typeId": "6b5c-b67a-16a5-05c8"},
+                      {"name": "special rules", "$text": "Forward Observer (Air Force)\nInfiltrator", "typeId": "9e09-34a3-3073-c2f4"}
+                    ]
+                  }
+                ],
+                "selectionEntryGroups": [
+                  {
+                    "name": "Weapon",
+                    "id": "6ea0-0ac0-6e8d-d67f",
+                    "hidden": false,
+                    "constraints": [
+                      {"id": "aa25-fd1a-7dc8-977b-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "aa25-fd1a-7dc8-977b-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ],
+                    "entryLinks": [
+                      {"name": "Pistol", "id": "1b88-5a1f-c1a8-bb87", "hidden": false, "import": true, "sortIndex": 1, "targetId": "76a4-3033-579c-e93f", "type": "selectionEntry"},
+                      {
+                        "name": "Rifle",
+                        "id": "6347-926a-ef4d-f232",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 2,
+                        "targetId": "54e5-13dc-90ac-8327",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 1}]
+                      },
+                      {
+                        "name": "Submachine Gun",
+                        "id": "6c43-d1de-f72c-fd15",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 3,
+                        "targetId": "3693-3302-b253-2948",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 5}]
+                      },
+                      {
+                        "name": "Assault Rifle",
+                        "id": "2535-0053-6348-5c03",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 4,
+                        "targetId": "a37c-1833-f773-07be",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 7}]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Soldier",
+                "id": "9650-b7ac-d4ae-cda6",
+                "hidden": false,
+                "import": true,
+                "type": "model",
+                "constraints": [{"id": "8d7f-5bd3-096d-5ae7", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 9}],
+                "infoLinks": [{"name": "Soldier", "id": "b8d1-7dce-dc24-68db", "hidden": false, "targetId": "57ae-f2a0-e3bd-a4b1", "type": "profile"}],
+                "modifiers": [{"affects": "model.profiles.infantry unit", "field": "9e09-34a3-3073-c2f4", "type": "set", "value": "Infiltrator"}],
+                "selectionEntryGroups": [
+                  {
+                    "name": "Weapon",
+                    "id": "f6ef-368e-7475-be88",
+                    "hidden": false,
+                    "constraints": [
+                      {"id": "aa34-b265-62db-2298-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "aa34-b265-62db-2298-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ],
+                    "entryLinks": [
+                      {"name": "Pistol", "id": "4c75-f297-84c3-47d0", "hidden": false, "import": true, "sortIndex": 1, "targetId": "76a4-3033-579c-e93f", "type": "selectionEntry"},
+                      {
+                        "name": "Rifle",
+                        "id": "5f44-8f65-58fd-c5d2",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 2,
+                        "targetId": "54e5-13dc-90ac-8327",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 1}]
+                      },
+                      {
+                        "name": "Submachine Gun",
+                        "id": "9e1b-0765-8db3-a1a0",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 3,
+                        "targetId": "3693-3302-b253-2948",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 5}]
+                      },
+                      {
+                        "name": "Assault Rifle",
+                        "id": "3b82-7cd2-55cc-57d9",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 4,
+                        "targetId": "a37c-1833-f773-07be",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 7}]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
         ]
       },
       {
@@ -1375,7 +1785,304 @@
         "type": "upgrade",
         "categoryLinks": [
           {"name": "basic infantry", "id": "4267-bd06-18af-a522", "hidden": false, "primary": true, "targetId": "a5af-4276-4e0f-cd76"},
-          {"name": "nonvehicle unit", "id": "a76d-a820-6815-3f7a", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"}
+          {"name": "nonvehicle unit", "id": "a76d-a820-6815-3f7a", "hidden": false, "primary": false, "targetId": "832b-b467-f671-7cf0"},
+          {"name": "Infantry", "id": "7ff8-b6d9-a754-0215", "hidden": false, "primary": false, "targetId": "d013-452d-3733-7f93"},
+          {"name": "Basic or Advanced infantry", "id": "b4e4-648e-e683-9475", "hidden": false, "primary": false, "targetId": "d6d7-014d-1a7d-49c5"}
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Quality",
+            "id": "010d-e48f-b4a1-32ed",
+            "hidden": false,
+            "sortIndex": 1,
+            "constraints": [
+              {"id": "eb13-c69b-b657-9c60", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "2bb2-ab47-4590-091d", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ],
+            "selectionEntries": [
+              {
+                "name": "regular",
+                "id": "a48b-5dd0-70f0-76dc",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {"affects": "profiles.infantry unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "9"},
+                      {"affects": "profiles.infantry unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "4+"},
+                      {"affects": "profiles.infantry unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "regular"}
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "veteran",
+                "id": "c1c2-f1c3-839a-7d4e",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 0}],
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {"affects": "profiles.infantry unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "10"},
+                      {"affects": "profiles.infantry unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "5+"},
+                      {"affects": "profiles.infantry unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "veteran"},
+                      {
+                        "field": "2eda-e484-fddf-506a",
+                        "type": "increment",
+                        "value": 3,
+                        "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "parent", "shared": true, "value": 1}]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "inexperienced",
+                "id": "cae9-2076-f5c6-5126",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 0}],
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {"affects": "profiles.infantry unit", "field": "874f-76b8-b3a2-a165", "type": "set", "value": "8"},
+                      {"affects": "profiles.infantry unit", "field": "d7d0-6fbe-65f5-e4cd", "type": "set", "value": "3+"},
+                      {"affects": "profiles.infantry unit", "field": "eea9-be51-f1cf-c5a0", "type": "set", "value": "inexperienced"},
+                      {
+                        "field": "2eda-e484-fddf-506a",
+                        "type": "increment",
+                        "value": -3,
+                        "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "parent", "shared": true, "value": 1}]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Options",
+            "id": "4d2c-4825-b263-73d6",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntries": [
+              {
+                "name": "NCO",
+                "id": "f4cd-8c28-38ce-d321",
+                "hidden": false,
+                "import": true,
+                "type": "model",
+                "constraints": [
+                  {"id": "89ff-ce65-c35e-8a59-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "89ff-ce65-c35e-8a59-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ],
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 10}],
+                "profiles": [
+                  {
+                    "name": "NCO",
+                    "id": "2a8c-1568-f478-fc9c",
+                    "hidden": false,
+                    "typeId": "i_stats",
+                    "typeName": "infantry unit",
+                    "characteristics": [
+                      {"name": "advance rate", "$text": "6\"", "typeId": "13d7-4ad1-36a5-25ac"},
+                      {"name": "run rate", "$text": "12\"", "typeId": "44fc-5e79-0003-21b1"},
+                      {"name": "quality", "$text": "-", "typeId": "eea9-be51-f1cf-c5a0"},
+                      {"name": "damage value", "$text": "-", "typeId": "d7d0-6fbe-65f5-e4cd"},
+                      {"name": "morale value", "$text": "-", "typeId": "874f-76b8-b3a2-a165"},
+                      {"name": "base size", "$text": "25mm", "typeId": "6b5c-b67a-16a5-05c8"},
+                      {"name": "special rules", "$text": "-", "typeId": "9e09-34a3-3073-c2f4"}
+                    ]
+                  }
+                ],
+                "selectionEntryGroups": [
+                  {
+                    "name": "Weapon",
+                    "id": "06be-dbb0-3bb2-f4a2",
+                    "hidden": false,
+                    "entryLinks": [
+                      {"name": "Rifle", "id": "9ec2-e6e1-1de8-84c0", "hidden": false, "import": true, "sortIndex": 1, "targetId": "54e5-13dc-90ac-8327", "type": "selectionEntry"},
+                      {
+                        "name": "Submachine Gun",
+                        "id": "9388-631e-bcfa-da03",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 2,
+                        "targetId": "3693-3302-b253-2948",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 4}]
+                      },
+                      {
+                        "name": "Assault Rifle",
+                        "id": "233f-fb7d-71f2-08b8",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 3,
+                        "targetId": "a37c-1833-f773-07be",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 6}]
+                      },
+                      {
+                        "name": "Rifle w/ Rifle Grenade Launcher",
+                        "id": "4765-df37-9b34-8a9d",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 4,
+                        "targetId": "421e-5cbc-fd03-9486",
+                        "type": "selectionEntry",
+                        "constraints": [{"id": "e127-fa80-0256-d6df", "field": "selections", "scope": "7d51-2b2e-aace-851e", "shared": true, "type": "max", "value": 3}],
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 6}]
+                      },
+                      {
+                        "name": "Infantry Light Machine Gun",
+                        "id": "0fc8-f91b-714e-0009",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 5,
+                        "targetId": "0f3c-09a4-504d-84bd",
+                        "type": "selectionEntry",
+                        "constraints": [{"id": "d648-41f0-19e1-22aa", "field": "selections", "scope": "7d51-2b2e-aace-851e", "shared": true, "type": "max", "value": 2}],
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 15}]
+                      },
+                      {
+                        "name": "Infantry Flamethrower",
+                        "id": "c5b7-ae5f-21ea-cef5",
+                        "hidden": true,
+                        "import": true,
+                        "targetId": "28c3-3869-669a-6026",
+                        "type": "selectionEntry",
+                        "constraints": [{"id": "d02a-6588-517c-3ecf", "field": "selections", "scope": "7d51-2b2e-aace-851e", "shared": true, "type": "max", "value": 1}],
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 30}]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Soldier",
+                "id": "f6a5-06ab-a22b-382d",
+                "hidden": false,
+                "import": true,
+                "type": "model",
+                "constraints": [
+                  {"id": "94f8-e803-25a6-c875", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 4},
+                  {"id": "113c-ddab-1bf4-0d4b", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 11}
+                ],
+                "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 10}],
+                "infoLinks": [{"name": "Soldier", "id": "681d-f29c-27e9-d70f", "hidden": false, "targetId": "57ae-f2a0-e3bd-a4b1", "type": "profile"}],
+                "selectionEntryGroups": [
+                  {
+                    "name": "Weapon",
+                    "id": "97fd-f601-1687-7956",
+                    "hidden": false,
+                    "entryLinks": [
+                      {"name": "Rifle", "id": "083e-81f6-95ed-69bb", "hidden": false, "import": true, "sortIndex": 1, "targetId": "54e5-13dc-90ac-8327", "type": "selectionEntry"},
+                      {
+                        "name": "Submachine Gun",
+                        "id": "410e-7177-b2de-0551",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 2,
+                        "targetId": "3693-3302-b253-2948",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 4}]
+                      },
+                      {
+                        "name": "Assault Rifle",
+                        "id": "ae1b-4248-de39-f5f5",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 3,
+                        "targetId": "a37c-1833-f773-07be",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 6}]
+                      },
+                      {
+                        "name": "Rifle w/ Rifle Grenade Launcher",
+                        "id": "313e-d40d-4fca-88f8",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 4,
+                        "targetId": "421e-5cbc-fd03-9486",
+                        "type": "selectionEntry",
+                        "constraints": [{"id": "3438-b34d-d5b0-d385", "field": "selections", "scope": "7d51-2b2e-aace-851e", "shared": true, "type": "max", "value": 3}],
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 6}]
+                      },
+                      {
+                        "name": "Infantry Light Machine Gun",
+                        "id": "0f2f-547d-9229-0f93",
+                        "hidden": false,
+                        "import": true,
+                        "sortIndex": 5,
+                        "targetId": "0f3c-09a4-504d-84bd",
+                        "type": "selectionEntry",
+                        "constraints": [{"id": "2fce-4dc4-3c61-f845", "field": "selections", "scope": "7d51-2b2e-aace-851e", "shared": true, "type": "max", "value": 2}],
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 15}]
+                      },
+                      {
+                        "name": "Infantry Flamethrower",
+                        "id": "3da5-edcb-63a4-c8f1",
+                        "hidden": true,
+                        "import": true,
+                        "targetId": "28c3-3869-669a-6026",
+                        "type": "selectionEntry",
+                        "constraints": [{"id": "bb49-cad2-c561-1060", "field": "selections", "scope": "7d51-2b2e-aace-851e", "shared": true, "type": "max", "value": 1}],
+                        "costs": [{"name": "points", "typeId": "2eda-e484-fddf-506a", "value": 30}]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Squad Upgrades",
+            "id": "9bb1-0d90-7207-974f",
+            "hidden": false,
+            "entryLinks": [
+              {
+                "name": "PRIAMs",
+                "id": "52bf-8856-f85b-5843",
+                "hidden": false,
+                "import": true,
+                "targetId": "ea34-8b85-d79e-af6d",
+                "type": "selectionEntry",
+                "modifiers": [
+                  {
+                    "field": "2eda-e484-fddf-506a",
+                    "type": "increment",
+                    "value": 5,
+                    "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "7d51-2b2e-aace-851e", "shared": true, "value": 1}]
+                  }
+                ]
+              }
+            ],
+            "selectionEntries": [
+              {
+                "name": "Engineers",
+                "id": "d2e5-8487-fd3b-4185",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "modifiers": [
+                  {"affects": "c5b7-ae5f-21ea-cef5", "field": "hidden", "scope": "7d51-2b2e-aace-851e", "type": "set", "value": false},
+                  {
+                    "field": "2eda-e484-fddf-506a",
+                    "type": "increment",
+                    "value": 1,
+                    "repeats": [{"childId": "model", "childName": "model", "field": "selections", "repeats": 1, "roundUp": false, "scope": "7d51-2b2e-aace-851e", "shared": true, "value": 1}]
+                  }
+                ]
+              }
+            ]
+          }
         ]
       },
       {

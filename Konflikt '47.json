@@ -892,7 +892,7 @@
           {"name": "range", "$text": "6\"", "typeId": "0fa9-a3c9-d7da-2e6e"},
           {"name": "shots", "$text": "1", "typeId": "4e5d-8016-2340-6789"},
           {"name": "pen", "$text": "+2", "typeId": "d212-35ab-fbf6-9588"},
-          {"name": "special rules", "$text": "Team, Flamethrower", "typeId": "8d46-fd5f-5386-1410"}
+          {"name": "special rules", "$text": "Team\nFlamethrower", "typeId": "8d46-fd5f-5386-1410"}
         ]
       },
       {
@@ -985,6 +985,19 @@
           {"name": "pen", "$text": "+3", "typeId": "d212-35ab-fbf6-9588"},
           {"name": "special rules", "$text": "Team\nFixed\nHE (1\")", "typeId": "8d46-fd5f-5386-1410"}
         ]
+      },
+      {
+        "name": "Rifle Grenade",
+        "id": "b6f2-0f88-02fb-31d8",
+        "hidden": false,
+        "typeId": "w_stats",
+        "typeName": "weapon",
+        "characteristics": [
+          {"name": "range", "$text": "6\"-18\"", "typeId": "0fa9-a3c9-d7da-2e6e"},
+          {"name": "shots", "$text": "1", "typeId": "4e5d-8016-2340-6789"},
+          {"name": "pen", "$text": "HE", "typeId": "d212-35ab-fbf6-9588"},
+          {"name": "special rules", "$text": "Indirect Fire\nHE (1\")", "typeId": "8d46-fd5f-5386-1410"}
+        ]
       }
     ],
     "sharedRules": [
@@ -1063,6 +1076,12 @@
         "name": "Tank Hunters",
         "id": "182a-1137-c269-cb40",
         "description": "a unit with tank hunters ignores tank fear and can deal full damage against an armored target rather than just superficial damage.",
+        "hidden": false
+      },
+      {
+        "name": "Flamethrower",
+        "id": "ccef-b4bb-7747-2182",
+        "description": "After you roll to hit with this weapon, if the roll was successful, roll a d6 to see how many damage checks to make.\n\n\nUnits hit by this weapon do not have cover saves or medic saves.\n\n\nwhen you target a unit with this weapon and it is within range, that unit gains 1 pin. If the hit roll is successful, that unit gains an extra d3 pins. after the flamethrower is shot, the targeted unit must take an immediate morale test. If they fail, that unit is destroyed.\n\n\nAfter resolving an attack with this weapon, roll a d6. on a roll of 1 or 2, that weapon cannot be fired for the rest of the game and is considered removed from infantry units.\n\n\nWhen targeting buildings, those buildings are set on fire on a roll of 4+.\n\n\nWhen targeting vehicles with this weapon, Roll against that vehicle's top armor.\n\n\nIf a vehicle is equipped with a weapon with the flamethrower special rule, it gains the Internal Volatile Fuel Tanks special rule.",
         "hidden": false
       }
     ],
@@ -1154,6 +1173,17 @@
         "import": true,
         "type": "upgrade",
         "infoLinks": [{"name": "Heavy Automatic Cannon", "id": "2854-a2c8-5803-4f6c", "hidden": false, "targetId": "ae8a-c5d9-085b-d67c", "type": "profile"}]
+      },
+      {
+        "name": "Rifle w/ Rifle Grenade Launcher",
+        "id": "421e-5cbc-fd03-9486",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {"name": "Rifle", "id": "49f4-499f-8d45-b2f4", "hidden": false, "targetId": "089a-ec9a-fa20-4c9e", "type": "profile"},
+          {"name": "Rifle Grenade", "id": "d6e1-fec3-6229-0cbc", "hidden": false, "targetId": "b6f2-0f88-02fb-31d8", "type": "profile"}
+        ]
       }
     ],
     "sharedSelectionEntryGroups": [

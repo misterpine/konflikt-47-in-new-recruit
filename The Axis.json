@@ -1551,7 +1551,7 @@
         ]
       },
       {
-        "name": "Schreckwulfen",
+        "name": "Schreckwulf",
         "id": "d309-c2e4-aa0a-afa2",
         "hidden": false,
         "typeId": "i_stats",
@@ -1562,7 +1562,8 @@
           {"name": "quality", "$text": "veteran", "typeId": "eea9-be51-f1cf-c5a0"},
           {"name": "damage value", "$text": "7+", "typeId": "d7d0-6fbe-65f5-e4cd"},
           {"name": "morale value", "$text": "10 (fearless)", "typeId": "874f-76b8-b3a2-a165"},
-          {"name": "base size", "$text": "40mm", "typeId": "6b5c-b67a-16a5-05c8"}
+          {"name": "base size", "$text": "40mm", "typeId": "6b5c-b67a-16a5-05c8"},
+          {"name": "special rules", "$text": "Deadly (3)\nFast\nFearless\nHard to Kill\nHorror", "typeId": "9e09-34a3-3073-c2f4"}
         ]
       },
       {
@@ -1655,7 +1656,8 @@
           {"name": "quality", "$text": "veteran", "typeId": "eea9-be51-f1cf-c5a0"},
           {"name": "damage value", "$text": "5+", "typeId": "d7d0-6fbe-65f5-e4cd"},
           {"name": "morale value", "$text": "10", "typeId": "874f-76b8-b3a2-a165"},
-          {"name": "base size", "$text": "25mm", "typeId": "6b5c-b67a-16a5-05c8"}
+          {"name": "base size", "$text": "25mm", "typeId": "6b5c-b67a-16a5-05c8"},
+          {"name": "special rules", "$text": "Advanced Body Armor", "typeId": "9e09-34a3-3073-c2f4"}
         ]
       },
       {
@@ -1683,7 +1685,8 @@
           {"name": "quality", "$text": "veteran", "typeId": "eea9-be51-f1cf-c5a0"},
           {"name": "damage value", "$text": "7+", "typeId": "d7d0-6fbe-65f5-e4cd"},
           {"name": "morale value", "$text": "10", "typeId": "874f-76b8-b3a2-a165"},
-          {"name": "base size", "$text": "32mm", "typeId": "6b5c-b67a-16a5-05c8"}
+          {"name": "base size", "$text": "32mm", "typeId": "6b5c-b67a-16a5-05c8"},
+          {"name": "special rules", "$text": "Augmented\nLarge\nWide Formation", "typeId": "9e09-34a3-3073-c2f4"}
         ]
       }
     ],
